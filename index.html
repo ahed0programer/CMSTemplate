@@ -617,10 +617,10 @@
                   <div class="avatar-sm">
                     <img src="assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle" />
                   </div>
-                  <span class="profile-username">
+                  <!-- <span class="profile-username">
                     <span class="op-7">Hi,</span>
                     <span class="fw-bold">Hizrian</span>
-                  </span>
+                  </span> -->
                 </a>
                 <ul class="dropdown-menu dropdown-user animated fadeIn">
                   <div class="dropdown-user-scroll scrollbar-outer">
@@ -630,7 +630,7 @@
                           <img src="assets/img/profile.jpg" alt="image profile" class="avatar-img rounded" />
                         </div>
                         <div class="u-text">
-                          <h4>Hizrian</h4>
+                          <h4>Mu3taz</h4>
                           <p class="text-muted">hello@example.com</p>
                           <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                         </div>
@@ -750,7 +750,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="row col-md-4">
+            <div class="row col-md-6">
               <div class="col-sm-6 col-md-6">
                 <div class="card card-stats card-round">
                   <div class="card-body">
@@ -792,8 +792,8 @@
               <div class="col card card-round">
                 <div class="card-body pb-0">
                   <div class="h1 fw-bold float-end text-primary">+5%</div>
-                  <h2 class="mb-2">17</h2>
-                  <p class="text-muted">Users online</p>
+                  <h2 class="mb-2">23</h2>
+                  <p class="text-muted">Cases this week</p>
                   <div class="pull-in sparkline-fix">
                     <div id="lineChart"></div>
                   </div>
@@ -817,17 +817,22 @@
               </div>
             </div>
 
-            <div class="col-md-4">
-              <div class="card">
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-transparent">
                 <div class="card-header">
-                  <div class="card-title">Cases</div>
+                  <h4 class="card-title text-center">Cases Distribution</h4>
                 </div>
                 <div class="card-body">
-                  <div class="chart-container">
-                    <canvas
-                      id="doughnutChart"
-                      style="width: 50%; height: 50%"
-                    ></canvas>
+                  <div class="col-md-10 ms-auto me-auto">
+                    <div class="mapcontainer">
+                      <div
+                        id="world-map"
+                        class="w-100"
+                        style="height: 450px"
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1065,7 +1070,7 @@
             </div>
           </div>
           <div>
-          
+            
           </div>
          
         </div>
@@ -1198,11 +1203,10 @@
 
   <!-- Kaiadmin DEMO methods, don't include it in your project! -->
   <script src="assets/js/setting-demo.js"></script>
-  <script src="assets/js/demo.js"></script>
-
+  <script src="assets/js/setting-demo2.js"></script>
 
   <script>
-    $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
+    $("#lineChart").sparkline([14, 23, 42, 12, 33, 12, 14], {
       type: "line",
       height: "70",
       width: "100%",
@@ -1269,6 +1273,96 @@
         },
       });
 
+  </script>
+
+  <script>
+    var world_map = new jsVectorMap({
+      selector: "#world-map",
+      zoomOnScroll: false,
+      regionStyle: {
+        hover: {
+          fill: "#435ebe",
+        },
+      },
+      markerStyle: {
+      initial: {
+        fontFamily: "'Inter', sans-serif",
+        fontSize: 13,
+        fontWeight: 500,
+        stroke: '#676767',
+        strokeWidth: 3.5,
+        fill: '#ff5566',
+        fillOpacity: 1
+      },
+      hover: {},  
+      selected: {},
+      selectedHover: {}
+    },
+      markers: [
+        {
+          name: "Indonesia , 23 client",
+          coords: [-6.229728, 106.6894311],
+          clients_num:40,
+          style: {
+            fill: "#435ebe",
+          },
+        },
+        {
+          name: "United States",
+          coords: [38.8936708, -77.1546604],
+          style: {
+            fill: "#ff9900",
+          }
+        },
+        {
+          name: "Russia",
+          coords: [55.5807481, 36.825129],
+          style: {
+            fill: "#f3616d",
+          },
+        },
+        {
+          name: "China",
+          coords: [39.9385466, 116.1172735],
+        },
+        {
+          name: "United Kingdom",
+          coords: [51.5285582, -0.2416812],
+        },
+        {
+          name: "India",
+          coords: [26.8851417, 75.6504721],
+        },
+        {
+          name: "Australia",
+          coords: [-35.2813046, 149.124822],
+        },
+        {
+          name: "Brazil",
+          coords: [-22.9140693, -43.5860681],
+        },
+        {
+          name: "Egypt",
+          coords: [26.834955, 26.3823725],
+        },
+      ],
+      labels: {
+        markers: {
+          // Starting from jsvectormap v1.2 the render function receives
+          // the marker object as a first parameter and index as the second.
+          render(marker, index) {
+            return marker.clients_num || marker.labelName || '0'
+          }
+        }
+      },
+      onRegionTooltipShow(event, tooltip) {
+        tooltip.css({ backgroundColor: "#435ebe" });
+        // tooltip.text(
+        //       `<h6>${tooltip.text()} , 40 case</h6>` ,
+        //       true // Enables HTML
+        //     )
+      },
+    });
   </script>
 
   <!-- Fonts and icons -->
