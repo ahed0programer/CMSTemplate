@@ -1,0 +1,90 @@
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.calendar-day {
+    margin: 4px;
+    width: calc((100% / 7) - 8px);
+    border: 1px solid #ddd;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.task-day {
+    display: none;
+    position: relative ;
+    top :30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.calendar-day:hover + task-day{
+    display: block;
+}
+
+
+.calendar-day:hover{
+    border: 2px solid #1a2035!important;
+    color: #1a2035;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.calendar-day-empty{
+    margin: 4px;
+    width: calc((100% / 7) - 8px);
+}
+
+.calendar-header {
+    margin: 4px;
+    width: calc((100% / 7) - 8px);
+    text-align: center;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.calendar-day.today {
+    background-color: #1a2035!important;
+    color: white;
+    font-weight: bold;
+}
+.calendar-day.highlight{
+    background-color: #1e7248!important;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-day.today:hover {
+    background-color: white!important;
+    color: #1a2035;
+}
+
+.tasks-area{
+    height: 280px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.tasks-area ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.tasks-area li{
+    padding: 5px 10px;
+}
+
+.tasks-stripped li:nth-child(odd) {
+    background-color: #ddd;
+}
+.tasks-stripped li:nth-child(even) {
+    background-color: white;
+}
+
+.plus-circle{
+    border: 1px;
+    border-radius: 50%;
+    font-size: 14px;
+}
