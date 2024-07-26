@@ -714,8 +714,8 @@
                               </button>
 
                               <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
-                                data-original-title="Remove" onclick="swalfunction()">
-                                <i class="fa fa-times" ></i>
+                                data-original-title="Remove" >
+                                <i class="fas fa-trash" onclick="swalfunction()"></i>
                               </button>
                             </div>
                           </td>
@@ -1010,59 +1010,7 @@
     
   </script>
 
-  <script>
-    //== Class definition
-    var SweetAlert2Demo = (function () {
-      //== Demos
-      var initDemos = function () {
-        $("#alert_demo_7").click(function (e) {
-          console.log("ahed ddd");
-          swal({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            type: "warning",
-            buttons: {
-              confirm: {
-                text: "Yes, delete it!",
-                className: "btn btn-success",
-              },
-              cancel: {
-                visible: true,
-                className: "btn btn-danger",
-              },
-            },
-          }).then((Delete) => {
-            if (Delete) {
-              swal({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                type: "success",
-                buttons: {
-                  confirm: {
-                    className: "btn btn-success",
-                  },
-                },
-              });
-            } else {
-              swal.close();
-            }
-          });
-        });
-      };
 
-      return {
-        //== Init
-        init: function () {
-          initDemos();
-        },
-      };
-    })();
-
-    //== Class Initialization
-    jQuery(document).ready(function () {
-      SweetAlert2Demo.init();
-    });
-  </script>
 
 </body>
 
