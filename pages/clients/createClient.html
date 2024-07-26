@@ -888,7 +888,7 @@
                           <option disabled selected value="">How Did You Learn About Us</option>
                           <option>Internet</option>
                           <option>Frinds</option>
-                          <option id="alert_add_another_way">
+                          <option id="alert_add_another_way" value="add_another_way">
                             Add Another Way
                           </option>
                         </select>
@@ -1257,9 +1257,13 @@
       //== Demos
       var initDemos = function () {
         //== Sweetalert Demo 1
+        $('#how_did_you_learn_about_us').change(function (e) {
+            var selectedValue = $(this).val();
+            if (selectedValue != 'add_another_way') {
+                console.log("Add Another Way selected");
+                return
+            }
 
-
-        $("#alert_add_another_way").click(function (e) {
           swal({
             title: "Input Option",
             html: '<br><input class="form-control" placeholder="Input Option" id="input-field">',
