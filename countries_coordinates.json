@@ -1,0 +1,230 @@
+markers = [
+    {
+        "name": "Russia",
+        "coords": (55.5807481, 36.825129),
+    },
+    {
+        "name": "China",
+        "coords": (39.9385466, 116.1172735),
+    },
+    {
+        "name": "United States",
+        "coords": (37.09024, -95.712891),
+    },
+    {
+        "name": "Canada",
+        "coords": (56.130366, -106.346771),
+    },
+    {
+        "name": "Australia",
+        "coords": (-25.274398, 133.775136),
+    },
+    {
+        "name": "India",
+        "coords": (20.593684, 78.96288),
+    },
+    {
+        "name": "Argentina",
+        "coords": (-38.416097, -63.616672),
+    },
+    {
+        "name": "Kazakhstan",
+        "coords": (48.019573, 66.923684),
+    },
+    {
+        "name": "Algeria",
+        "coords": (28.033886, 1.659626),
+    },
+    {
+        "name": "Germany",
+        "coords": (51.165691, 10.451526),
+    },
+    {
+        "name": "Brazil",
+        "coords": (-14.235004, -51.92528),
+    },
+    {
+        "name": "France",
+        "coords": (46.227638, 2.213749),
+    },
+    {
+        "name": "UK",
+        "coords": (55.378051, -3.435973),
+    },
+    {
+        "name": "Italy",
+        "coords": (41.871941, 12.56738),
+    },
+    {
+        "name": "South Africa",
+        "coords": (-30.559482, 22.937506),
+    },
+    {
+        "name": "South Korea",
+        "coords": (35.907757, 127.766922),
+    },
+    {
+        "name": "Mexico",
+        "coords": (23.634501, -102.552784),
+    },
+    {
+        "name": "Indonesia",
+        "coords": (-0.789275, 113.921327),
+    },
+    {
+        "name": "Turkey",
+        "coords": (38.963745, 35.243322),
+    },
+    {
+        "name": "Saudi Arabia",
+        "coords": (23.885942, 45.079162),
+    },
+    {
+        "name": "Poland",
+        "coords": (51.919438, 19.145136),
+    },
+    {
+        "name": "Iran",
+        "coords": (32.427908, 53.688046),
+    },
+    {
+        "name": "Japan",
+        "coords": (36.204824, 138.252924),
+    },
+    {
+        "name": "Egypt",
+        "coords": (26.820553, 30.802498),
+    },
+    {
+        "name": "Nigeria",
+        "coords": (9.081999, 8.675277),
+    },
+    {
+        "name": "Spain",
+        "coords": (40.463667, -3.74922),
+    },
+    {
+        "name": "Pakistan",
+        "coords": (30.375321, 69.345116),
+    },
+    {
+        "name": "Ukraine",
+        "coords": (48.379433, 31.16558),
+    },
+    {
+        "name": "Vietnam",
+        "coords": (14.058324, 108.277199),
+    },
+    {
+        "name": "Thailand",
+        "coords": (15.870032, 100.992541),
+    },
+    {
+        "name": "Colombia",
+        "coords": (4.570868, -74.297333),
+    },
+    {
+        "name": "Bangladesh",
+        "coords": (23.685, 90.3563),
+    },
+    {
+        "name": "Philippines",
+        "coords": (12.879721, 121.774017),
+    },
+    {
+        "name": "Malaysia",
+        "coords": (4.210484, 101.975766),
+    },
+    {
+        "name": "Chile",
+        "coords": (-35.675147, -71.542969),
+    },
+    {
+        "name": "Netherlands",
+        "coords": (52.132633, 5.291266),
+    },
+    {
+        "name": "Romania",
+        "coords": (45.943161, 24.96676),
+    },
+    {
+        "name": "Belgium",
+        "coords": (50.503887, 4.469936),
+    },
+    {
+        "name": "Czech Republic",
+        "coords": (49.817492, 15.472962),
+    },
+    {
+        "name": "Greece",
+        "coords": (39.074208, 21.824312),
+    },
+    {
+        "name": "Portugal",
+        "coords": (39.399872, -8.224454),
+    },
+    {
+        "name": "Sweden",
+        "coords": (60.128161, 18.643501),
+    },
+    {
+        "name": "Hungary",
+        "coords": (47.162494, 19.503304),
+    },
+    {
+        "name": "Switzerland",
+        "coords": (46.818188, 8.227512),
+    },
+    {
+        "name": "Austria",
+        "coords": (47.516231, 14.550072),
+    },
+    {
+        "name": "Sri Lanka",
+        "coords": (7.873054, 80.771797),
+    },
+    {
+        "name": "Myanmar",
+        "coords": (21.916221, 95.955974),
+    },
+    {
+        "name": "Israel",
+        "coords": (31.046051, 34.851612),
+    },
+    {
+        "name": "Norway",
+        "coords": (60.472024, 8.468946),
+    },
+    {
+        "name": "Denmark",
+        "coords": (56.26392, 9.501785),
+    },
+    {
+        "name": "Finland",
+        "coords": (61.92411, 25.748151),
+    },
+    {
+        "name": "Ireland",
+        "coords": (53.41291, -8.24389),
+    },
+    {
+        "name": "New Zealand",
+        "coords": (-40.900557, 174.885971),
+    },
+    {
+        "name": "Singapore",
+        "coords": (1.352083, 103.819836),
+    },
+    {
+        "name": "Qatar",
+        "coords": (25.354826, 51.183884),
+    },
+    {
+        "name": "United Arab Emirates",
+        "coords": (23.424076, 53.847818),
+    },
+    {
+        "name": "Kuwait",
+        "coords": (29.31166, 47.481766),
+    }
+]
