@@ -946,9 +946,52 @@
                     
                 </div>
                 <div class="d-flex justify-content-end ">
-                  <a href="#" class="btn btn-label-info btn-round me-2"><i class="far fa-calendar-check"></i> Add Task</a>
+                  <button type="button" class="btn btn-label-info btn-round me-2" id="alert_add_task">
+                    <i class="far fa-calendar-check"></i> Add Task
+                  </button>
                 </div>
-            </div>
+              </div>
+
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Launch static backdrop modal
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered ">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Add Task</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="task-title" class="col-form-label">title: </label>
+                            <input type="text" class="form-control" id="task-title">
+                          </div>
+                          <div class="mb-3">
+                            <label for="task-description" class="col-form-label">description: </label>
+                            <textarea class="form-control" id="task-description"></textarea>
+                          </div>
+                          <div class="mb-3">
+                            <label for="task-date" class="col-form-label">date: </label>
+                            <input type="date" class="form-control" id="task-date"></textarea>
+                          </div>
+                          <div class="mb-3">
+                            <label for="task-time" class="col-form-label">time: </label>
+                            <input type="time" class="form-control" id="task-time"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Add</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
             </div>
            </div>
           <!-- * end calendar -->
@@ -1087,89 +1130,119 @@
 
   <!-- * Calendar Script -->
   <script>
-      $(document).ready(function() {
-          let today = new Date();
-          let currentMonth = today.getMonth();
-          let currentYear = today.getFullYear();
-          const months = [null,"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    // displaying calendar
+    $(document).ready(function() {
+        let today = new Date();
+        let currentMonth = today.getMonth();
+        let currentYear = today.getFullYear();
+        const months = [null,"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-          function generateCalendar(month, year , index) {
-              const daysInMonth = new Date(year, month, 0).getDate();
-              const firstDay = new Date(year, month, 1).getDay();
-              const calendar = $('#calendar'+index);
-              calendar.empty();
+        function generateCalendar(month, year , index) {
+            const daysInMonth = new Date(year, month, 0).getDate();
+            const firstDay = new Date(year, month, 1).getDay();
+            const calendar = $('#calendar'+index);
+            calendar.empty();
 
-              if (month === 12) {
-                  nextMonth = 1
-              } else{
-                  nextMonth = month +1
-              }
-
-
-              const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-              for (let i = 0; i < daysOfWeek.length; i++) {
-                  calendar.append('<div class="calendar-header">' + daysOfWeek[i] + '</div>');
-              }
-
-              for (let i = 0; i < firstDay; i++) {
-                  calendar.append('<div class="calendar-day-empty"></div>');
-              }
-
-              for (let i = 1; i <= daysInMonth; i++) {
-                  const dayElement = $('<div class="calendar-day">' + i + ' <div class="task-day">4</div></div>');
-                  if (year === today.getFullYear() && month === today.getMonth() && i === today.getDate()) {
-                      dayElement.addClass('today');
-                  }
-                  // the days that have task wil be highlight
-                  if( i === 7 || i === 16 ){
-                    dayElement.addClass('highlight');
-                  }
-                  calendar.append(dayElement);
-              }
-
-              $('#currentMonth').text(months[month] + " " + year);
-              $('#nextMonth').text(months[nextMonth] + " " + year);
-          }
-
-          function showNextMonth() {
-              if (currentMonth === 12) {
-                  currentMonth = 1;
-                  currentYear++;
-              } else {
-                  currentMonth++;
-              }
-              if (currentMonth===12) {
-                nextMonth=1
-              }else{
-                nextMonth=currentMonth+1
-              }
-              generateCalendar(currentMonth, currentYear , 1);
-              generateCalendar(nextMonth, currentYear , 2);
-          }
-
-          function showPrevMonth() {
-            if (currentMonth === 1) {
-                  currentMonth = 12;
-                  currentYear--;
-              } else {
-                  currentMonth--;
-              }
-            if (currentMonth===1) {
-                nextMonth=12
-            }else{
-              nextMonth=currentMonth-1
+            if (month === 12) {
+                nextMonth = 1
+            } else{
+                nextMonth = month +1
             }
-            
+
+
+            const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            for (let i = 0; i < daysOfWeek.length; i++) {
+                calendar.append('<div class="calendar-header">' + daysOfWeek[i] + '</div>');
+            }
+
+            for (let i = 0; i < firstDay; i++) {
+                calendar.append('<div class="calendar-day-empty"></div>');
+            }
+
+            for (let i = 1; i <= daysInMonth; i++) {
+                const dayElement = $('<div class="calendar-day">' + i + ' <div class="task-day">4</div></div>');
+                if (year === today.getFullYear() && month === today.getMonth() && i === today.getDate()) {
+                    dayElement.addClass('today');
+                }
+                // the days that have task wil be highlight
+                if( i === 7 || i === 16 ){
+                  dayElement.addClass('highlight');
+                }
+                calendar.append(dayElement);
+            }
+
+            $('#currentMonth').text(months[month] + " " + year);
+            $('#nextMonth').text(months[nextMonth] + " " + year);
+        }
+
+        function showNextMonth() {
+            if (currentMonth === 12) {
+                currentMonth = 1;
+                currentYear++;
+            } else {
+                currentMonth++;
+            }
+            if (currentMonth===12) {
+              nextMonth=1
+            }else{
+              nextMonth=currentMonth+1
+            }
             generateCalendar(currentMonth, currentYear , 1);
             generateCalendar(nextMonth, currentYear , 2);
+        }
+
+        function showPrevMonth() {
+          if (currentMonth === 1) {
+                currentMonth = 12;
+                currentYear--;
+            } else {
+                currentMonth--;
+            }
+          if (currentMonth===1) {
+              nextMonth=12
+          }else{
+            nextMonth=currentMonth-1
           }
-
-          $('#nextMonthbtn').click(showNextMonth);
-          $('#prevMonthbtn').click(showPrevMonth);
-
+          
           generateCalendar(currentMonth, currentYear , 1);
-          generateCalendar(currentMonth+1, currentYear , 2);
-      });
+          generateCalendar(nextMonth, currentYear , 2);
+        }
+
+        $('#nextMonthbtn').click(showNextMonth);
+        $('#prevMonthbtn').click(showPrevMonth);
+
+        generateCalendar(currentMonth, currentYear , 1);
+        generateCalendar(currentMonth+1, currentYear , 2);
+    });
+
+    // add task 
+    $("#alert_add_task").click(function (e) {
+        swal({
+          title: "Input Something",
+          html: '<br><input class="form-control" placeholder="Input Something" id="input-field">',
+          content: {
+            element: "input",
+            attributes: {
+              placeholder: "Input Something",
+              type: "text",
+              id: "input-field",
+              className: "form-control",
+            },
+          },
+          buttons: {
+            cancel: {
+              visible: true,
+              className: "btn btn-danger",
+            },
+            confirm: {
+              className: "btn btn-success",
+            },
+          },
+        }).then( function () {
+          swal("", "You entered : " + $("#input-field").val(), "success")
+        });
+      })
+      
   </script>
 
   <!-- * Charts Script -->
