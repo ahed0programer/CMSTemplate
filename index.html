@@ -898,8 +898,8 @@
             <div class="row mt-4 mb-4">
               <!-- * current motnth calendar section -->
               <div class="col-md-4 text-center">
-                  <div class="d-flex justify-content-between">
-                    <i id="prevMonthbtn" class="fas fa-angle-left prev"></i>  
+                  <div class="d-flex justify-content-around">
+                    <i id="prevMonthbtn" class="fas fa-angle-left prev month-nav"></i>  
                       <h6 id="currentMonth"></h6>
                   </div>
                   <div id="calendar1" class="calendar mt-2">
@@ -908,9 +908,9 @@
               </div>
               <!-- * next motnth calendar section -->
               <div class="col-md-4 text-center">
-                  <div class="d-flex justify-content-between">
+                  <div class="d-flex justify-content-around">
                       <h6 id="nextMonth"></h6>
-                      <i id="nextMonthbtn" class="fas fa-angle-right next"></i> 
+                      <i id="nextMonthbtn" class="fas fa-angle-right next month-nav"></i> 
                   </div>
                   <div id="calendar2" class="calendar mt-2">
                       <!-- Calendar will be generated here -->
@@ -949,23 +949,24 @@
                   <button type="button" class="btn btn-label-info btn-round me-2" id="alert_add_task">
                     <i class="far fa-calendar-check"></i> Add Task
                   </button>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-label-info btn-round me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="far fa-calendar-check"></i> Add Task
+                  </button>
                 </div>
               </div>
 
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Launch static backdrop modal
-              </button>
+              
 
               <!-- Modal -->
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title" id="staticBackdropLabel">Add Task</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                      <div class="modal-body">
+                      <div class="modal-body ">
                         <form>
                           <div class="mb-3">
                             <label for="task-title" class="col-form-label">title: </label>
@@ -975,14 +976,19 @@
                             <label for="task-description" class="col-form-label">description: </label>
                             <textarea class="form-control" id="task-description"></textarea>
                           </div>
-                          <div class="mb-3">
-                            <label for="task-date" class="col-form-label">date: </label>
-                            <input type="date" class="form-control" id="task-date"></textarea>
+                          <div> 
+                            <div class="mb-3 d-flex justify-content-between">
+                              <div class="col-5">
+                                <label for="task-time" class="col-form-label">From: </label>
+                                <input type="time" class="form-control me-3" id="task-time"></input>
+                              </div>
+                              <div class="col-5">
+                                <label for="task-time" class="col-form-label">To: </label>
+                                <input type="time" class="form-control" id="task-time"></input>
+                              </div>
+                            </div>
                           </div>
-                          <div class="mb-3">
-                            <label for="task-time" class="col-form-label">time: </label>
-                            <input type="time" class="form-control" id="task-time"></textarea>
-                          </div>
+                         
                         </form>
                       </div>
                       <div class="modal-footer">

@@ -41,7 +41,6 @@
     margin: 4px;
     width: calc((100% / 7) - 8px);
     text-align: center;
-    font-weight: bold;
     padding: 2px;
 }
 
@@ -87,4 +86,13 @@
     border: 1px;
     border-radius: 50%;
     font-size: 14px;
+}
+
+.month-nav{
+    width: 50px;
+
+}
+.month-nav:hover{
+    cursor: pointer;
+
 }
