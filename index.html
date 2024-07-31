@@ -923,7 +923,7 @@
                     <h5 >Tasks</h5>
                 </div>
                 <div class="tasks-area">
-                  <ul class="tasks-stripped">
+                  <ul id="tasks" class="tasks-stripped">
                     <li>
                       <h6>playing football match</h6>
                       <div class="d-flex justify-content-end">
@@ -953,6 +953,7 @@
                   <button type="button" class="btn btn-label-info btn-round me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i class="far fa-calendar-check"></i> Add Task
                   </button>
+                  <button onclick='show_tasks_in_date("2024-08-01")'>show</button>
                 </div>
               </div>
 
@@ -1133,123 +1134,8 @@
   <script src="assets/js/setting-demo.js"></script>
   <script src="assets/js/setting-demo2.js"></script>
 
+  <script src="assets/js/calendar2.js"></script>
 
-  <!-- * Calendar Script -->
-  <script>
-    // displaying calendar
-    $(document).ready(function() {
-        let today = new Date();
-        let currentMonth = today.getMonth();
-        let currentYear = today.getFullYear();
-        const months = [null,"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-        function generateCalendar(month, year , index) {
-            const daysInMonth = new Date(year, month, 0).getDate();
-            const firstDay = new Date(year, month, 1).getDay();
-            const calendar = $('#calendar'+index);
-            calendar.empty();
-
-            if (month === 12) {
-                nextMonth = 1
-            } else{
-                nextMonth = month +1
-            }
-
-
-            const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-            for (let i = 0; i < daysOfWeek.length; i++) {
-                calendar.append('<div class="calendar-header">' + daysOfWeek[i] + '</div>');
-            }
-
-            for (let i = 0; i < firstDay; i++) {
-                calendar.append('<div class="calendar-day-empty"></div>');
-            }
-
-            for (let i = 1; i <= daysInMonth; i++) {
-                const dayElement = $('<div class="calendar-day">' + i + ' <div class="task-day">4</div></div>');
-                if (year === today.getFullYear() && month === today.getMonth() && i === today.getDate()) {
-                    dayElement.addClass('today');
-                }
-                // the days that have task wil be highlight
-                if( i === 7 || i === 16 ){
-                  dayElement.addClass('highlight');
-                }
-                calendar.append(dayElement);
-            }
-
-            $('#currentMonth').text(months[month] + " " + year);
-            $('#nextMonth').text(months[nextMonth] + " " + year);
-        }
-
-        function showNextMonth() {
-            if (currentMonth === 12) {
-                currentMonth = 1;
-                currentYear++;
-            } else {
-                currentMonth++;
-            }
-            if (currentMonth===12) {
-              nextMonth=1
-            }else{
-              nextMonth=currentMonth+1
-            }
-            generateCalendar(currentMonth, currentYear , 1);
-            generateCalendar(nextMonth, currentYear , 2);
-        }
-
-        function showPrevMonth() {
-          if (currentMonth === 1) {
-                currentMonth = 12;
-                currentYear--;
-            } else {
-                currentMonth--;
-            }
-          if (currentMonth===1) {
-              nextMonth=12
-          }else{
-            nextMonth=currentMonth-1
-          }
-          
-          generateCalendar(currentMonth, currentYear , 1);
-          generateCalendar(nextMonth, currentYear , 2);
-        }
-
-        $('#nextMonthbtn').click(showNextMonth);
-        $('#prevMonthbtn').click(showPrevMonth);
-
-        generateCalendar(currentMonth, currentYear , 1);
-        generateCalendar(currentMonth+1, currentYear , 2);
-    });
-
-    // add task 
-    $("#alert_add_task").click(function (e) {
-        swal({
-          title: "Input Something",
-          html: '<br><input class="form-control" placeholder="Input Something" id="input-field">',
-          content: {
-            element: "input",
-            attributes: {
-              placeholder: "Input Something",
-              type: "text",
-              id: "input-field",
-              className: "form-control",
-            },
-          },
-          buttons: {
-            cancel: {
-              visible: true,
-              className: "btn btn-danger",
-            },
-            confirm: {
-              className: "btn btn-success",
-            },
-          },
-        }).then( function () {
-          swal("", "You entered : " + $("#input-field").val(), "success")
-        });
-      })
-      
-  </script>
 
   <!-- * Charts Script -->
   <script>
