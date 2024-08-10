@@ -657,6 +657,7 @@
 
           <!-- Left container card -->
           <div class="row">
+            <!-- left side cards -->
             <div class="col-lg-8 col-md-12">
 
               <!-- Personal Info card -->
@@ -949,33 +950,60 @@
                 </div>
               </div>
 
-
-              <!-- three card -->
+              <!-- partners card -->
               <div class="row">
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-header">
-                      <div class="card-title">Form Elements</div>
+                      <div class="card-title">Partners :</div>
                     </div>
-
                     <div class="card-body">
-                      <div class="row">
-
-
-
-                        <!-- First Name -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="f_name">First Name *</label>
-                            <input type="text" class="form-control" id="f_name" placeholder="Enter First Name"
-                              required />
-
-                          </div>
+                      <div class="card-body">
+                        <div class="text-center">
+                          <h4>we need to add parnets list here</h4>
+                          <button class="btn btn-round btn-label-info"> Add partner</button>
                         </div>
-
-
                       </div>
                     </div>
+                </div>
+              </div>
+              </div>
+
+              <!-- appointments schedule card -->
+              <div class="row">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <div class="card-title">appointments shcedule</div>
+                      </div>
+                      <div class="card-body">
+                        <div class="card-body">
+                          <ul class="nav nav-pills nav-secondary" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="pills-week-tab" data-bs-toggle="pill" href="#pills-week" role="tab" aria-controls="pills-week" aria-selected="true">week</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab" aria-controls="pills-month" aria-selected="false">month</a>
+                            </li>
+                          </ul>
+                          <div class="tab-content mt-2 mb-3" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
+                              <div class="d-flex justify-content-start flex-wrap">
+                                <span class="me-3 ">saturday</span>
+                                <span class="me-3 ">sunday</span>
+                                <span class="me-3 ">monday</span>
+                                <span class="me-3 ">tuesday</span>
+                                <span class="me-3 ">wedensday</span>
+                                <span class="me-3 ">thirsday</span>
+                                <span class="me-3 ">friday  </span>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
+                              !! calendar is watiing to be set !!
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -983,9 +1011,7 @@
 
             </div>
 
-
-
-            <!-- left container card -->
+            <!-- right side card -->
             <div class="col-lg-4 col-md-12">
 
               <!-- Other Info card -->
@@ -1050,14 +1076,13 @@
 
 
             <!-- submit card -->
-            <div class="col-md-12 col-lg-3">
-              <div class="card">
-                <div class="card-action">
-                  <button class="btn btn-success" id="button_add">Add</button>
-                  <button class="btn btn-success" id="button_add_with_case">Add With Case</button>
-                  <button class="btn btn-danger">Cancel</button>
+            <div class="col-md-8 col-lg-8">
+                <div class="card-action d-flex justify-content-end">
+                  <button class="btn me-2 btn-round btn-danger">Cancel</button>
+                  <button class="btn me-2 btn-round btn-label-info">save draft</button>
+                  <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
+                  <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
                 </div>
-              </div>
             </div>
           </div>
 
