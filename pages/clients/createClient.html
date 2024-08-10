@@ -653,47 +653,37 @@
               </li>
             </ul>
           </div>
+
+
+          <!-- Left container card -->
           <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Form Elements</div>
-                </div>
+            <div class="col-lg-8 col-md-12">
 
-                <div class="card-body">
-                  <div class="row">
-
-                    <!-- Anonymous check -->
-                    <div class="col-md-6 col-lg-4">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="anonymous_client"
-                          onclick="renameFirstLastName()" />
-                        <label class="form-check-label" for="anonymous_client">
-                          Anonymous Client
-                        </label>
-                      </div>
+              <!-- Personal Info card -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-title">Personal Info</div>
                     </div>
 
-                    <!-- this is the select inout with search -->
-                    <!-- ! Fadiouuuus I am here !!! -->
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <select class="choices form-select">
-                            <option value="square">Square</option>
-                            <option value="rectangle">Rectangle</option>
-                            <option value="rombo">Rombo</option>
-                            <option value="romboid">Romboid</option>
-                            <option value="trapeze">Trapeze</option>
-                            <option value="traible">Triangle</option>
-                            <option value="polygon">Polygon</option>
-                        </select>
-                    </div>
-                    </div>
-                    <!-- ! END -->
+                    <div class="card-body">
+                      <div class="row">
 
-                    <!-- Primery Secandry Client -->
-                    <div class="col-md-6 col-lg-4">
-                      <div class="form-group">
+                        <!-- Anonymous check -->
+                        <div class="col-md-12 col-lg-12">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="anonymous_client"
+                              onclick="renameFirstLastNameToAnonymous()" />
+                            <label class="form-check-label" for="anonymous_client">
+                              Anonymous Client
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- Primery Secandry Client -->
+                        <!-- <div class="col-md-6 col-lg-4">
+                        <div class="form-group">
                         <label>Client Status</label>
                         <div class="d-flex">
                           <div class="form-check">
@@ -712,213 +702,329 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
 
-                    <!-- First Name -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="f_name">First Name *</label>
-                        <input type="text" class="form-control" id="f_name" placeholder="Enter First Name" required />
-                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        <!-- First Name -->
+                        <div class="col-md-6 col-lg-6">
+                          <div class="form-group">
+                            <label for="f_name">First Name *</label>
+                            <input type="text" class="form-control" id="f_name" placeholder="Enter First Name"
+                              required />
+                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
                           else.</small> -->
-                      </div>
-                    </div>
-
-                    <!-- Last Name -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="l_name">Last Name *</label>
-                        <input type="text" class="form-control" id="l_name" placeholder="Enter Last Name" required />
-                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                      </div>
-                    </div>
-
-                    <!-- gender -->
-                    <div class="col-md-6 col-lg-4">
-                      <div class="form-group">
-                        <label>Gender</label><br />
-                        <div class="d-flex">
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gender" id="Male" checked />
-                            <label class="form-check-label" for="Male">
-                              Male
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gender" id="Female" />
-                            <label class="form-check-label" for="Female">
-                              Female
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gender" id="Other" />
-                            <label class="form-check-label" for="Other">
-                              Other
-                            </label>
                           </div>
                         </div>
-                      </div>
-                    </div>
 
-                    <!-- Age -->
-                    <div class="col-md-6 col-lg-4">
-                      <div class="form-group">
-                        <label for="defaultSelect">Age</label>
-                        <select class="form-select form-control" id="age">
-                          <option disabled selected value="">Select Age</option>
-                          <option>18-30</option>
-                          <option>31-45</option>
-                          <option>46-60</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <!-- Nationality -->
-                    <div class="col-md-6 col-lg-4">
-                      <div class="form-group">
-                        <label for="defaultSelect">Nationality</label>
-
-                        <select class="form-select form-control" id="nationality">
-                          <option disabled selected value="">Select Nationality</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter Email" />
-                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                      </div>
-                    </div>
-
-                    <!-- phone_number -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="phone_number">Phone Number</label>
-                        <input type="text" class="form-control" id="phone_number" placeholder="Enter Phone Number"
-                          oninput="validatePhoneNumber()" />
-                        <small id="error_message_phone_number" class="form-text text-muted">
-                          Please Enter Only Number
-                        </small>
-                      </div>
-                    </div>
-
-                    <!-- Counrty -->
-                    <div class="col-md-6 col-lg-3">
-                      <div class="form-group">
-                        <label for="defaultSelect">Counrty</label>
-                        <select class="form-select form-control" id="counrty">
-                          <option disabled selected value="">Select Counrty</option>
-                          <option>Germany</option>
-                          <option>Denmark</option>
-                          <option>France</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <!-- City -->
-                    <div class="col-md-6 col-lg-3">
-                      <div class="form-group">
-                        <label for="defaultSelect">City</label>
-                        <select class="form-select form-control" id="city">
-                          <option disabled selected value="">Select City</option>
-                          <option>18-30</option>
-                          <option>31-45</option>
-                          <option>46-60</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <!-- Street -->
-                    <div class="col-md-6 col-lg-3">
-                      <div class="form-group">
-                        <label for="street">Street</label>
-                        <input type="text" class="form-control" id="street" placeholder="Enter Street" />
-                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                      </div>
-                    </div>
-
-                    <!-- Street Number -->
-                    <div class="col-md-6 col-lg-3">
-                      <div class="form-group">
-                        <label for="street_number">Street Number</label>
-                        <input type="text" class="form-control" id="street_number" placeholder="Enter Street Number" />
-                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                      </div>
-                    </div>
-
-
-                    <!-- Place Residence -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="Place_Residence">Place Residence</label>
-                        <select class="form-select form-control" id="Place_Residence">
-                          <option disabled selected value="">Select Place Residence</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-lg-6">
-                      <div class="row">
-                        <!-- Type Residence -->
-                        <div class="col-md-12" id="div_type_residence">
+                        <!-- Last Name -->
+                        <div class="col-md-6 col-lg-6">
                           <div class="form-group">
-                            <label for="type_Residence">Type Residence</label>
-                            <select class="form-select form-control" id="type_Residence">
-                              <option disabled selected value="">Select Type Residence</option>
-                              <option>Sitizen</option>
-                              <option>Permanent</option>
-                              <option>Temporary</option>
+                            <label for="l_name">Last Name *</label>
+                            <input type="text" class="form-control" id="l_name" placeholder="Enter Last Name"
+                              required />
+                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small> -->
+                          </div>
+                        </div>
+
+                        <!-- gender -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="form-group">
+                            <label>Gender</label><br />
+                            <div class="d-flex">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="Male" checked />
+                                <label class="form-check-label" for="Male">
+                                  Male
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="Female" />
+                                <label class="form-check-label" for="Female">
+                                  Female
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="Other" />
+                                <label class="form-check-label" for="Other">
+                                  Other
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Age -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="form-group">
+                            <label for="defaultSelect">Marital Status</label>
+                            <select class="form-select form-control" id="marital_status">
+                              <option disabled selected value="">Marital Status</option>
+                              <option>18-30</option>
+                              <option>31-45</option>
+                              <option>46-60</option>
                             </select>
                           </div>
                         </div>
-                        <!-- Date Residence -->
-                        <div class="col-md-5" id="div_date_residence">
+
+                        <!-- Age -->
+                        <div class="col-md-6 col-lg-4">
                           <div class="form-group">
-                            <label for="date_residence">Date Residence</label>
-                            <input type="date" class="form-control" id="date_residence"
-                              placeholder="Enter Date Residence" name="date_residence" />
+                            <label for="defaultSelect">Age</label>
+                            <select class="form-select form-control" id="age">
+                              <option disabled selected value="">Select Age</option>
+                              <option>18-30</option>
+                              <option>31-45</option>
+                              <option>46-60</option>
+                            </select>
                           </div>
                         </div>
+
+                        <!-- Nationality -->
+                        <div class="col-md-6 col-lg-6">
+                          <div class="form-group">
+                            <label for="defaultSelect">Nationality</label>
+
+                            <select class="choices form-select form-control" id="nationality">
+                              <option disabled selected value="">Select Nationality</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Seond Nationality -->
+                        <div class="col-md-6 col-lg-6">
+                          <div class="form-group">
+                            <label for="defaultSelect">Seond Nationality</label>
+
+                            <select class="choices form-select form-control" id="seond_nationality">
+                              <option disabled selected value="">Select Seond Nationality</option>
+                              <option>none</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
 
 
-                    <!-- How Did You Learn About Us! -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="how_did_you_learn_about_us">How Did You Learn About Us!</label>
-                        <select class="form-select form-control" id="how_did_you_learn_about_us">
-                          <option disabled selected value="">How Did You Learn About Us</option>
-                          <option>Internet</option>
-                          <option>Frinds</option>
-                          <option id="alert_add_another_way" value="add_another_way">
-                            Add Another Way
-                          </option>
-                        </select>
-                      </div>
+              <!-- Contact Info card -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-title">Contact Info</div>
                     </div>
 
+                    <div class="card-body">
+                      <div class="row">
 
-                    <!-- Case -->
-                    <div class="col-md-6 col-lg-6">
+
+
+                        <!-- Email -->
+                        <div class="col-md-6 col-lg-6">
+                          <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email" />
+                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small> -->
+                          </div>
+                        </div>
+
+                        <!-- phone_number -->
+                        <div class="col-md-6 col-lg-6">
+                          <div class="form-group">
+                            <label for="phone_number">Phone Number</label>
+                            <input type="text" class="form-control" id="phone_number" placeholder="Enter Phone Number"
+                              oninput="validatePhoneNumber()" />
+                            <small id="error_message_phone_number" class="form-text text-muted">
+                              Please Enter Only Number
+                            </small>
+                          </div>
+                        </div>
+
+                        <!-- Counrty -->
+                        <div class="col-md-6 col-lg-3">
+                          <div class="form-group">
+                            <label for="defaultSelect">Counrty</label>
+                            <select class="choices form-select form-control" id="counrty">
+                              <option disabled selected value="">Select Counrty</option>
+                              <option>Germany</option>
+                              <option>Denmark</option>
+                              <option>France</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- City -->
+                        <div class="col-md-6 col-lg-3">
+                          <div class="form-group">
+                            <label for="defaultSelect">City</label>
+                            <select class="choices form-select form-control" id="city">
+                              <option disabled selected value="">Select City</option>
+                              <option>18-30</option>
+                              <option>31-45</option>
+                              <option>46-60</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Street -->
+                        <div class="col-md-6 col-lg-3">
+                          <div class="form-group">
+                            <label for="street">Street</label>
+                            <input type="text" class="form-control" id="street" placeholder="Enter Street" />
+                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small> -->
+                          </div>
+                        </div>
+
+                        <!-- Street Number -->
+                        <div class="col-md-6 col-lg-3">
+                          <div class="form-group">
+                            <label for="street_number">Street Number</label>
+                            <input type="text" class="form-control" id="street_number"
+                              placeholder="Enter Street Number" />
+                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small> -->
+                          </div>
+                        </div>
+
+
+                        <!-- Place Residence -->
+                        <div class="col-md-6 col-lg-6">
+                          <div class="form-group">
+                            <label for="Place_Residence">Place Residence</label>
+                            <select class="choices form-select form-control" id="Place_Residence">
+                              <option disabled selected value="">Select Place Residence</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-6">
+                          <div class="row">
+                            <!-- Type Residence -->
+                            <div class="col-md-12" id="div_type_residence">
+                              <div class="form-group">
+                                <label for="type_Residence">Type Residence</label>
+                                <select class="form-select form-control" id="type_Residence">
+                                  <option disabled selected value="">Select Type Residence</option>
+                                  <option>Sitizen</option>
+                                  <option>Permanent</option>
+                                  <option>Temporary</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- Date Residence -->
+                            <div class="col-md-5" id="div_date_residence">
+                              <div class="form-group">
+                                <label for="date_residence">Date Residence</label>
+                                <input type="date" class="form-control" id="date_residence"
+                                  placeholder="Enter Date Residence" name="date_residence" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- three card -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-title">Form Elements</div>
+                    </div>
+
+                    <div class="card-body">
+                      <div class="row">
+
+
+
+                        <!-- First Name -->
+                        <div class="col-md-6 col-lg-6">
+                          <div class="form-group">
+                            <label for="f_name">First Name *</label>
+                            <input type="text" class="form-control" id="f_name" placeholder="Enter First Name"
+                              required />
+
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+            <!-- left container card -->
+            <div class="col-lg-4 col-md-12">
+
+              <!-- Other Info card -->
+              <div class="row">
+                <div class="col-md-12" >
+                  <div class="card" id="otherInfo">
+                    <div class="card-header">
+                      <div class="card-title">Other Info</div>
+                    </div>
+
+                    <div class="card-body">
+                      <div class="row">
+                        <!-- How Did You Learn About Us! -->
+                        <div class="col-md-12 col-lg-12">
+                          <div class="form-group">
+                            <label for="how_did_you_learn_about_us">How Did You Learn About Us!</label>
+                            <select class="form-select form-control" id="how_did_you_learn_about_us">
+                              <option disabled selected value="">How Did You Learn About Us</option>
+                              <option>Internet</option>
+                              <option>Frinds</option>
+                              <option id="alert_add_another_way" value="add_another_way">
+                                Add Another Way
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+
+
+                        <!-- Notes -->
+                        <div class="col-md-12 col-lg-12">
+                          <div class="form-group">
+                            <label for="notes">Notes</label>
+                            <textarea class="notes" id="notes" placeholder="Notes"></textarea>
+                          </div>
+                        </div>
+
+
+                        <!-- Case -->
+                        <!-- <div class="col-md-6 col-lg-6">
                       <div class="form-group">
                         <label for="case">Case</label>
                         <select class="form-select form-control" id="case" disabled>
@@ -928,14 +1034,24 @@
                           <option>46-60</option>
                         </select>
                       </div>
+                    </div> -->
+
+                      </div>
+
+
                     </div>
-
                   </div>
-
-
                 </div>
-                <div class="card-action">
 
+              </div>
+            </div>
+
+
+
+            <!-- submit card -->
+            <div class="col-md-12 col-lg-3">
+              <div class="card">
+                <div class="card-action">
                   <button class="btn btn-success" id="button_add">Add</button>
                   <button class="btn btn-success" id="button_add_with_case">Add With Case</button>
                   <button class="btn btn-danger">Cancel</button>
@@ -943,8 +1059,11 @@
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
+
 
       <footer class="footer">
         <div class="container-fluid d-flex justify-content-between">
@@ -974,72 +1093,6 @@
         </div>
       </footer>
     </div>
-
-
-
-    <!-- Custom template | don't include it in your project! -->
-    <div class="custom-template">
-      <div class="title">Settings</div>
-      <div class="custom-content">
-        <div class="switcher">
-          <div class="switch-block">
-            <h4>Logo Header</h4>
-            <div class="btnSwitch">
-              <button type="button" class="selected changeLogoHeaderColor" data-color="dark"></button>
-              <button type="button" class="selected changeLogoHeaderColor" data-color="blue"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="purple"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="light-blue"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="green"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="orange"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="red"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="white"></button>
-              <br />
-              <button type="button" class="changeLogoHeaderColor" data-color="dark2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="blue2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="purple2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="light-blue2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="green2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="orange2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="red2"></button>
-            </div>
-          </div>
-          <div class="switch-block">
-            <h4>Navbar Header</h4>
-            <div class="btnSwitch">
-              <button type="button" class="changeTopBarColor" data-color="dark"></button>
-              <button type="button" class="changeTopBarColor" data-color="blue"></button>
-              <button type="button" class="changeTopBarColor" data-color="purple"></button>
-              <button type="button" class="changeTopBarColor" data-color="light-blue"></button>
-              <button type="button" class="changeTopBarColor" data-color="green"></button>
-              <button type="button" class="changeTopBarColor" data-color="orange"></button>
-              <button type="button" class="changeTopBarColor" data-color="red"></button>
-              <button type="button" class="changeTopBarColor" data-color="white"></button>
-              <br />
-              <button type="button" class="changeTopBarColor" data-color="dark2"></button>
-              <button type="button" class="selected changeTopBarColor" data-color="blue2"></button>
-              <button type="button" class="changeTopBarColor" data-color="purple2"></button>
-              <button type="button" class="changeTopBarColor" data-color="light-blue2"></button>
-              <button type="button" class="changeTopBarColor" data-color="green2"></button>
-              <button type="button" class="changeTopBarColor" data-color="orange2"></button>
-              <button type="button" class="changeTopBarColor" data-color="red2"></button>
-            </div>
-          </div>
-          <div class="switch-block">
-            <h4>Sidebar</h4>
-            <div class="btnSwitch">
-              <button type="button" class="selected changeSideBarColor" data-color="white"></button>
-              <button type="button" class="changeSideBarColor" data-color="dark"></button>
-              <button type="button" class="changeSideBarColor" data-color="dark2"></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="custom-toggle">
-        <i class="icon-settings"></i>
-      </div>
-    </div>
-    <!-- End Custom template -->
-
 
   </div>
   <!--   Core JS Files   -->
@@ -1203,7 +1256,7 @@
       dateResidence.style.display = "none";
     });
 
-    function renameFirstLastName() {
+    function renameFirstLastNameToAnonymous() {
       var checkbox = document.getElementById("anonymous_client");
       var firstNameInput = document.getElementById("f_name");
       var lastNameInput = document.getElementById("l_name");
@@ -1283,11 +1336,11 @@
       var initDemos = function () {
         //== Sweetalert Demo 1
         $('#how_did_you_learn_about_us').change(function (e) {
-            var selectedValue = $(this).val();
-            if (selectedValue != 'add_another_way') {
-                console.log("Add Another Way selected");
-                return
-            }
+          var selectedValue = $(this).val();
+          if (selectedValue != 'add_another_way') {
+            console.log("Add Another Way selected");
+            return
+          }
 
           swal({
             title: "Input Option",
@@ -1344,6 +1397,22 @@
     });
   </script>
 
+
+<script>
+  $(document).ready(function() {
+  var section = $('#otherInfo');
+  var sectionOffset = section.offset().top;
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 80) {
+      section.addClass('fixed_card_other_info');
+    } else {
+      section.removeClass('fixed_card_other_info');
+    }
+  });
+});
+</script>
+</script>
 </body>
 
 </html>
