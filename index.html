@@ -16,6 +16,7 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="assets/css/demo.css" />
 
+
 </head>
 
 <body>
@@ -100,7 +101,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/calendar.html" class="collapsed" aria-expanded="false">
+              <a href="pages/calendar0.html" class="collapsed" aria-expanded="false">
                 <i class="far fa-calendar-alt"></i>
                 <p>Calendar</p>
               </a>
@@ -113,6 +114,18 @@
                 <i class="fa fa-ellipsis-h"></i>
               </span>
               <h4 class="text-section">Manage</h4>
+            </li>
+            <li class="nav-item">
+              <a href="pages/members.html" class="collapsed" aria-expanded="false">
+                <i class="fas fa-star"></i>
+                <p>Events</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/members.html" class="collapsed" aria-expanded="false">
+                <i class="fas fa-user-tie"></i>
+                <p>Stakeholders</p>
+              </a>
             </li>
             <li class="nav-item">
               <a href="pages/members.html" class="collapsed" aria-expanded="false">
@@ -463,14 +476,15 @@
         <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
           <div class="container-fluid">
             <nav class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
-              <div class="input-group">
+              <!-- <div class="input-group">
                 <div class="input-group-prepend">
                   <button type="submit" class="btn btn-search pe-1">
                     <i class="fa fa-search search-icon"></i>
                   </button>
                 </div>
                 <input type="text" placeholder="Search ..." class="form-control" />
-              </div>
+              </div> -->
+              <h3 style="font-family: 'system-ui';">Mutaz's Team</h3>
             </nav>
 
             <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
@@ -943,21 +957,14 @@
                       </div>
                     </li>
                   </ul>
-                    
-                </div>
-                <div class="d-flex justify-content-end ">
-                  <button type="button" class="btn btn-label-info btn-round me-2" id="alert_add_task">
-                    <i class="far fa-calendar-check"></i> Add Task
-                  </button>
-                  <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-label-info btn-round me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <i class="far fa-calendar-check"></i> Add Task
-                  </button>
-                  <button onclick='show_tasks_in_date("2024-08-01")'>show</button>
+                  <li class="d-flex justify-content-end">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <i class="far fa-calendar-check"></i> Add Task
+                    </button>
+                  </li>
                 </div>
               </div>
-
-              
 
               <!-- Modal -->
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -975,7 +982,7 @@
                           </div>
                           <div class="mb-3">
                             <label for="task-description" class="col-form-label">description: </label>
-                            <textarea class="form-control" id="task-description"></textarea>
+                            <textarea class="modal-form-control modal-txtarea" id="task-description"></textarea>
                           </div>
                           <div> 
                             <div class="mb-3 d-flex justify-content-between">
@@ -989,12 +996,12 @@
                               </div>
                             </div>
                           </div>
-                         
+                          
                         </form>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Add</button>
+                        <button type="button" class="btn btn-primary" onclick="add_task()" data-bs-dismiss="modal">Add</button>
                       </div>
                   </div>
                 </div>

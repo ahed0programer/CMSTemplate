@@ -152,4 +152,9 @@ function show_tasks_in_date(date) {
         tasksListElement.append("<p>No tasks for this date.</p>");
     }
 }
+
+
+function add_task() {
+    swal("", "You entered : " + $("#input-field").val(), "success")
+}
     

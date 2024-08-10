@@ -1,0 +1,12 @@
+.element-hour{
+    height: 8.3222%
+}
+
+.time-table{
+    height: 700px   ;
+    overflow-y: scroll;
+}
+
+.inherit-height{
+    height: inherit;
+}
