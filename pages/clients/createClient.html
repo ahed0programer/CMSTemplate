@@ -655,14 +655,11 @@
           </div>
 
 
-          <!-- Left container card -->
           <div class="row">
             <!-- left side cards -->
-            <div class="col-lg-8 col-md-12">
 
               <!-- Personal Info card -->
-              <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6 col-lg-8">
                   <div class="card">
                     <div class="card-header">
                       <div class="card-title">Personal Info</div>
@@ -817,211 +814,17 @@
                     </div>
                   </div>
                 </div>
-              </div>
 
-
-              <!-- Contact Info card -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <div class="card-title">Contact Info</div>
-                    </div>
-
-                    <div class="card-body">
-                      <div class="row">
-
-
-
-                        <!-- Email -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter Email" />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- phone_number -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="phone_number">Phone Number</label>
-                            <input type="text" class="form-control" id="phone_number" placeholder="Enter Phone Number"
-                              oninput="validatePhoneNumber()" />
-                            <small id="error_message_phone_number" class="form-text text-muted">
-                              Please Enter Only Number
-                            </small>
-                          </div>
-                        </div>
-
-                        <!-- Counrty -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="defaultSelect">Counrty</label>
-                            <select class="choices form-select form-control" id="counrty">
-                              <option disabled selected value="">Select Counrty</option>
-                              <option>Germany</option>
-                              <option>Denmark</option>
-                              <option>France</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- City -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="defaultSelect">City</label>
-                            <select class="choices form-select form-control" id="city">
-                              <option disabled selected value="">Select City</option>
-                              <option>18-30</option>
-                              <option>31-45</option>
-                              <option>46-60</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Street -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="street">Street</label>
-                            <input type="text" class="form-control" id="street" placeholder="Enter Street" />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- Street Number -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="street_number">Street Number</label>
-                            <input type="text" class="form-control" id="street_number"
-                              placeholder="Enter Street Number" />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-
-                        <!-- Place Residence -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="Place_Residence">Place Residence</label>
-                            <select class="choices form-select form-control" id="Place_Residence">
-                              <option disabled selected value="">Select Place Residence</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-
-
-                        <div class="col-md-6 col-lg-6">
-                          <div class="row">
-                            <!-- Type Residence -->
-                            <div class="col-md-12" id="div_type_residence">
-                              <div class="form-group">
-                                <label for="type_Residence">Type Residence</label>
-                                <select class="form-select form-control" id="type_Residence">
-                                  <option disabled selected value="">Select Type Residence</option>
-                                  <option>Sitizen</option>
-                                  <option>Permanent</option>
-                                  <option>Temporary</option>
-                                </select>
-                              </div>
-                            </div>
-                            <!-- Date Residence -->
-                            <div class="col-md-5" id="div_date_residence">
-                              <div class="form-group">
-                                <label for="date_residence">Date Residence</label>
-                                <input type="date" class="form-control" id="date_residence"
-                                  placeholder="Enter Date Residence" name="date_residence" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- partners card -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <div class="card-title">Partners :</div>
-                    </div>
-                    <div class="card-body">
-                      <div class="card-body">
-                        <div class="text-center">
-                          <h4>we need to add parnets list here</h4>
-                          <button class="btn btn-round btn-label-info"> Add partner</button>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-              </div>
-
-              <!-- appointments schedule card -->
-              <div class="row">
-                  <div class="col-md-12">
-                    <div class="card">
-                      <div class="card-header">
-                        <div class="card-title">appointments shcedule</div>
-                      </div>
-                      <div class="card-body">
-                        <div class="card-body">
-                          <ul class="nav nav-pills nav-secondary" id="pills-tab" role="tablist">
-                            <li class="nav-item">
-                              <a class="nav-link active" id="pills-week-tab" data-bs-toggle="pill" href="#pills-week" role="tab" aria-controls="pills-week" aria-selected="true">week</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" id="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab" aria-controls="pills-month" aria-selected="false">month</a>
-                            </li>
-                          </ul>
-                          <div class="tab-content mt-2 mb-3" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
-                              <div class="d-flex justify-content-start flex-wrap">
-                                <span class="me-3 ">saturday</span>
-                                <span class="me-3 ">sunday</span>
-                                <span class="me-3 ">monday</span>
-                                <span class="me-3 ">tuesday</span>
-                                <span class="me-3 ">wedensday</span>
-                                <span class="me-3 ">thirsday</span>
-                                <span class="me-3 ">friday  </span>
-                              </div>
-                            </div>
-                            <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
-                              !! calendar is watiing to be set !!
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
 
             <!-- right side card -->
-            <div class="col-lg-4 col-md-12">
 
               <!-- Other Info card -->
-              <div class="row">
-                <div class="col-md-12" >
+                <div class="col-md-6 col-lg-4">
                   <div class="card" id="otherInfo">
                     <div class="card-header">
                       <div class="card-title">Other Info</div>
                     </div>
-                    
+
 
                     <div class="card-body">
                       <div class="row">
@@ -1070,22 +873,206 @@
                   </div>
                 </div>
 
+          </div>
+
+
+          <div class="row">
+
+
+            <!-- Contact Info card -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Contact Info</div>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+
+
+
+                    <!-- Email -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email" />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                      </div>
+                    </div>
+
+                    <!-- phone_number -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="text" class="form-control" id="phone_number" placeholder="Enter Phone Number"
+                          oninput="validatePhoneNumber()" />
+                        <small id="error_message_phone_number" class="form-text text-muted">
+                          Please Enter Only Number
+                        </small>
+                      </div>
+                    </div>
+
+                    <!-- Counrty -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="defaultSelect">Counrty</label>
+                        <select class="choices form-select form-control" id="counrty">
+                          <option disabled selected value="">Select Counrty</option>
+                          <option>Germany</option>
+                          <option>Denmark</option>
+                          <option>France</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- City -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="defaultSelect">City</label>
+                        <select class="choices form-select form-control" id="city">
+                          <option disabled selected value="">Select City</option>
+                          <option>18-30</option>
+                          <option>31-45</option>
+                          <option>46-60</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Street -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="street">Street</label>
+                        <input type="text" class="form-control" id="street" placeholder="Enter Street" />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                      </div>
+                    </div>
+
+                    <!-- Street Number -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="street_number">Street Number</label>
+                        <input type="text" class="form-control" id="street_number" placeholder="Enter Street Number" />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                      </div>
+                    </div>
+
+
+                    <!-- Place Residence -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="Place_Residence">Place Residence</label>
+                        <select class="choices form-select form-control" id="Place_Residence">
+                          <option disabled selected value="">Select Place Residence</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-6">
+                      <div class="row">
+                        <!-- Type Residence -->
+                        <div class="col-md-12" id="div_type_residence">
+                          <div class="form-group">
+                            <label for="type_Residence">Type Residence</label>
+                            <select class="form-select form-control" id="type_Residence">
+                              <option disabled selected value="">Select Type Residence</option>
+                              <option>Sitizen</option>
+                              <option>Permanent</option>
+                              <option>Temporary</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!-- Date Residence -->
+                        <div class="col-md-5" id="div_date_residence">
+                          <div class="form-group">
+                            <label for="date_residence">Date Residence</label>
+                            <input type="date" class="form-control" id="date_residence"
+                              placeholder="Enter Date Residence" name="date_residence" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
               </div>
             </div>
 
+            <!-- partners card -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Partners :</div>
+                </div>
+                <div class="card-body">
+                  <div class="card-body">
+                    <div class="text-center">
+                      <h4>we need to add parnets list here</h4>
+                      <button class="btn btn-round btn-label-info"> Add partner</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <!-- appointments schedule card -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">appointments shcedule</div>
+                </div>
+                <div class="card-body">
+                  <div class="card-body">
+                    <ul class="nav nav-pills nav-secondary" id="pills-tab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-week-tab" data-bs-toggle="pill" href="#pills-week"
+                          role="tab" aria-controls="pills-week" aria-selected="true">week</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab"
+                          aria-controls="pills-month" aria-selected="false">month</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content mt-2 mb-3" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-week" role="tabpanel"
+                        aria-labelledby="pills-week-tab">
+                        <div class="d-flex justify-content-start flex-wrap">
+                          <span class="me-3 ">saturday</span>
+                          <span class="me-3 ">sunday</span>
+                          <span class="me-3 ">monday</span>
+                          <span class="me-3 ">tuesday</span>
+                          <span class="me-3 ">wedensday</span>
+                          <span class="me-3 ">thirsday</span>
+                          <span class="me-3 ">friday </span>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
+                        !! calendar is watiing to be set !!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <!-- submit card -->
-            <div class="col-md-8 col-lg-8">
-                <div class="card-action d-flex justify-content-end">
-                  <button class="btn me-2 btn-round btn-danger">Cancel</button>
-                  <button class="btn me-2 btn-round btn-label-info">save draft</button>
-                  <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
-                  <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
-                </div>
+            <!-- <div class="col-md-8 col-lg-8"> -->
+            <div class="card-action d-flex justify-content-end">
+              <button class="btn me-2 btn-round btn-danger">Cancel</button>
+              <button class="btn me-2 btn-round btn-label-info">save draft</button>
+              <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
+              <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
+              <!-- </div> -->
             </div>
           </div>
-
 
         </div>
       </div>
@@ -1424,21 +1411,20 @@
   </script>
 
 
-<script>
-  $(document).ready(function() {
-  var section = $('#otherInfo');
-  var sectionOffset = section.offset().top;
+  <!-- <script>
+    $(document).ready(function () {
+      var section = $('#otherInfo');
+      var sectionOffset = section.offset().top;
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > 80) {
-      section.addClass('fixed_card_other_info');
-    } else {
-      section.removeClass('fixed_card_other_info');
-    }
-  });
-});
-</script>
-</script>
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 80 && window.matchMedia('(min-width: 1024px)').matches) {
+          section.addClass('fixed_card_other_info');
+        } else {
+          section.removeClass('fixed_card_other_info');
+        }
+      });
+    });
+  </script> -->
 </body>
 
 </html>

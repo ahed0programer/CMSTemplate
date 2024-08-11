@@ -204,8 +204,11 @@ body {
     text-align: var(--bs-body-text-align);
     background-color: var(--bs-body-bg);
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
+    
 }
+
+
 
 hr {
     margin: 1rem 0;
@@ -498,6 +501,7 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+
 }
 
 
@@ -13911,7 +13915,7 @@ fieldset:disabled .btn {
     font-size: 1rem;
     border-color: #ebedf2;
     padding: .6rem 1rem;
-    height: 450px;
+    height: 100%;
     border-width: 2px;
     display: block;
     width: 100%;
