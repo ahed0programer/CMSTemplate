@@ -13934,7 +13934,32 @@ fieldset:disabled .btn {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.fixed_card_other_info {
-    position: fixed;
-    top: 80px;
+
+.modal-form-control{
+    font-size: 1rem;
+    border-color: #ebedf2;
+    padding: .6rem 1rem;
+    height: inherit;
+    border-width: 2px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+
+.modal-txtarea{
+    min-height: 100px;
+    max-height: 300px;
+}
+
