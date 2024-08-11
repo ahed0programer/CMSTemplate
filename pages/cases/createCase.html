@@ -655,7 +655,6 @@
           </div>
 
           <div class="row">
-
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
@@ -664,14 +663,18 @@
 
                 <div class="card-body">
                   <div class="row">
-                    
+                    <div class="col-12 d-flex">
+                        <span></span>
+                        <span>Ahed Sulieman</span>
+                        
+                    </div>
                   </div>
                 </div>
               </div>
 
             </div>
 
-            <!-- Contact Info card -->
+            <!-- case info card -->
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
@@ -681,10 +684,10 @@
                 <div class="card-body">
                   <div class="row">
 
-                    <!-- Counrty -->
+                    <!-- case type -->
                     <div class="col-md-6 col-lg-6">
                       <div class="form-group">
-                        <label for="defaultSelect">Case Type</label>
+                        <label for="defaultSelect">Case Type : </label>
                         <select class="choices form-select form-control" id="case_type">
                           <option id="alert_add_another_way" value="add_another_way">
                             add new type
@@ -701,7 +704,7 @@
                     <!-- consultaion method -->
                     <div class="col-md-6 col-lg-6">
                       <div class="form-group">
-                        <label for="defaultSelect">Consultation Method</label>
+                        <label for="defaultSelect">Consultation Method :</label>
                         <select class="choices form-select form-control">
                           <option selected value="telephone">telephone</option>
                           <option value="email" >email</option>
@@ -719,26 +722,31 @@
                     </div>
 
                     <!-- date and duration -->
-                    <div class="col-md-6 col-lg-6 d-flex">
-                      <div class="col-6">
+                    <div class="col-md-7 col-lg-7 d-flex">
+                      <div class="col-4">
                         <div class="form-group">
-                          <label for="case_date">Date</label>
+                          <label for="case_date">Date :</label>
                           <input class="form-control" type="date" name="" id="case_date">
                         </div>
                       </div>
-                      <div class="col-6">
+                      <div class="col-4">
                         <div class="form-group">
-                          <label for="case_date">Time</label>
+                          <label for="case_date">Time :</label>
                           <input class="form-control" type="time" name="" id="case_date">
                         </div>
                       </div>
-                      
+                      <div class="col-4">
+                        <div class="form-group">
+                          <label for="case_date">duration (minuts) :</label>
+                          <input class="form-control" type="number" name="" id="case_date">
+                        </div>
+                      </div>
                     </div>
 
                     <!-- Case status -->
-                    <div class="col-md-6 col-lg-6">
+                    <div class="col-md-5 col-lg-5">
                       <div class="form-group">
-                        <label>Status</label><br />
+                        <label>Status :</label><br />
                         <div class="d-flex">
                           <div class="form-check">
                             <input class="form-check-input" type="radio" name="case_status" id="open" checked />
@@ -779,34 +787,6 @@
         </div>
       </div>
 
-
-      <footer class="footer">
-        <div class="container-fluid d-flex justify-content-between">
-          <nav class="pull-left">
-            <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link" href="http://www.themekita.com">
-                  ThemeKita
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Help </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Licenses </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright">
-            2024, made with <i class="fa fa-heart heart text-danger"></i> by
-            <a href="http://www.themekita.com">ThemeKita</a>
-          </div>
-          <div>
-            Distributed by
-            <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
-          </div>
-        </div>
-      </footer>
     </div>
 
   </div>
