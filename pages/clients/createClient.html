@@ -658,29 +658,29 @@
           <div class="row">
             <!-- left side cards -->
 
-              <!-- Personal Info card -->
-                <div class="col-md-6 col-lg-8">
-                  <div class="card">
-                    <div class="card-header">
-                      <div class="card-title">Personal Info</div>
+            <!-- Personal Info card -->
+            <div class="col-md-6 col-lg-8">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Personal Info</div>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+
+                    <!-- Anonymous check -->
+                    <div class="col-md-12 col-lg-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="anonymous_client"
+                          onclick="renameFirstLastNameToAnonymous()" />
+                        <label class="form-check-label" for="anonymous_client">
+                          Anonymous Client
+                        </label>
+                      </div>
                     </div>
 
-                    <div class="card-body">
-                      <div class="row">
-
-                        <!-- Anonymous check -->
-                        <div class="col-md-12 col-lg-12">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="anonymous_client"
-                              onclick="renameFirstLastNameToAnonymous()" />
-                            <label class="form-check-label" for="anonymous_client">
-                              Anonymous Client
-                            </label>
-                          </div>
-                        </div>
-
-                        <!-- Primery Secandry Client -->
-                        <!-- <div class="col-md-6 col-lg-4">
+                    <!-- Primery Secandry Client -->
+                    <!-- <div class="col-md-6 col-lg-4">
                         <div class="form-group">
                         <label>Client Status</label>
                         <div class="d-flex">
@@ -702,159 +702,157 @@
                       </div>
                     </div> -->
 
-                        <!-- First Name -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="f_name">First Name *</label>
-                            <input type="text" class="form-control" id="f_name" placeholder="Enter First Name"
-                              required />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                    <!-- First Name -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="f_name">First Name *</label>
+                        <input type="text" class="form-control" id="f_name" placeholder="Enter First Name" required />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
                           else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- Last Name -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="l_name">Last Name *</label>
-                            <input type="text" class="form-control" id="l_name" placeholder="Enter Last Name"
-                              required />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- gender -->
-                        <div class="col-md-6 col-lg-4">
-                          <div class="form-group">
-                            <label>Gender</label><br />
-                            <div class="d-flex">
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="Male" checked />
-                                <label class="form-check-label" for="Male">
-                                  Male
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="Female" />
-                                <label class="form-check-label" for="Female">
-                                  Female
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="Other" />
-                                <label class="form-check-label" for="Other">
-                                  Other
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Age -->
-                        <div class="col-md-6 col-lg-4">
-                          <div class="form-group">
-                            <label for="defaultSelect">Marital Status</label>
-                            <select class="form-select form-control" id="marital_status">
-                              <option disabled selected value="">Marital Status</option>
-                              <option>18-30</option>
-                              <option>31-45</option>
-                              <option>46-60</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Age -->
-                        <div class="col-md-6 col-lg-4">
-                          <div class="form-group">
-                            <label for="defaultSelect">Age</label>
-                            <select class="form-select form-control" id="age">
-                              <option disabled selected value="">Select Age</option>
-                              <option>18-30</option>
-                              <option>31-45</option>
-                              <option>46-60</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Nationality -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="defaultSelect">Nationality</label>
-
-                            <select class="choices form-select form-control" id="nationality">
-                              <option disabled selected value="">Select Nationality</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Seond Nationality -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="defaultSelect">Seond Nationality</label>
-
-                            <select class="choices form-select form-control" id="seond_nationality">
-                              <option disabled selected value="">Select Seond Nationality</option>
-                              <option>none</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-
                       </div>
                     </div>
+
+                    <!-- Last Name -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="l_name">Last Name *</label>
+                        <input type="text" class="form-control" id="l_name" placeholder="Enter Last Name" required />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small> -->
+                      </div>
+                    </div>
+
+                    <!-- gender -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="form-group">
+                        <label>Gender</label><br />
+                        <div class="d-flex">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="Male" checked />
+                            <label class="form-check-label" for="Male">
+                              Male
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="Female" />
+                            <label class="form-check-label" for="Female">
+                              Female
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="Other" />
+                            <label class="form-check-label" for="Other">
+                              Other
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Marital Status -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="form-group">
+                        <label for="defaultSelect">Marital Status</label>
+                        <select class="form-select form-control" id="marital_status">
+                          <option disabled selected value="">Marital Status</option>
+                          <option>18-30</option>
+                          <option>31-45</option>
+                          <option>46-60</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Age -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="form-group">
+                        <label for="defaultSelect">Age</label>
+                        <select class="form-select form-control" id="age">
+                          <option disabled selected value="">Select Age</option>
+                          <option>18-30</option>
+                          <option>31-45</option>
+                          <option>46-60</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Nationality -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="defaultSelect">Nationality</label>
+
+                        <select class="choices form-select form-control" id="nationality">
+                          <option disabled selected value="">Select Nationality</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Seond Nationality -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="defaultSelect">Seond Nationality</label>
+
+                        <select class="choices form-select form-control" id="seond_nationality">
+                          <option disabled selected value="">Select Seond Nationality</option>
+                          <option>none</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
+              </div>
+            </div>
 
 
             <!-- right side card -->
 
-              <!-- Other Info card -->
-                <div class="col-md-6 col-lg-4">
-                  <div class="card" id="otherInfo">
-                    <div class="card-header">
-                      <div class="card-title">Other Info</div>
+            <!-- Other Info card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card" id="otherInfo">
+                <div class="card-header">
+                  <div class="card-title">Other Info</div>
+                </div>
+
+
+                <div class="card-body">
+                  <div class="row">
+                    <!-- How Did You Learn About Us! -->
+                    <div class="col-md-12 col-lg-12">
+                      <div class="form-group">
+                        <label for="how_did_you_learn_about_us">How Did You Learn About Us!</label>
+                        <select class="form-select form-control" id="how_did_you_learn_about_us">
+                          <option disabled selected value="">How Did You Learn About Us</option>
+                          <option>Internet</option>
+                          <option>Frinds</option>
+                          <option id="alert_add_another_way" value="add_another_way">
+                            Add Another Way
+                          </option>
+                        </select>
+                      </div>
                     </div>
 
 
-                    <div class="card-body">
-                      <div class="row">
-                        <!-- How Did You Learn About Us! -->
-                        <div class="col-md-12 col-lg-12">
-                          <div class="form-group">
-                            <label for="how_did_you_learn_about_us">How Did You Learn About Us!</label>
-                            <select class="form-select form-control" id="how_did_you_learn_about_us">
-                              <option disabled selected value="">How Did You Learn About Us</option>
-                              <option>Internet</option>
-                              <option>Frinds</option>
-                              <option id="alert_add_another_way" value="add_another_way">
-                                Add Another Way
-                              </option>
-                            </select>
-                          </div>
-                        </div>
+                    <!-- Notes -->
+                    <div class="col-md-12 col-lg-12">
+                      <div class="form-group">
+                        <label for="notes">Notes</label>
+                        <textarea class="notes" id="notes" placeholder="Notes"></textarea>
+                      </div>
+                    </div>
 
 
-                        <!-- Notes -->
-                        <div class="col-md-12 col-lg-12">
-                          <div class="form-group">
-                            <label for="notes">Notes</label>
-                            <textarea class="notes" id="notes" placeholder="Notes"></textarea>
-                          </div>
-                        </div>
-
-
-                        <!-- Case -->
-                        <!-- <div class="col-md-6 col-lg-6">
+                    <!-- Case -->
+                    <!-- <div class="col-md-6 col-lg-6">
                       <div class="form-group">
                         <label for="case">Case</label>
                         <select class="form-select form-control" id="case" disabled>
@@ -866,12 +864,12 @@
                       </div>
                     </div> -->
 
-                      </div>
-
-
-                    </div>
                   </div>
+
+
                 </div>
+              </div>
+            </div>
 
           </div>
 
@@ -1016,402 +1014,539 @@
                   <div class="card-body">
                     <div class="text-center">
                       <h4>we need to add parnets list here</h4>
-                      <button class="btn btn-round btn-label-info"> Add partner</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                      <!-- <button class="btn btn-round btn-label-info"> Add partner</button> -->
 
-            <!-- appointments schedule card -->
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-title">appointments shcedule</div>
-                </div>
-                <div class="card-body">
-                  <div class="card-body">
-                    <ul class="nav nav-pills nav-secondary" id="pills-tab" role="tablist">
-                      <li class="nav-item">
-                        <a class="nav-link active" id="pills-week-tab" data-bs-toggle="pill" href="#pills-week"
-                          role="tab" aria-controls="pills-week" aria-selected="true">week</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab"
-                          aria-controls="pills-month" aria-selected="false">month</a>
-                      </li>
-                    </ul>
-                    <div class="tab-content mt-2 mb-3" id="pills-tabContent">
-                      <div class="tab-pane fade show active" id="pills-week" role="tabpanel"
-                        aria-labelledby="pills-week-tab">
-                        <div class="d-flex justify-content-start flex-wrap">
-                          <span class="me-3 ">saturday</span>
-                          <span class="me-3 ">sunday</span>
-                          <span class="me-3 ">monday</span>
-                          <span class="me-3 ">tuesday</span>
-                          <span class="me-3 ">wedensday</span>
-                          <span class="me-3 ">thirsday</span>
-                          <span class="me-3 ">friday </span>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="far fa-calendar-check"></i> Add Task
+                      </button>
+
+                      <!-- Modal -->
+
+                      <div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered ">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="staticBackdropLabel">Add Partner</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                              <form>
+                                <div class="row">
+
+                                  <!-- Partner Type -->
+                                  <div class="col-md-6 col-lg-12">
+                                    <div class="form-group">
+                                      <label>Partner Type</label><br />
+                                      <div class="d-flex">
+
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="partner_type"
+                                            id="family_partner" checked />
+                                          <label class="form-check-label" for="family_partner">
+                                            Family
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="partner_type"
+                                            id="other_partner" />
+                                          <label class="form-check-label" for="other_partner">
+                                            Other
+                                          </label>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <!-- First Name -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="f_name_partner">First Name *</label>
+                                      <input type="text" class="form-control" id="f_name_partner"
+                                        placeholder="Enter First Name" required />
+                                    </div>
+                                  </div>
+
+                                  <!-- Last Name -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="l_name_partner">Last Name *</label>
+                                      <input type="text" class="form-control" id="l_name_partner"
+                                        placeholder="Enter Last Name" required />
+                                    </div>
+                                  </div>
+
+                                  <!-- Email -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="email_partner">Email Address</label>
+                                      <input type="email" class="form-control" id="email_partner"
+                                        placeholder="Enter Email" />
+                                      <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                                    </div>
+                                  </div>
+
+                                  <!-- phone_number -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="phone_number_partner">Phone Number</label>
+                                      <input type="text" class="form-control" id="phone_number_partner"
+                                        placeholder="Enter Phone Number" />
+                                      <!-- <small id="error_message_phone_number" class="form-text text-muted">
+                                        Please Enter Only Number
+                                      </small> -->
+                                    </div>
+                                  </div>
+
+
+                                  <!-- Relationship Type -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="relationship_type_partner" id="lable_name_relationship_type_partner">Relationship Type</label>
+                                      <select class="choices form-select form-control" id="relationship_type_partner">
+                                        <option disabled selected value="" >Select</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                      </select>
+                                    </div>
+                                  </div>
+
+
+                                  <!-- Organization -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="organization_partner">Organization</label>
+                                      <input type="text" class="form-control" id="organization_partner"
+                                        placeholder="Enter Organization" required />
+                                    </div>
+                                  </div>
+
+
+                                  <!-- Notes -->
+                                  <div class="col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                      <label for="note_partner">Notes</label>
+                                      <textarea class="notes" id="note_partner" placeholder="Notes"></textarea>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </form>
+                              <!-- </div> -->
+
+
+                            </div>
+
+                            <!-- </div> -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary" onclick="add_task()"
+                                data-bs-dismiss="modal">Add</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
-                        !! calendar is watiing to be set !!
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- appointments schedule card -->
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">appointments shcedule</div>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-body">
+                      <ul class="nav nav-pills nav-secondary" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-week-tab" data-bs-toggle="pill" href="#pills-week"
+                            role="tab" aria-controls="pills-week" aria-selected="true">week</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab"
+                            aria-controls="pills-month" aria-selected="false">month</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content mt-2 mb-3" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-week" role="tabpanel"
+                          aria-labelledby="pills-week-tab">
+                          <div class="d-flex justify-content-start flex-wrap">
+                            <span class="me-3 ">saturday</span>
+                            <span class="me-3 ">sunday</span>
+                            <span class="me-3 ">monday</span>
+                            <span class="me-3 ">tuesday</span>
+                            <span class="me-3 ">wedensday</span>
+                            <span class="me-3 ">thirsday</span>
+                            <span class="me-3 ">friday </span>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
+                          !! calendar is watiing to be set !!
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- submit card -->
+              <div class="card-action d-flex justify-content-end">
+                <button class="btn me-2 btn-round btn-danger">Cancel</button>
+                <button class="btn me-2 btn-round btn-label-info">save draft</button>
+                <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
+                <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
+              </div>
             </div>
 
-            <!-- submit card -->
-            <!-- <div class="col-md-8 col-lg-8"> -->
-            <div class="card-action d-flex justify-content-end">
-              <button class="btn me-2 btn-round btn-danger">Cancel</button>
-              <button class="btn me-2 btn-round btn-label-info">save draft</button>
-              <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
-              <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
-              <!-- </div> -->
+          </div>
+        </div>
+
+
+        <footer class="footer">
+          <div class="container-fluid d-flex justify-content-between">
+            <nav class="pull-left">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="http://www.themekita.com">
+                    ThemeKita
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Help </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Licenses </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="copyright">
+              2024, made with <i class="fa fa-heart heart text-danger"></i> by
+              <a href="http://www.themekita.com">ThemeKita</a>
+            </div>
+            <div>
+              Distributed by
+              <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
             </div>
           </div>
-
-        </div>
+        </footer>
       </div>
 
-
-      <footer class="footer">
-        <div class="container-fluid d-flex justify-content-between">
-          <nav class="pull-left">
-            <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link" href="http://www.themekita.com">
-                  ThemeKita
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Help </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Licenses </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright">
-            2024, made with <i class="fa fa-heart heart text-danger"></i> by
-            <a href="http://www.themekita.com">ThemeKita</a>
-          </div>
-          <div>
-            Distributed by
-            <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
-          </div>
-        </div>
-      </footer>
     </div>
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
 
-  </div>
-  <!--   Core JS Files   -->
-  <script src="../../assets/js/core/jquery-3.7.1.min.js"></script>
-  <script src="../../assets/js/core/popper.min.js"></script>
-  <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <!-- jQuery Scrollbar -->
+    <script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <!-- Chart JS -->
+    <script src="../../assets/js/plugin/chart.js/chart.min.js"></script>
 
-  <!-- jQuery Scrollbar -->
-  <script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-  <!-- Chart JS -->
-  <script src="../../assets/js/plugin/chart.js/chart.min.js"></script>
+    <!-- jQuery Sparkline -->
+    <script src="../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
 
-  <!-- jQuery Sparkline -->
-  <script src="../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+    <!-- Chart Circle -->
+    <script src="../../assets/js/plugin/chart-circle/circles.min.js"></script>
 
-  <!-- Chart Circle -->
-  <script src="../../assets/js/plugin/chart-circle/circles.min.js"></script>
+    <!-- Datatables -->
+    <script src="../../assets/js/plugin/datatables/datatables.min.js"></script>
 
-  <!-- Datatables -->
-  <script src="../../assets/js/plugin/datatables/datatables.min.js"></script>
+    <!-- Bootstrap Notify -->
+    <script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
-  <!-- Bootstrap Notify -->
-  <script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <!-- jQuery Vector Maps -->
+    <script src="../../assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+    <script src="../../assets/js/plugin/jsvectormap/world.js"></script>
 
-  <!-- jQuery Vector Maps -->
-  <script src="../../assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
-  <script src="../../assets/js/plugin/jsvectormap/world.js"></script>
+    <!-- Google Maps Plugin -->
+    <script src="../../assets/js/plugin/gmaps/gmaps.js"></script>
 
-  <!-- Google Maps Plugin -->
-  <script src="../../assets/js/plugin/gmaps/gmaps.js"></script>
+    <!-- Sweet Alert -->
+    <script src="../../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
-  <!-- Sweet Alert -->
-  <script src="../../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+    <!-- Kaiadmin JS -->
+    <script src="../../assets/js/kaiadmin.min.js"></script>
 
-  <!-- Kaiadmin JS -->
-  <script src="../../assets/js/kaiadmin.min.js"></script>
+    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    <script src="../../assets/js/setting-demo2.js"></script>
 
-  <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-  <script src="../../assets/js/setting-demo2.js"></script>
-
-  <script src="../../assets/js/choices.js/choices.min.js"></script>
+    <script src="../../assets/js/choices.js/choices.min.js"></script>
 
 
 
-  <script>
-    $("#displayNotif").on("click", function () {
-      var placementFrom = $("#notify_placement_from option:selected").val();
-      var placementAlign = $("#notify_placement_align option:selected").val();
-      var state = $("#notify_state option:selected").val();
-      var style = $("#notify_style option:selected").val();
-      var content = {};
+    <script>
+      $("#displayNotif").on("click", function () {
+        var placementFrom = $("#notify_placement_from option:selected").val();
+        var placementAlign = $("#notify_placement_align option:selected").val();
+        var state = $("#notify_state option:selected").val();
+        var style = $("#notify_style option:selected").val();
+        var content = {};
 
-      content.message =
-        'Turning standard Bootstrap alerts into "notify" like notifications';
-      content.title = "Bootstrap notify";
-      if (style == "withicon") {
-        content.icon = "fa fa-bell";
-      } else {
-        content.icon = "none";
-      }
-      content.url = "index.html";
-      content.target = "_blank";
-
-      $.notify(content, {
-        type: state,
-        placement: {
-          from: placementFrom,
-          align: placementAlign,
-        },
-        time: 1000,
-      });
-    });
-  </script>
-
-  <!-- Fonts and icons -->
-  <script src="../../assets/js/plugin/webfont/webfont.min.js"></script>
-  <script>
-    WebFont.load({
-      google: { families: ["Public Sans:300,400,500,600,700"] },
-      custom: {
-        families: [
-          "Font Awesome 5 Solid",
-          "Font Awesome 5 Regular",
-          "Font Awesome 5 Brands",
-          "simple-line-icons",
-        ],
-        urls: ["../../assets/css/fonts.min.css"],
-      },
-      active: function () {
-        sessionStorage.fonts = true;
-      },
-    });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      $("#basic-datatables").DataTable({});
-
-      $("#multi-filter-select").DataTable({
-        pageLength: 5,
-        initComplete: function () {
-          this.api()
-            .columns()
-            .every(function () {
-              var column = this;
-              var select = $(
-                '<select class="form-select"><option value=""></option></select>'
-              )
-                .appendTo($(column.footer()).empty())
-                .on("change", function () {
-                  var val = $.fn.dataTable.util.escapeRegex($(this).val());
-
-                  column
-                    .search(val ? "^" + val + "$" : "", true, false)
-                    .draw();
-                });
-
-              column
-                .data()
-                .unique()
-                .sort()
-                .each(function (d, j) {
-                  select.append(
-                    '<option value="' + d + '">' + d + "</option>"
-                  );
-                });
-            });
-        },
-      });
-
-      // Add Row
-      $("#add-row").DataTable({
-        pageLength: 5,
-      });
-
-      var action =
-        '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
-
-      $("#addRowButton").click(function () {
-        $("#add-row")
-          .dataTable()
-          .fnAddData([
-            $("#addName").val(),
-            $("#addPosition").val(),
-            $("#addOffice").val(),
-            action,
-          ]);
-        $("#addRowModal").modal("hide");
-      });
-    });
-  </script>
-
-  <script>
-    // init loded page
-    document.addEventListener("DOMContentLoaded", function () {
-      date_residence
-      var errorMessage = document.getElementById("error_message_phone_number");
-      var dateResidence = document.getElementById("div_date_residence");
-
-      errorMessage.style.display = "none";
-      dateResidence.style.display = "none";
-    });
-
-    function renameFirstLastNameToAnonymous() {
-      var checkbox = document.getElementById("anonymous_client");
-      var firstNameInput = document.getElementById("f_name");
-      var lastNameInput = document.getElementById("l_name");
-
-      if (checkbox.checked) {
-        firstNameInput.value = "Anonymous";
-        lastNameInput.value = "Anonymous";
-      } else {
-        firstNameInput.value = "";
-        lastNameInput.value = "";
-      }
-    }
-
-    function notAllowEnterCase() {
-      var radio = document.getElementById("primery_client");
-      var select = document.getElementById("case");
-      var addWithCase = document.getElementById("button_add_with_case");
-
-      if (radio.checked) {
-        select.setAttribute("disabled", "disabled");
-        addWithCase.removeAttribute("disabled");
-      }
-    }
-
-    function allowEnterCase() {
-      var radio = document.getElementById("secandry_client");
-      var select = document.getElementById("case");
-      var addWithCase = document.getElementById("button_add_with_case");
-
-      if (radio.checked) {
-        select.removeAttribute("disabled");
-        addWithCase.setAttribute("disabled", "disabled");
-
-      }
-    }
-
-    // For error message phone number 
-    function validatePhoneNumber() {
-      var input = document.getElementById("phone_number");
-      var numbers = /^[0-9]+$/;
-      var errorMessage = document.getElementById("error_message_phone_number");
-
-      if (input.value.trim() !== "" && !input.value.match(numbers)) {
-        errorMessage.style.display = "block";
-        input.value = input.value.replace(/\D/g, '');
-
-        setTimeout(function () {
-          errorMessage.style.display = "none";
-        }, 4000);
-      } else {
-        errorMessage.style.display = "none";
-      }
-    }
-
-
-    // to display date Residence
-    $(document).ready(function () {
-      var typeResidence = document.getElementById("div_type_residence");
-      $('#type_Residence').change(function () {
-        if ($(this).val() === 'Temporary') {
-          $('#div_date_residence').show();
-          typeResidence.className = 'col-md-7';
+        content.message =
+          'Turning standard Bootstrap alerts into "notify" like notifications';
+        content.title = "Bootstrap notify";
+        if (style == "withicon") {
+          content.icon = "fa fa-bell";
         } else {
-          $('#div_date_residence').hide();
-          typeResidence.className = 'col-md-12';
+          content.icon = "none";
         }
+        content.url = "index.html";
+        content.target = "_blank";
+
+        $.notify(content, {
+          type: state,
+          placement: {
+            from: placementFrom,
+            align: placementAlign,
+          },
+          time: 1000,
+        });
       });
-    });
+    </script>
 
-  </script>
+    <!-- Fonts and icons -->
+    <script src="../../assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["../../assets/css/fonts.min.css"],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
+    </script>
 
-  <!-- to show alert add new option -->
-  <script>
-    //== Class definition
-    var SweetAlert2Demo = (function () {
-      //== Demos
-      var initDemos = function () {
-        //== Sweetalert Demo 1
-        $('#how_did_you_learn_about_us').change(function (e) {
-          var selectedValue = $(this).val();
-          if (selectedValue != 'add_another_way') {
-            console.log("Add Another Way selected");
-            return
-          }
+    <script>
+      $(document).ready(function () {
+        $("#basic-datatables").DataTable({});
 
-          swal({
-            title: "Input Option",
-            html: '<br><input class="form-control" placeholder="Input Option" id="input-field">',
-            content: {
-              element: "input",
-              attributes: {
-                placeholder: "Input Option",
-                type: "text",
-                id: "input-field",
-                className: "form-control",
-              },
-            },
-            buttons: {
-              cancel: {
-                visible: true,
-                className: "btn btn-danger",
-              },
-              confirm: {
-                className: "btn btn-success",
-              },
-            },
-          }).then((value) => {
-            if (value) {
-              var newOption = $("#input-field").val();
-              if (newOption !== "") {
-                var $select = $("#how_did_you_learn_about_us");
-                $select.find("option:last").before('<option>' + newOption + '</option>');
-                $select.val(newOption);
-                swal("", "New option added: " + newOption, "success");
-              } else {
-                swal("", "Please enter a valid option", "error");
-              }
-            } else {
-              swal.close();
-            }
-          });
+        $("#multi-filter-select").DataTable({
+          pageLength: 5,
+          initComplete: function () {
+            this.api()
+              .columns()
+              .every(function () {
+                var column = this;
+                var select = $(
+                  '<select class="form-select"><option value=""></option></select>'
+                )
+                  .appendTo($(column.footer()).empty())
+                  .on("change", function () {
+                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
+
+                    column
+                      .search(val ? "^" + val + "$" : "", true, false)
+                      .draw();
+                  });
+
+                column
+                  .data()
+                  .unique()
+                  .sort()
+                  .each(function (d, j) {
+                    select.append(
+                      '<option value="' + d + '">' + d + "</option>"
+                    );
+                  });
+              });
+          },
         });
 
+        // Add Row
+        $("#add-row").DataTable({
+          pageLength: 5,
+        });
 
-      };
+        var action =
+          '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
 
-      return {
-        //== Init
-        init: function () {
-          initDemos();
-        },
-      };
-    })();
+        $("#addRowButton").click(function () {
+          $("#add-row")
+            .dataTable()
+            .fnAddData([
+              $("#addName").val(),
+              $("#addPosition").val(),
+              $("#addOffice").val(),
+              action,
+            ]);
+          $("#addRowModal").modal("hide");
+        });
+      });
+    </script>
 
-    //== Class Initialization
-    jQuery(document).ready(function () {
-      SweetAlert2Demo.init();
-    });
-  </script>
+    <script>
+      // init loded page
+      document.addEventListener("DOMContentLoaded", function () {
+        date_residence
+        var errorMessage = document.getElementById("error_message_phone_number");
+        var dateResidence = document.getElementById("div_date_residence");
+
+        errorMessage.style.display = "none";
+        dateResidence.style.display = "none";
+      });
+
+      function renameFirstLastNameToAnonymous() {
+        var checkbox = document.getElementById("anonymous_client");
+        var firstNameInput = document.getElementById("f_name");
+        var lastNameInput = document.getElementById("l_name");
+
+        if (checkbox.checked) {
+          firstNameInput.value = "Anonymous";
+          lastNameInput.value = "Anonymous";
+        } else {
+          firstNameInput.value = "";
+          lastNameInput.value = "";
+        }
+      }
+
+      function notAllowEnterCase() {
+        var radio = document.getElementById("primery_client");
+        var select = document.getElementById("case");
+        var addWithCase = document.getElementById("button_add_with_case");
+
+        if (radio.checked) {
+          select.setAttribute("disabled", "disabled");
+          addWithCase.removeAttribute("disabled");
+        }
+      }
+
+      function allowEnterCase() {
+        var radio = document.getElementById("secandry_client");
+        var select = document.getElementById("case");
+        var addWithCase = document.getElementById("button_add_with_case");
+
+        if (radio.checked) {
+          select.removeAttribute("disabled");
+          addWithCase.setAttribute("disabled", "disabled");
+
+        }
+      }
+
+      // For error message phone number 
+      function validatePhoneNumber() {
+        var input = document.getElementById("phone_number");
+        var numbers = /^[0-9]+$/;
+        var errorMessage = document.getElementById("error_message_phone_number");
+
+        if (input.value.trim() !== "" && !input.value.match(numbers)) {
+          errorMessage.style.display = "block";
+          input.value = input.value.replace(/\D/g, '');
+
+          setTimeout(function () {
+            errorMessage.style.display = "none";
+          }, 4000);
+        } else {
+          errorMessage.style.display = "none";
+        }
+      }
 
 
-  <!-- <script>
+      // to display date Residence
+      $(document).ready(function () {
+        var typeResidence = document.getElementById("div_type_residence");
+        $('#type_Residence').change(function () {
+          if ($(this).val() === 'Temporary') {
+            $('#div_date_residence').show();
+            typeResidence.className = 'col-md-7';
+          } else {
+            $('#div_date_residence').hide();
+            typeResidence.className = 'col-md-12';
+          }
+        });
+      });
+
+    </script>
+
+    <!-- to show alert add new option -->
+    <script>
+      //== Class definition
+      var SweetAlert2Demo = (function () {
+        //== Demos
+        var initDemos = function () {
+          //== Sweetalert Demo 1
+          $('#how_did_you_learn_about_us').change(function (e) {
+            var selectedValue = $(this).val();
+            if (selectedValue != 'add_another_way') {
+              console.log("Add Another Way selected");
+              return
+            }
+
+            swal({
+              title: "Input Option",
+              html: '<br><input class="form-control" placeholder="Input Option" id="input-field">',
+              content: {
+                element: "input",
+                attributes: {
+                  placeholder: "Input Option",
+                  type: "text",
+                  id: "input-field",
+                  className: "form-control",
+                },
+              },
+              buttons: {
+                cancel: {
+                  visible: true,
+                  className: "btn btn-danger",
+                },
+                confirm: {
+                  className: "btn btn-success",
+                },
+              },
+            }).then((value) => {
+              if (value) {
+                var newOption = $("#input-field").val();
+                if (newOption !== "") {
+                  var $select = $("#how_did_you_learn_about_us");
+                  $select.find("option:last").before('<option>' + newOption + '</option>');
+                  $select.val(newOption);
+                  swal("", "New option added: " + newOption, "success");
+                } else {
+                  swal("", "Please enter a valid option", "error");
+                }
+              } else {
+                swal.close();
+              }
+            });
+          });
+
+
+        };
+
+        return {
+          //== Init
+          init: function () {
+            initDemos();
+          },
+        };
+      })();
+
+      //== Class Initialization
+      jQuery(document).ready(function () {
+        SweetAlert2Demo.init();
+      });
+    </script>
+
+
+    <!-- <script>
     $(document).ready(function () {
       var section = $('#otherInfo');
       var sectionOffset = section.offset().top;
@@ -1425,6 +1560,40 @@
       });
     });
   </script> -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const familyRadio = document.getElementById('family_partner');
+      const organizationInput = document.getElementById('organization_partner');
+      const lableNnameRelationshipTypePartner = document.getElementById('lable_name_relationship_type_partner');
+
+      // Check if "Family" radio button is selected on page load
+      if (familyRadio.checked) {
+        organizationInput.disabled = true;
+        lableNnameRelationshipTypePartner.textContent  = "Relationship Type"
+      }
+
+      // Listen for changes in the "Partner Type" radio buttons
+      familyRadio.addEventListener('change', function() {
+        organizationInput.disabled = this.checked;
+        lableNnameRelationshipTypePartner.textContent  = "Relationship Type"
+
+      });
+
+      const otherRadio = document.getElementById('other_partner');
+
+      if (otherRadio.checked) {
+        // organizationInput.disabled = true;
+        lableNnameRelationshipTypePartner.textContent  = "Position"
+      }
+
+      otherRadio.addEventListener('change', function() {
+        organizationInput.disabled = !this.checked;
+        lableNnameRelationshipTypePartner.textContent  = "Position"
+
+      });
+    });
+  </script>
 </body>
 
 </html>
