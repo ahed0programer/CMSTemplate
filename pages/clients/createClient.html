@@ -1042,7 +1042,7 @@
                             <div class="row">
 
                               <!-- Partner Type -->
-                              <div class="col-md-6 col-lg-12">
+                              <div class="col-md-6 col-lg-12" id="partner_type">
                                 <div class="form-group">
                                   <label>Partner Type</label><br />
                                   <div class="d-flex">
@@ -1614,19 +1614,30 @@
 
 
   <script>
-    function edit_Partner_form(rowId) {
+    function edit_Partner_form(rowId) {partner_type
       const row = document.getElementById(`row_${rowId}`);
       const addPartnerButton = document.getElementById('add_partner_button');
       const editPartnerButton = document.getElementById('edit_partner_button');
+      const partnerType = document.getElementById('partner_type');
 
+      // partnerType.classList.add('d-none');
       addPartnerButton.classList.add('d-none');
       editPartnerButton.classList.remove('d-none');
 
       const cells = row.getElementsByTagName('td');
 
-      // ahhhhhhhhhhhhhhhed this is error 
-      // document.querySelector('input[name="partner_type"]').value = cells[0].textContent;
-
+      const partnerTypeRadioFamily = document.getElementById('family_partner');
+      const partnerTypeRadioOther = document.getElementById('other_partner');
+      console.log(cells[0].textContent)
+      if (cells[0].textContent === 'Family') {
+        console.log("Family")
+          partnerTypeRadioFamily.checked = true;
+          partnerTypeRadioOther.checked = false;
+      } else {
+        console.log("other")
+          partnerTypeRadioFamily.checked = false;
+          partnerTypeRadioOther.checked = true;
+      }
 
       disabledInabledOrganizationInput()
       document.getElementById('f_name_partner').value = cells[1].textContent;
@@ -1645,7 +1656,7 @@
   <script>
     function edit_partner(rowId) {
 
-      const partnerType = document.querySelector('input[name="partner_type"]:checked').nextElementSibling.textContent;
+      // const partnerType = document.querySelector('input[name="partner_type"]:checked').nextElementSibling.textContent;
       const firstName = document.getElementById('f_name_partner').value || 'Null';
       const lastName = document.getElementById('l_name_partner').value || 'Null';
       const email = document.getElementById('email_partner').value || 'Null';
@@ -1657,7 +1668,7 @@
       const row = document.getElementById(`row_${rowId}`);
       const cells = row.getElementsByTagName('td');
 
-      cells[0].textContent = partnerType
+      // cells[0].textContent = partnerType
       cells[1].textContent = firstName
       cells[2].textContent = lastName
       cells[3].textContent = email
@@ -1677,7 +1688,9 @@
       disabledInabledOrganizationInput();
       const addPartnerButton = document.getElementById('add_partner_button');
       const editPartnerButton = document.getElementById('edit_partner_button');
+      const partnerType = document.getElementById('partner_type');
 
+      partnerType.classList.remove('d-none');
       editPartnerButton.classList.add('d-none');
       addPartnerButton.classList.remove('d-none');
     }
