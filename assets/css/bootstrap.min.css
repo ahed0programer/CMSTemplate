@@ -509,7 +509,7 @@ input[type="text"],
 input[type="email"],
 input[type="date"],
 input[type="time"],
-
+input[type="number"],
 select,
 textarea {
     background-color: #f9f9f9 !important;
