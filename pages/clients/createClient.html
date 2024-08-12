@@ -1049,14 +1049,14 @@
 
                                     <div class="form-check">
                                       <input class="form-check-input" type="radio" name="partner_type"
-                                        id="family_partner" checked />
+                                        id="family_partner" checked  value="family"/>
                                       <label class="form-check-label" for="family_partner">
                                         Family
                                       </label>
                                     </div>
                                     <div class="form-check">
                                       <input class="form-check-input" type="radio" name="partner_type"
-                                        id="other_partner" />
+                                        id="other_partner" value="other" />
                                       <label class="form-check-label" for="other_partner">
                                         Other
                                       </label>
@@ -1566,7 +1566,7 @@
 
       rowCounter++;
 
-      const partnerType = document.querySelector('input[name="partner_type"]:checked').nextElementSibling.textContent;
+      const partnerType = document.querySelector('input[name="partner_type"]:checked').value;
       const firstName = document.getElementById('f_name_partner').value || 'Null';
       const lastName = document.getElementById('l_name_partner').value || 'Null';
       const phoneNumber = document.getElementById('phone_number_partner').value || 'Null';
@@ -1628,8 +1628,10 @@
 
       const partnerTypeRadioFamily = document.getElementById('family_partner');
       const partnerTypeRadioOther = document.getElementById('other_partner');
-      console.log(cells[0].textContent)
-      if (cells[0].textContent === 'Family') {
+
+      console.log(cells[0])
+
+      if (cells[0].textContent === 'family') {
         console.log("Family")
           partnerTypeRadioFamily.checked = true;
           partnerTypeRadioOther.checked = false;
