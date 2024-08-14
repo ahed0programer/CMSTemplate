@@ -3,22 +3,19 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Create Case</title>
+  <title>Clients</title>
   <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
   <link rel="icon" href="../../assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
+
+
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../../assets/css/plugins.min.css" />
   <link rel="stylesheet" href="../../assets/css/kaiadmin.min.css" />
 
-  <!-- Include Choices CSS -->
-  <link rel="stylesheet" href="../../assets/js/choices.js/choices.min.css" />
-
-
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../../assets/css/demo.css" />
-
 </head>
 
 <body>
@@ -74,7 +71,7 @@
               <h4 class="text-section">Business</h4>
             </li>
             <li class="nav-item">
-              <a href="../clients/clients.html" class="collapsed" aria-expanded="false">
+              <a href="clients.html" class="collapsed" aria-expanded="false">
                 <i class="fas fa-user-friends"></i>
                 <p>Clients</p>
               </a>
@@ -97,7 +94,7 @@
               <h4 class="text-section">Manage</h4>
             </li>
             <li class="nav-item">
-              <a href="pages/members.html" class="collapsed" aria-expanded="false">
+              <a href="members.html" class="collapsed" aria-expanded="false">
                 <i class="fas fa-home"></i>
                 <p>Team members</p>
               </a>
@@ -628,11 +625,10 @@
         <!-- End Navbar -->
       </div>
 
-      <!-- Form -->
-      <div class="container" id="case_owner">
+      <div class="container">
         <div class="page-inner">
           <div class="page-header">
-            <h3 class="fw-bold mb-3">Case Name</h3>
+            <h3 class="fw-bold mb-3">Stakeholders</h3>
             <ul class="breadcrumbs mb-3">
               <li class="nav-home">
                 <a href="#">
@@ -643,288 +639,188 @@
                 <i class="icon-arrow-right"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Client</a>
+                <a href="#">Business</a>
               </li>
               <li class="separator">
                 <i class="icon-arrow-right"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Create</a>
+                <a href="#">Clients</a>
               </li>
             </ul>
           </div>
 
+          <!-- Table clients -->
           <div class="row">
-            <!-- case owner -->
-            <div class="col-12" >
+            <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
-                  <div class="card-title">Case Owner</div>
+                  <div class="d-flex align-items-center">
+                    <h4 class="card-title">Stakeholders</h4>
+                    <button class="btn btn-primary btn-round ms-auto" data-bs-toggle="modal" id="create_stakeholder">
+                      <i class="fa fa-plus"></i>
+                      Add client
+                    </button>
+
+                  </div>
                 </div>
 
                 <div class="card-body">
-                  <div class="row">
-                    <div class="col-12 d-flex justify-content-between">
-                        <span class="me-3"><i class="fas fa-user-alt me-1"></i>Ahed Sulieman</span>
-                        <span class="me-3"><i class="fas fa-at me-1"></i>example@gmail.com</span>
-                        <span class="me-3"><i class="fas fa-phone me-1"></i>+96223322435</span>
-                        <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i>German, Frankfurt</span>
-                    </div>
-                    <div>
+                  <div class="table-responsive">
+                    <table id="multi-filter-select" class="display table table-striped table-hover">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
+                          <th style="width: 10%">Action</th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                        <tr>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
+                          <th>Action</th>
+                        </tr>
+                      </tfoot>
+                      <tbody>
+                        <tr>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>61</td>
+                          <td>2011/04/25</td>
+                          <td>$320,800</td>
+                          <td>
+                            <div class="form-button-action">
 
-                    </div>
-                  </div>
-                </div>
-              </div>
+                              <button type="button" data-bs-toggle="tooltip" title=""
+                                class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+                                <a href="editClient.html"><i class="fa fa-edit"></i></a>
+                              </button>
 
-            </div>
+                              <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
+                                data-original-title="Remove" >
+                                <i class="fas fa-trash" onclick="swalfunction()"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
 
-            <!-- case info card -->
-            <div class="col-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Case Info</div>
-                </div>
-
-                <div class="card-body">
-                  <div class="row">
-
-                    <!-- case type -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="defaultSelect"><i class="fas fa-tag"></i> Case Type :</label>
-                        <span class="info-lable">Divorce</span>
-                      </div>
-                    </div>
-
-                    <!-- consultaion method -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="defaultSelect"><i class="fas fa-address-book"></i> Consultation Method : </label>
-                        <span class="info-lable">in person</span>
-                      </div>
-                    </div>
-
-                    <!-- Description -->
-                    <div class="col-md-12 col-lg-12">
-                      <div class="form-group">
-                        <label>Description :</label>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque expedita odio necessitatibus laborum sequi repudiandae ullam, dolores ea deleniti iste, nisi omnis, autem placeat. Alias facilis odio dolorem nesciunt totam.
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- date and duration -->
-                    <div class="col-md-8 col-lg-8 d-flex">
-                      <div class="col-4">
-                        <div class="form-group">
-                            <label><i class=" far fa-calendar"></i> Date :</label>
-                            <span class="info-lable">2/8/2024</span>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="form-group">
-                            <label ><i class="fas fa-clock"></i>  Time :</label>
-                            <span class="info-lable"> 9:00 PM</span>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="form-group">
-                          <label><i class="fas fa-hourglass-half"></i>  duration : </label>
-                          <span class="info-lable">45 mins</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Case status -->
-                    <div class="col-md-4 col-lg-4">
-                      <div class="form-group">
-                        <label> <i class="fas fa-info-circle"></i> Status :</label>
-                        <span class="info-lable">open</span>
-                       
-                      </div>
-                    </div>
-
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
             </div>
 
-             <!-- case plan card -->
-             <div class="col-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Plan for Case</div>
-                </div>
 
-                <div class="card-body">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ea consequatur vel quaerat, ullam similique dicta, molestiae, aliquid pariatur explicabo cupiditate nemo tenetur nisi mollitia laboriosam nesciunt consectetur ex sapiente?
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam iusto est maiores aut placeat esse in atque commodi doloremque rem, veniam ratione distinctio excepturi officia nemo fugit quidem, quam consequuntur.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et deleniti ea harum, ut accusamus rerum ipsa tempore animi consectetur saepe nisi aspernatur, atque blanditiis non velit reiciendis dicta illum ipsam.
-                    </p>
-                </div>
-              </div>
-            </div>
-
-             <!-- partners card -->
-             <div class="col-md-12">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-title">Consultaions :</div>
-                  </div>
-                  <div class="card-body">
-  
-                    <div class="text-center">
-                      <div class="table-responsive">
-                        <table class="table mt-3" id="tablePartner">
-                          <thead>
-                            <tr>
-                              <th scope="col">Content</th>
-                              <th scope="col">Method</th>
-                              <th scope="col">place</th>
-                              <th scope="col">Date & time</th>
-                              <th scope="col">Duration</th>
-                            </tr>
-                          </thead>
-  
-                          <tbody >
-                            <tr>
-                                <td colspan="5">
-                                    <div class="card-sub">
-                                        No Consultaions
-                                    </div>
-                                </td>
-                                
-                            </tr>
-                            
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-  
-                    <div class="d-flex justify-content-end">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-label-info me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
-                            <i class="fas fa-pen-square"></i> Add Consultaion
-                        </button>
-                    </div>
-                   
-                    <!-- Modal Add Partner -->
-  
-                    <div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static"
-                      data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered ">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title " id="staticBackdropLabel">Add Partner</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-  
-                          <div class="modal-body">
-                            <form id="partner_form">
-                                <div class="row">    
-                                    <!-- consultant -->
-                                    <div class="col-md-6 col-lg-6">
-                                      <div class="form-group">
-                                        <label for="defaultSelect">Consultant : </label>
-                                        <a href="#case_owner">Ahed Sulieman</a>
-                                      </div>
-                                    </div>
-                
-                                  
-                                    <!-- Description -->
-                                    <div class="col-md-12 col-lg-12">
-                                      <div class="form-group">
-                                        <label for="notes">Consultaion Content :</label>
-                                        <textarea style="height: 100px;" class="notes" id="notes" placeholder="content"></textarea>
-                                      </div>
-                                    </div>
-                
-                                    <!-- consultaion method -->
-                                    <div class="col-md-6 col-lg-6">
-                                      <div class="form-group">
-                                        <label for="defaultSelect">Consultation Method :</label>
-                                        <select class="choices form-select form-control">
-                                          <option selected value="telephone">telephone</option>
-                                          <option value="email" >email</option>
-                                          <option value="in_person">in person</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <!-- consultaion method -->
-                                    <div class="col-md-6 col-lg-6">
-                                      <div class="form-group">
-                                        <label for="defaultSelect">consultaion place :</label>
-                                        <input class="form-control" type="text" name="consult_place" id="">
-                                      </div>
-                                    </div>
-                
-                                    <!-- date and duration -->
-                                    <div class="col-md-12 col-lg-12 d-flex">
-                                      <div class="col-4">
-                                        <div class="form-group">
-                                          <label for="case_date">Date :</label>
-                                          <input class="form-control" type="date" name="" id="case_date">
-                                        </div>
-                                      </div>
-                                      <div class="col-4">
-                                        <div class="form-group">
-                                          <label for="case_date">Time :</label>
-                                          <input class="form-control" type="time" name="" id="case_date">
-                                        </div>
-                                      </div>
-                                      <div class="col-3">
-                                        <div class="form-group">
-                                          <label for="case_date">duration :</label>
-                                          <div class="input-group">
-                                            <input class="form-control" type="number" name="" id="case_date" min="5" value="5">
-                                            <span class="input-group-text">minutes</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                </div>
-                            </form>
-                            <!-- </div> -->
-  
-  
-                          </div>
-  
-                          <!-- </div> -->
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="add_partner()" data-bs-dismiss="modal"
-                              id="add_partner_button">Add</button>
-  
-                            <button type="button" class="btn btn-primary d-none"
-                              onclick="edit_partner(this.getAttribute('data-row-id'))" data-bs-dismiss="modal"
-                              id="edit_partner_button">Edit</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- </div> -->
-                  </div>
-                </div>
-              </div>
-
-            <!-- submit card -->
-            <div class="card-action d-flex justify-content-end">
-              <button class="btn me-2 btn-round btn-danger">Cancel</button>
-              <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add & assign tasks</button>  
-              <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add </button>  
-              <!-- </div> -->
-            </div>
           </div>
-
 
         </div>
       </div>
 
+      <footer class="footer">
+        <div class="container-fluid d-flex justify-content-between">
+          <nav class="pull-left">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="http://www.themekita.com">
+                  ThemeKita
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Help </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Licenses </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright">
+            2024, made with <i class="fa fa-heart heart text-danger"></i> by
+            <a href="http://www.themekita.com">ThemeKita</a>
+          </div>
+          <div>
+            Distributed by
+            <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
+          </div>
+        </div>
+      </footer>
     </div>
+
+
+
+    <!-- Custom template | don't include it in your project! -->
+    <div class="custom-template">
+      <div class="title">Settings</div>
+      <div class="custom-content">
+        <div class="switcher">
+          <div class="switch-block">
+            <h4>Logo Header</h4>
+            <div class="btnSwitch">
+              <button type="button" class="selected changeLogoHeaderColor" data-color="dark"></button>
+              <button type="button" class="selected changeLogoHeaderColor" data-color="blue"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="purple"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="light-blue"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="green"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="orange"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="red"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="white"></button>
+              <br />
+              <button type="button" class="changeLogoHeaderColor" data-color="dark2"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="blue2"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="purple2"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="light-blue2"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="green2"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="orange2"></button>
+              <button type="button" class="changeLogoHeaderColor" data-color="red2"></button>
+            </div>
+          </div>
+          <div class="switch-block">
+            <h4>Navbar Header</h4>
+            <div class="btnSwitch">
+              <button type="button" class="changeTopBarColor" data-color="dark"></button>
+              <button type="button" class="changeTopBarColor" data-color="blue"></button>
+              <button type="button" class="changeTopBarColor" data-color="purple"></button>
+              <button type="button" class="changeTopBarColor" data-color="light-blue"></button>
+              <button type="button" class="changeTopBarColor" data-color="green"></button>
+              <button type="button" class="changeTopBarColor" data-color="orange"></button>
+              <button type="button" class="changeTopBarColor" data-color="red"></button>
+              <button type="button" class="changeTopBarColor" data-color="white"></button>
+              <br />
+              <button type="button" class="changeTopBarColor" data-color="dark2"></button>
+              <button type="button" class="selected changeTopBarColor" data-color="blue2"></button>
+              <button type="button" class="changeTopBarColor" data-color="purple2"></button>
+              <button type="button" class="changeTopBarColor" data-color="light-blue2"></button>
+              <button type="button" class="changeTopBarColor" data-color="green2"></button>
+              <button type="button" class="changeTopBarColor" data-color="orange2"></button>
+              <button type="button" class="changeTopBarColor" data-color="red2"></button>
+            </div>
+          </div>
+          <div class="switch-block">
+            <h4>Sidebar</h4>
+            <div class="btnSwitch">
+              <button type="button" class="selected changeSideBarColor" data-color="white"></button>
+              <button type="button" class="changeSideBarColor" data-color="dark"></button>
+              <button type="button" class="changeSideBarColor" data-color="dark2"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-toggle">
+        <i class="icon-settings"></i>
+      </div>
+    </div>
+    <!-- End Custom template -->
+
 
   </div>
   <!--   Core JS Files   -->
@@ -934,25 +830,26 @@
 
   <!-- jQuery Scrollbar -->
   <script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
- 
-  <!-- jQuery Sparkline -->
-  <script src="../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+  <!-- Datatables -->
+  <script src="../../assets/js/plugin/datatables/datatables.min.js"></script>
 
   <!-- Chart Circle -->
   <script src="../../assets/js/plugin/chart-circle/circles.min.js"></script>
 
-  <!-- Bootstrap Notify -->
-  <script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
-
-  <!-- Sweet Alert -->
-  <script src="../../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-
   <!-- Kaiadmin JS -->
   <script src="../../assets/js/kaiadmin.min.js"></script>
 
-  <script src="../../assets/js/choices.js/choices.min.js"></script>
+   <!-- Bootstrap Notify -->
+   <script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
+ <!-- Sweet Alert -->
+ <script src="../../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+  <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+  <script src="../../assets/js/setting-demo2.js"></script>
+
+ 
 
 
   <script>
@@ -1005,80 +902,106 @@
     });
   </script>
 
-
-  <!-- to show alert add new option -->
   <script>
-    
-    var currentCaseType = $("#case_type").val()
+    $(document).ready(function () {
+      $("#basic-datatables").DataTable({});
 
-    var SweetAlert2Demo = (function () {
-      //== Demos
-      var initDemos = function () {
-        //== Sweetalert Demo 1
-        $('#case_type').change(function (e) {
-          var selectedValue = $(this).val();
-          if (selectedValue != 'add_another_way') {
-            console.log("Add Another Way selected");
-            return
-          }
+      $("#multi-filter-select").DataTable({
+        pageLength: 5,
+        initComplete: function () {
+          this.api()
+            .columns()
+            .every(function () {
+              var column = this;
+              var select = $(
+                '<select class="form-select"><option value=""></option></select>'
+              )
+                .appendTo($(column.footer()).empty())
+                .on("change", function () {
+                  var val = $.fn.dataTable.util.escapeRegex($(this).val());
+
+                  column
+                    .search(val ? "^" + val + "$" : "", true, false)
+                    .draw();
+                });
+
+              column
+                .data()
+                .unique()
+                .sort()
+                .each(function (d, j) {
+                  select.append(
+                    '<option value="' + d + '">' + d + "</option>"
+                  );
+                });
+            });
+        },
+      });
+
+      // Add Row
+      $("#add-row").DataTable({
+        pageLength: 5,
+      });
+
+      var action =
+        '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
+
+      $("#addRowButton").click(function () {
+        $("#add-row")
+          .dataTable()
+          .fnAddData([
+            $("#addName").val(),
+            $("#addPosition").val(),
+            $("#addOffice").val(),
+            action,
+          ]);
+        $("#addRowModal").modal("hide");
+      });
+    });
+  </script>
+
+  <script>
+    document.getElementById('create_stakeholder').addEventListener('click', function () {
+      window.location.href = 'create.html';
+    });
+  </script>
+
+  <script>
+    function swalfunction() {
+      console.log("ahed ddd");
+      swal({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        type: "warning",
+        buttons: {
+          confirm: {
+            text: "Yes, delete it!",
+            className: "btn btn-success",
+          },
+          cancel: {
+            visible: true,
+            className: "btn btn-danger",
+          },
+        },
+      }).then((Delete) => {
+        if (Delete) {
           swal({
-            title: "Input Option",
-            html: '<br><input class="form-control" placeholder="Input Option" id="input-field">',
-            content: {
-              element: "input",
-              attributes: {
-                placeholder: "Input Option",
-                type: "text",
-                id: "input-field",
-                className: "form-control",
-              },
-            },
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            type: "success",
             buttons: {
-              cancel: {
-                visible: true,
-                className: "btn btn-danger",
-              },
               confirm: {
                 className: "btn btn-success",
               },
             },
-          }).then((value) => {
-            if (value) {
-              var newOption = $("#input-field").val();
-              if (newOption !== "") {
-                var $select = $("#case_type");
-                $select.find("option:last").before('<option>' + newOption + '</option>');
-                $select.val(newOption);
-                swal("", "New option added: " + newOption, "success");
-              } else {
-                var $select = $("#case_type");
-                $select.find("option:last").before('<option>' + newOption + '</option>');
-                $select.val(newOption);
-                swal("", "Please enter a valid option", "error");
-              }
-            } else {
-              swal.close();
-            }
           });
-        });
-
-
-      };
-
-      return {
-        //== Init
-        init: function () {
-          initDemos();
-        },
-      };
-    });
-
-    //== Class Initialization
-    jQuery(document).ready(function () {
-      SweetAlert2Demo.init();
-    });
+        } else {
+          swal.close();
+        }
+      });
+    }
+    
   </script>
 
 </body>
-
 </html>
