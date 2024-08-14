@@ -14,6 +14,50 @@
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../../assets/css/demo.css" />
+  <style>
+    .profile-card {
+      max-width: 600px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .profile-card .card-body {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .profile-card .profile-info {
+      flex: 1;
+    }
+    .profile-card .profile-info img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+    .profile-card .profile-info h3 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .profile-card .profile-info p {
+      margin-bottom: 0;
+    }
+    .profile-card .details {
+      flex: 2;
+      padding-left: 1.5rem;
+    }
+    .profile-card .details ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .profile-card .details ul li {
+      margin-bottom: 10px;
+    }
+    .profile-card .details ul li i {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+  </style>
 
 </head>
 
@@ -657,25 +701,94 @@
 
       <div class="container">
         <div class="page-inner">
-          <div class="card card-body">
-            <div class="d-flex justify-content-end">
-              <a href="editProfile.html"><i class="fas fa-edit"></i></a>
-            </div>
-            <div class="row ">
-              <div class="col-lg-4 col-icon">
-                <img class="avatar-img rounded-circle" src="../../assets/img/profile.jpg" alt="" srcset="">
+          <!-- profile card  -->
+          <div class="row">
+            <div class="card shadow-sm rounded-3 col-md-8 ">
+              <div class="card-header d-flex justify-content-between">
+                <div class="card-title">Profile </div>
+                <div><span class="btn">edit</span></div> 
               </div>
-              <div class="col-lg-8">
-                <div class="m">
-                  <h4><span>Name :</span></h4>
-                  <h4><span>E-mail :</span> </h4>
-                  <h4><span>phone :</span> </h4>
-                  <h4><span class="fw-bold ">completed tasks :</span> </h4>
+              <div class="card-body row g-0">
+                <!-- Left Side: Image, Name, and Position -->
+                <div class="col-md-5 d-flex flex-column align-items-center p-3">
+                  <img src="../../assets/img/profile.jpg" alt="Profile Picture" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                  <h4 class="mb-1">John Doe</h4>
+                  <p class="text-muted">Web Developer</p>
+                </div>
+                <!-- Right Side: Contact Information -->
+                <div class="col-md-7 p-3">
+                  <ul class="list-unstyled">
+                    <li class="d-flex align-items-center mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Main St, Anytown</li>
+                    <li class="d-flex align-items-center mb-2"><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                    <li class="d-flex align-items-center mb-2"><i class="fas fa-envelope me-2"></i> john.doe@example.com</li>
+                    <li class="d-flex align-items-center mb-2"><i class="fas fa-briefcase me-2"></i> Senior Developer at TechCorp</li>
+                    <li class="d-flex align-items-center mb-2"><i class="fas fa-birthday-cake me-2"></i> August 14, 1985</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4 ">
+              <div class="col-12">
+                <div class="card card-stats card-round">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-icon">
+                        <div class="icon-big text-center icon-primary bubble-shadow-small">
+                          <i class="fas fa-briefcase"></i>
+                        </div>
+                      </div>
+                      <div class="col col-stats ms-3 ms-sm-0">
+                        <div class="numbers">
+                          <p class="card-category">total cases handled</p>
+                          <h4 class="card-title">156</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-stats card-round">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-icon">
+                        <div class="icon-big text-center icon-primary bubble-shadow-small">
+                          <i class="fas fa-user-check"></i>
+                        </div>
+                      </div>
+                      <div class="col col-stats ms-3 ms-sm-0">
+                        <div class="numbers">
+                          <p class="card-category">Total Clients reviewed</p>
+                          <h4 class="card-title">1303</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-stats card-round">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-icon">
+                        <div class="icon-big text-center icon-primary bubble-shadow-small">
+                          <i class="far fa-calendar-check"></i>
+                        </div>
+                      </div>
+                      <div class="col col-stats ms-3 ms-sm-0">
+                        <div class="numbers">
+                          <p class="card-category">Completed Tasks</p>
+                          <h4 class="card-title">1303</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
+      
+          <!-- statistics -->
           <div class="row">
             <div class="col-sm-6 col-md-3">
               <div class="card card-stats card-round">
@@ -833,6 +946,44 @@
             </div>
           </div>
 
+          <!-- logs card -->
+          <div class="card">
+            <div class="card-header d-flex justify-content-between">
+              <div class="card-title">Work Logs </div>
+              <div><span class="btn btn-label-info">last month</span></div>
+              
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th style="width: 80%;">Action</th>
+                      <th >time stamp</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> cloesd Mutaz Muleiman unemplyement case </td>
+                      <td>2/8/2024 5:45 pm</td>
+                    </tr>
+                    <tr>
+                      <td> created a new case </td>
+                      <td>2/8/2024 5:45 pm</td>
+                    </tr>
+                    <tr>
+                      <td> created a task "meeting a client"  </td>
+                      <td>2/8/2024 5:45 pm</td>
+                    </tr>
+                    <tr>
+                      <td>completed a task </td>
+                      <td>2/8/2024 5:45 pm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
