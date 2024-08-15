@@ -653,6 +653,7 @@
           </div>
 
 
+          <!-- personal , note info -->
           <div class="row">
             <!-- left side cards -->
 
@@ -851,9 +852,8 @@
           </div>
 
 
+          <!-- contact , partners , consultaions  and appointments  -->
           <div class="row">
-
-
             <!-- Contact Info card -->
             <div class="col-md-12">
               <div class="card">
@@ -984,14 +984,18 @@
             <!-- partners card -->
             <div class="col-md-12">
               <div class="card">
-                <div class="card-header">
+                <div class="card-header d-flex justify-content-between">
                   <div class="card-title">Partners :</div>
+                  <div>
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePartners" aria-expanded="false" aria-controls="collapsePartners">
+                      expand <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
                 </div>
-                <div class="card-body">
-
+                <div class="card-body collapse"  id="collapsePartners">
                   <div class="text-center">
                     <div class="card-sub" id="noPartner">
-                      No Partner Yet
+                      No Partners
                     </div>
 
                     <div class="table-responsive">
@@ -1167,58 +1171,135 @@
                   <!-- </div> -->
                 </div>
               </div>
+            </div>
 
-              <!-- appointments schedule card -->
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-title">appointments shcedule</div>
+            <!-- Consultaions card -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="card-title">First Consultaion :</div>
+                  <div>
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConsultaions" aria-expanded="false" aria-controls="collapseConsultaions">
+                      expand <i class="fas fa-chevron-down"></i>
+                    </button>
                   </div>
-                  <div class="card-body">
-                    <div class="card-body">
-                      <ul class="nav nav-pills nav-secondary" id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link active" id="pills-week-tab" data-bs-toggle="pill" href="#pills-week"
-                            role="tab" aria-controls="pills-week" aria-selected="true">week</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab"
-                            aria-controls="pills-month" aria-selected="false">month</a>
-                        </li>
-                      </ul>
-                      <div class="tab-content mt-2 mb-3" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-week" role="tabpanel"
-                          aria-labelledby="pills-week-tab">
-                          <div class="d-flex justify-content-start flex-wrap">
-                            <span class="me-3 ">saturday</span>
-                            <span class="me-3 ">sunday</span>
-                            <span class="me-3 ">monday</span>
-                            <span class="me-3 ">tuesday</span>
-                            <span class="me-3 ">wedensday</span>
-                            <span class="me-3 ">thirsday</span>
-                            <span class="me-3 ">friday </span>
-                          </div>
+                </div>
+                <div class="card-body collapse"  id="collapseConsultaions">
+                  <div class="row">    
+                    <!-- consultant -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="defaultSelect">Consultant : </label>
+                        <a href="#case_owner">Ahed Sulieman</a>
+                      </div>
+                    </div>
+
+                  
+                    <!-- Description -->
+                    <div class="col-md-12 col-lg-12">
+                      <div class="form-group">
+                        <label for="notes">Consultaion Content :</label>
+                        <textarea style="height: 100px;" class="notes" id="notes" placeholder="content"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- consultaion method -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="defaultSelect">Consultation Method :</label>
+                        <select class="choices form-select form-control">
+                          <option selected value="telephone">telephone</option>
+                          <option value="email" >email</option>
+                          <option value="in_person">in person</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- consultaion method -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="defaultSelect">consultaion place :</label>
+                        <input class="form-control" type="text" name="consult_place" id="">
+                      </div>
+                    </div>
+
+                    <!-- date and duration -->
+                    <div class="col-md-12 col-lg-12 d-flex">
+                      <div class="col-4">
+                        <div class="form-group">
+                          <label for="case_date">Date :</label>
+                          <input class="form-control" type="date" name="" id="case_date">
                         </div>
-                        <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
-                          !! calendar is watiing to be set !!
+                      </div>
+                      <div class="col-4">
+                        <div class="form-group">
+                          <label for="case_date">Time :</label>
+                          <input class="form-control" type="time" name="" id="case_date">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                          <label for="case_date">duration :</label>
+                          <div class="input-group">
+                            <input class="form-control" type="number" name="" id="case_date" min="5" value="5">
+                            <span class="input-group-text">minutes</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- submit card -->
-              <div class="card-action d-flex justify-content-end">
-                <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
-                <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
-                
-                <button class="btn me-2 btn-round btn-label-info">save draft</button>
-                <button class="btn me-2 btn-round btn-danger">Cancel</button>
-                
+            <!-- appointments schedule card -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="card-title">appointments shcedule</div>
+                  <div>
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAppointments" aria-expanded="false" aria-controls="collapseAppointments">
+                      expand <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body collapse"  id="collapseAppointments">
+                  <div class="mb-4">
+                    <ul class="nav nav-tabs card-header-tabs" id="pills-tab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-week-tab" data-bs-toggle="pill" href="#pills-week"
+                        role="tab" aria-controls="pills-week" aria-selected="true">Weekly</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link"d="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab"
+                        aria-controls="pills-month" aria-selected="false">Monthly</a>
+                      </li>
+                    </ul>
+                  </div> 
+                  <div class="tab-content mt-2 mb-3 text-center" id="pills-tabContent">
+                    <div class="tab-pane fade show active"  id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
+                      <h5 class="card-title">Weekly</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
+                      <h5 class="card-title">Month</h5>
+                      <p class="card-text">adklaldsk calsdkfmald mf;alksdfma;lksd f.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
+            <!-- submit card -->
+            <div class="card-action d-flex justify-content-end">
+              <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
+              <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
+              
+              <button class="btn me-2 btn-round btn-label-info">save draft</button>
+              <button class="btn me-2 btn-round btn-danger">Cancel</button>
+              
+            </div>
           </div>
         </div>
 

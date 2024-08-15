@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Create Client</title>
+  <title>Edit Client</title>
   <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
   <link rel="icon" href="../../assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
 
@@ -23,8 +23,6 @@
 
 <body>
   <div class="wrapper">
-
-
     <!-- Sidebar -->
     <div class="sidebar" data-background-color="dark">
       <div class="sidebar-logo">
@@ -337,8 +335,6 @@
     </div>
     <!-- End Sidebar -->
 
-
-
     <div class="main-panel">
       <div class="main-header">
         <div class="main-header-logo">
@@ -632,7 +628,7 @@
       <div class="container">
         <div class="page-inner">
           <div class="page-header">
-            <h3 class="fw-bold mb-3">Create Client</h3>
+            <h3 class="fw-bold mb-3">Edit Client</h3>
             <ul class="breadcrumbs mb-3">
               <li class="nav-home">
                 <a href="#">
@@ -643,389 +639,196 @@
                 <i class="icon-arrow-right"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Client</a>
+                <a href="#">Clients</a>
               </li>
               <li class="separator">
                 <i class="icon-arrow-right"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Create</a>
+                <a href="#">edit</a>
               </li>
             </ul>
           </div>
 
 
-          <!-- Left container card -->
+          <!-- personal , note info -->
           <div class="row">
-            <div class="col-lg-8 col-md-12">
+            <!-- left side cards -->
 
-              <!-- Personal Info card -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <div class="card-title">Personal Info</div>
+            <!-- Personal Info card -->
+            <div class="col-md-6 col-lg-8">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Personal Info</div>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+
+                    <!-- Anonymous check -->
+                    <div class="col-md-12 col-lg-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="anonymous_client"
+                          onclick="renameFirstLastNameToAnonymous()" />
+                        <label class="form-check-label" for="anonymous_client">
+                          Anonymous Client
+                        </label>
+                      </div>
                     </div>
 
-                    <div class="card-body">
-                      <div class="row">
 
-                        <!-- Anonymous check -->
-                        <div class="col-md-12 col-lg-12">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="anonymous_client"
-                              onclick="renameFirstLastNameToAnonymous()" />
-                            <label class="form-check-label" for="anonymous_client">
-                              Anonymous Client
-                            </label>
-                          </div>
-                        </div>
 
-                        <!-- Primery Secandry Client -->
-                        <!-- <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                        <label>Client Status</label>
+                    <!-- First Name -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="f_name">First Name *</label>
+                        <input type="text" class="form-control" id="f_name" placeholder="Enter First Name" required />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small> -->
+                      </div>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="l_name">Last Name *</label>
+                        <input type="text" class="form-control" id="l_name" placeholder="Enter Last Name" required />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small> -->
+                      </div>
+                    </div>
+
+                    <!-- gender -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="form-group">
+                        <label>Gender</label><br />
                         <div class="d-flex">
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="primery_secandry_client"
-                              id="primery_client" checked onchange="notAllowEnterCase()" />
-                            <label class="form-check-label" for="primery_client">
-                              Primery Client
+                            <input class="form-check-input" type="radio" name="gender" id="Male" checked />
+                            <label class="form-check-label" for="Male">
+                              Male
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="primery_secandry_client"
-                              id="secandry_client" onchange="allowEnterCase()" />
-                            <label class="form-check-label" for="secandry_client">
-                              Secandry Client
+                            <input class="form-check-input" type="radio" name="gender" id="Female" />
+                            <label class="form-check-label" for="Female">
+                              Female
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="Other" />
+                            <label class="form-check-label" for="Other">
+                              Other
                             </label>
                           </div>
                         </div>
                       </div>
-                    </div> -->
+                    </div>
 
-                        <!-- First Name -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="f_name">First Name *</label>
-                            <input type="text" class="form-control" id="f_name" placeholder="Enter First Name"
-                              required />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- Last Name -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="l_name">Last Name *</label>
-                            <input type="text" class="form-control" id="l_name" placeholder="Enter Last Name"
-                              required />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- gender -->
-                        <div class="col-md-6 col-lg-4">
-                          <div class="form-group">
-                            <label>Gender</label><br />
-                            <div class="d-flex">
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="Male" checked />
-                                <label class="form-check-label" for="Male">
-                                  Male
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="Female" />
-                                <label class="form-check-label" for="Female">
-                                  Female
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="Other" />
-                                <label class="form-check-label" for="Other">
-                                  Other
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Age -->
-                        <div class="col-md-6 col-lg-4">
-                          <div class="form-group">
-                            <label for="defaultSelect">Marital Status</label>
-                            <select class="form-select form-control" id="marital_status">
-                              <option disabled selected value="">Marital Status</option>
-                              <option>18-30</option>
-                              <option>31-45</option>
-                              <option>46-60</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Age -->
-                        <div class="col-md-6 col-lg-4">
-                          <div class="form-group">
-                            <label for="defaultSelect">Age</label>
-                            <select class="form-select form-control" id="age">
-                              <option disabled selected value="">Select Age</option>
-                              <option>18-30</option>
-                              <option>31-45</option>
-                              <option>46-60</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Nationality -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="defaultSelect">Nationality</label>
-
-                            <select class="choices form-select form-control" id="nationality">
-                              <option disabled selected value="">Select Nationality</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Seond Nationality -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="defaultSelect">Seond Nationality</label>
-
-                            <select class="choices form-select form-control" id="seond_nationality">
-                              <option disabled selected value="">Select Seond Nationality</option>
-                              <option>none</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-
+                    <!-- Marital Status -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="form-group">
+                        <label for="defaultSelect">Marital Status</label>
+                        <select class="form-select form-control" id="marital_status">
+                          <option disabled selected value="">Marital Status</option>
+                          <option>18-30</option>
+                          <option>31-45</option>
+                          <option>46-60</option>
+                        </select>
                       </div>
                     </div>
+
+                    <!-- Age -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="form-group">
+                        <label for="defaultSelect">Age</label>
+                        <select class="form-select form-control" id="age">
+                          <option disabled selected value="">Select Age</option>
+                          <option>18-30</option>
+                          <option>31-45</option>
+                          <option>46-60</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Nationality -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="defaultSelect">Nationality</label>
+
+                        <select class="choices form-select form-control" id="nationality">
+                          <option disabled selected value="">Select Nationality</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Seond Nationality -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="defaultSelect">Seond Nationality</label>
+
+                        <select class="choices form-select form-control" id="seond_nationality">
+                          <option disabled selected value="">Select Seond Nationality</option>
+                          <option>none</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
-
-
-              <!-- Contact Info card -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <div class="card-title">Contact Info</div>
-                    </div>
-
-                    <div class="card-body">
-                      <div class="row">
-
-
-
-                        <!-- Email -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter Email" />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- phone_number -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="phone_number">Phone Number</label>
-                            <input type="text" class="form-control" id="phone_number" placeholder="Enter Phone Number"
-                              oninput="validatePhoneNumber()" />
-                            <small id="error_message_phone_number" class="form-text text-muted">
-                              Please Enter Only Number
-                            </small>
-                          </div>
-                        </div>
-
-                        <!-- Counrty -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="defaultSelect">Counrty</label>
-                            <select class="choices form-select form-control" id="counrty">
-                              <option disabled selected value="">Select Counrty</option>
-                              <option>Germany</option>
-                              <option>Denmark</option>
-                              <option>France</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- City -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="defaultSelect">City</label>
-                            <select class="choices form-select form-control" id="city">
-                              <option disabled selected value="">Select City</option>
-                              <option>18-30</option>
-                              <option>31-45</option>
-                              <option>46-60</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Street -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="street">Street</label>
-                            <input type="text" class="form-control" id="street" placeholder="Enter Street" />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- Street Number -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="street_number">Street Number</label>
-                            <input type="text" class="form-control" id="street_number"
-                              placeholder="Enter Street Number" />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-
-                        <!-- Place Residence -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="Place_Residence">Place Residence</label>
-                            <select class="choices form-select form-control" id="Place_Residence">
-                              <option disabled selected value="">Select Place Residence</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-
-
-                        <div class="col-md-6 col-lg-6">
-                          <div class="row">
-                            <!-- Type Residence -->
-                            <div class="col-md-12" id="div_type_residence">
-                              <div class="form-group">
-                                <label for="type_Residence">Type Residence</label>
-                                <select class="form-select form-control" id="type_Residence">
-                                  <option disabled selected value="">Select Type Residence</option>
-                                  <option>Sitizen</option>
-                                  <option>Permanent</option>
-                                  <option>Temporary</option>
-                                </select>
-                              </div>
-                            </div>
-                            <!-- Date Residence -->
-                            <div class="col-md-5" id="div_date_residence">
-                              <div class="form-group">
-                                <label for="date_residence">Date Residence</label>
-                                <input type="date" class="form-control" id="date_residence"
-                                  placeholder="Enter Date Residence" name="date_residence" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- three card -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <div class="card-title">Form Elements</div>
-                    </div>
-
-                    <div class="card-body">
-                      <div class="row">
-
-
-
-                        <!-- First Name -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="f_name">First Name *</label>
-                            <input type="text" class="form-control" id="f_name" placeholder="Enter First Name"
-                              required />
-
-                          </div>
-                        </div>
-
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
             </div>
 
 
+            <!-- right side card -->
 
-            <!-- left container card -->
-            <div class="col-lg-4 col-md-12">
+            <!-- Other Info card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card" id="otherInfo">
+                <div class="card-header">
+                  <div class="card-title">Other Info</div>
+                </div>
 
-              <!-- Other Info card -->
-              <div class="row">
-                <div class="col-md-12" >
-                  <div class="card" id="otherInfo">
-                    <div class="card-header">
-                      <div class="card-title">Other Info</div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <!-- How Did You Learn About Us! -->
+                    <div class="col-md-12 col-lg-12">
+                      <div class="form-group">
+                        <label for="how_did_you_learn_about_us">How Did You Learn About Us!</label>
+                        <select class="form-select form-control" id="how_did_you_learn_about_us">
+                          <option disabled selected value="">How Did You Learn About Us</option>
+                          <option>Internet</option>
+                          <option>Frinds</option>
+                          <option id="alert_add_another_way" value="add_another_way">
+                            Add Another Way
+                          </option>
+                        </select>
+                      </div>
                     </div>
-                    
-
-                    <div class="card-body">
-                      <div class="row">
-                        <!-- How Did You Learn About Us! -->
-                        <div class="col-md-12 col-lg-12">
-                          <div class="form-group">
-                            <label for="how_did_you_learn_about_us">How Did You Learn About Us!</label>
-                            <select class="form-select form-control" id="how_did_you_learn_about_us">
-                              <option disabled selected value="">How Did You Learn About Us</option>
-                              <option>Internet</option>
-                              <option>Frinds</option>
-                              <option id="alert_add_another_way" value="add_another_way">
-                                Add Another Way
-                              </option>
-                            </select>
-                          </div>
-                        </div>
 
 
-                        <!-- Notes -->
-                        <div class="col-md-12 col-lg-12">
-                          <div class="form-group">
-                            <label for="notes">Notes</label>
-                            <textarea class="notes" id="notes" placeholder="Notes"></textarea>
-                          </div>
-                        </div>
+                    <!-- Notes -->
+                    <div class="col-md-12 col-lg-12">
+                      <div class="form-group">
+                        <label for="notes">Notes</label>
+                        <textarea class="notes" id="notes" placeholder="Notes"></textarea>
+                      </div>
+                    </div>
 
 
-                        <!-- Case -->
-                        <!-- <div class="col-md-6 col-lg-6">
+                    <!-- Case -->
+                    <!-- <div class="col-md-6 col-lg-6">
                       <div class="form-group">
                         <label for="case">Case</label>
                         <select class="form-select form-control" id="case" disabled>
@@ -1037,64 +840,227 @@
                       </div>
                     </div> -->
 
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- contact , partners , consultaions  and appointments  -->
+          <div class="row">
+            <!-- Contact Info card -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Contact Info</div>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+
+
+
+                    <!-- Email -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email" />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
                       </div>
+                    </div>
+
+                    <!-- phone_number -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="text" class="form-control" id="phone_number" placeholder="Enter Phone Number"
+                          oninput="validatePhoneNumber()" />
+                        <small id="error_message_phone_number" class="form-text text-muted">
+                          Please Enter Only Number
+                        </small>
+                      </div>
+                    </div>
+
+                    <!-- Counrty -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="defaultSelect">Counrty</label>
+                        <select class="choices form-select form-control" id="counrty">
+                          <option disabled selected value="">Select Counrty</option>
+                          <option>Germany</option>
+                          <option>Denmark</option>
+                          <option>France</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- City -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="defaultSelect">City</label>
+                        <select class="choices form-select form-control" id="city">
+                          <option disabled selected value="">Select City</option>
+                          <option>18-30</option>
+                          <option>31-45</option>
+                          <option>46-60</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Street -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="street">Street</label>
+                        <input type="text" class="form-control" id="street" placeholder="Enter Street" />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                      </div>
+                    </div>
+
+                    <!-- Street Number -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="street_number">Street Number</label>
+                        <input type="text" class="form-control" id="street_number" placeholder="Enter Street Number" />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                      </div>
+                    </div>
 
 
+                    <!-- Place Residence -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="Place_Residence">Place Residence</label>
+                        <select class="choices form-select form-control" id="Place_Residence">
+                          <option disabled selected value="">Select Place Residence</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-6">
+                      <div class="row">
+                        <!-- Type Residence -->
+                        <div class="col-md-12" id="div_type_residence">
+                          <div class="form-group">
+                            <label for="type_Residence">Type Residence</label>
+                            <select class="form-select form-control" id="type_Residence">
+                              <option disabled selected value="">Select Type Residence</option>
+                              <option>Sitizen</option>
+                              <option>Permanent</option>
+                              <option>Temporary</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!-- Date Residence -->
+                        <div class="col-md-5" id="div_date_residence">
+                          <div class="form-group">
+                            <label for="date_residence">Date Residence</label>
+                            <input type="date" class="form-control" id="date_residence"
+                              placeholder="Enter Date Residence" name="date_residence" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- appointments schedule card -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="card-title">appointments shcedule</div>
+                  <div>
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAppointments" aria-expanded="false" aria-controls="collapseAppointments">
+                      expand <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body collapse"  id="collapseAppointments">
+                  <div class="mb-4">
+                    <ul class="nav nav-tabs card-header-tabs" id="pills-tab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-week-tab" data-bs-toggle="pill" href="#pills-week"
+                        role="tab" aria-controls="pills-week" aria-selected="true">Weekly</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link"d="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab"
+                        aria-controls="pills-month" aria-selected="false">Monthly</a>
+                      </li>
+                    </ul>
+                  </div> 
+                  <div class="tab-content mt-2 mb-3 text-center" id="pills-tabContent">
+                    <div class="tab-pane fade show active"  id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
+                      <h5 class="card-title">Weekly</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
+                      <h5 class="card-title">Month</h5>
+                      <p class="card-text">adklaldsk calsdkfmald mf;alksdfma;lksd f.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
-
-
 
             <!-- submit card -->
-            <div class="col-md-12 col-lg-3">
-              <div class="card">
-                <div class="card-action">
-                  <button class="btn btn-success" id="button_add">Add</button>
-                  <button class="btn btn-success" id="button_add_with_case">Add With Case</button>
-                  <button class="btn btn-danger">Cancel</button>
-                </div>
-              </div>
+            <div class="card-action d-flex justify-content-end">
+              <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
+              <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
+              
+              <button class="btn me-2 btn-round btn-label-info">save draft</button>
+              <button class="btn me-2 btn-round btn-danger">Cancel</button>
+              
             </div>
           </div>
-
-
         </div>
+
+
+        <footer class="footer">
+          <div class="container-fluid d-flex justify-content-between">
+            <nav class="pull-left">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="http://www.themekita.com">
+                    ThemeKita
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Help </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Licenses </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="copyright">
+              2024, made with <i class="fa fa-heart heart text-danger"></i> by
+              <a href="http://www.themekita.com">ThemeKita</a>
+            </div>
+            <div>
+              Distributed by
+              <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
+            </div>
+          </div>
+        </footer>
       </div>
-
-
-      <footer class="footer">
-        <div class="container-fluid d-flex justify-content-between">
-          <nav class="pull-left">
-            <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link" href="http://www.themekita.com">
-                  ThemeKita
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Help </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Licenses </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright">
-            2024, made with <i class="fa fa-heart heart text-danger"></i> by
-            <a href="http://www.themekita.com">ThemeKita</a>
-          </div>
-          <div>
-            Distributed by
-            <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
-          </div>
-        </div>
-      </footer>
     </div>
-
   </div>
   <!--   Core JS Files   -->
   <script src="../../assets/js/core/jquery-3.7.1.min.js"></script>
@@ -1136,8 +1102,6 @@
 
   <script src="../../assets/js/choices.js/choices.min.js"></script>
 
-
-
   <script>
     $("#displayNotif").on("click", function () {
       var placementFrom = $("#notify_placement_from option:selected").val();
@@ -1147,7 +1111,7 @@
       var content = {};
 
       content.message =
-        'Turning standard Bootstrap alerts into "notify" like notifications';
+        'Notification From AHed suleiman ';
       content.title = "Bootstrap notify";
       if (style == "withicon") {
         content.icon = "fa fa-bell";
@@ -1163,7 +1127,7 @@
           from: placementFrom,
           align: placementAlign,
         },
-        time: 1000,
+        time: 2000,
       });
     });
   </script>
@@ -1249,6 +1213,8 @@
   <script>
     // init loded page
     document.addEventListener("DOMContentLoaded", function () {
+      disabledInabledOrganizationInput();
+      updateTableVisibility();
       date_residence
       var errorMessage = document.getElementById("error_message_phone_number");
       var dateResidence = document.getElementById("div_date_residence");
@@ -1398,22 +1364,6 @@
     });
   </script>
 
-
-<script>
-  $(document).ready(function() {
-  var section = $('#otherInfo');
-  var sectionOffset = section.offset().top;
-
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > 80) {
-      section.addClass('fixed_card_other_info');
-    } else {
-      section.removeClass('fixed_card_other_info');
-    }
-  });
-});
-</script>
-</script>
 </body>
 
 </html>
