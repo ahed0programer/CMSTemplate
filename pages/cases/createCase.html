@@ -16,6 +16,11 @@
   <link rel="stylesheet" href="../../assets/js/choices.js/choices.min.css" />
 
 
+    <!-- form eitor styles -->
+    <link rel="stylesheet" href="../../assets/vendors/quill/quill.bubble.css">
+    <link rel="stylesheet" href="../../assets/vendors/quill/quill.snow.css">
+  
+
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../../assets/css/demo.css" />
 
@@ -653,166 +658,106 @@
               </li>
             </ul>
           </div>
-
-          <div class="row">
-            <!-- case owner -->
-            <div class="col-12" >
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Case Owner</div>
-                </div>
-
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-12 mb-3 d-flex justify-content-between">
-                        <span class="me-3"><i class="fas fa-user-check"></i> <a href="">Ahed Sulieman</a></span>
-                        <span class="me-3"><i class="fas fa-at me-1"></i>example@gmail.com</span>
-                        <span class="me-3"><i class="fas fa-phone me-1"></i>+96223322435</span>
-                        <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i>German, Frankfurt</span>
-                    </div>
-                    <div>
-                        <p><i class="fas fa-info-circle text-danger"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed rem laudantium consectetur maxime vitae natus ipsam accusamus architecto aperiam minus? Voluptatem numquam impedit aliquid ducimus, odio id vitae totam optio.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                    <div class="col-12 d-flex justify-content-end">
-                        <span><i class="fas fa-user"></i> Created By :</span>
-                        <span class="me-3"><a href="">Mutaz Suleiman</a></span>
-                    </div>
+           <!-- case owner -->
+            <div class="card sticky-top">
+              <div class="card-header d-flex justify-content-between">
+                <div class="card-title">Case Owner</div>
+                <div class="d-flex justify-content-end align-items-center">
+                  <span><i class="fas fa-user"></i> Created By :</span>
+                  <span class="me-3"><a href="">Mutaz Suleiman</a></span>
                 </div>
               </div>
 
-            </div>
-
-            <!-- case info card -->
-            <div class="col-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Case Info</div>
-                </div>
-
-                <div class="card-body">
-                  <div class="row">
-
-                    <!-- case type -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="defaultSelect">Case Type : </label>
-                        <select class="choices form-select form-control" id="case_type">
-                          <option id="alert_add_another_way" value="add_another_way">
-                            add new type
-                          </option>
-                          <option disabled selected value="">Select Case Type</option>
-                          <option>Germany</option>
-                          <option>Denmark</option>
-                          <option>France</option>
-                        
-                        </select>
-                      </div>
-                    </div>
-
-                    <!-- consultaion method -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="defaultSelect">Consultation Method :</label>
-                        <select class="choices form-select form-control">
-                          <option selected value="telephone">telephone</option>
-                          <option value="email" >email</option>
-                          <option value="in_person">in person</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <!-- Description -->
-                    <div class="col-md-12 col-lg-12">
-                      <div class="form-group">
-                        <label for="notes">Description :</label>
-                        <textarea style="height: 100px;" class="notes" id="notes" placeholder="Description"></textarea>
-                      </div>
-                    </div>
-
-                    <!-- date and duration -->
-                    <div class="col-md-7 col-lg-7 d-flex">
-                      <div class="col-4">
-                        <div class="form-group">
-                          <label for="case_date">Date :</label>
-                          <input class="form-control" type="date" name="" id="case_date">
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="form-group">
-                          <label for="case_date">Time :</label>
-                          <input class="form-control" type="time" name="" id="case_date">
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="form-group">
-                          <label for="case_date">duration (minuts) :</label>
-                          <input class="form-control" type="number" name="" id="case_date">
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Case status -->
-                    <div class="col-md-5 col-lg-5">
-                      <div class="form-group">
-                        <label>Status :</label><br />
-                        <div class="d-flex">
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="case_status" id="open" checked />
-                            <label class="form-check-label" for="open">
-                              open
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="case_status" id="ongoing" />
-                            <label class="form-check-label" for="ongoing">
-                              ongoing
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="case_status" id="closed" />
-                            <label class="form-check-label" for="closed">
-                              closed
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
+              <div class="card-body">
+                  <div class="col-12 d-flex justify-content-between">
+                      <span class="me-3"><i class="fas fa-user-check"></i> <a href="">Ahed Sulieman</a></span>
+                      <span class="me-3"><i class="fas fa-at me-1"></i>example@gmail.com</span>
+                      <span class="me-3"><i class="fas fa-phone me-1"></i>+96223322435</span>
+                      <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i>German, Frankfurt</span>
                   </div>
-                </div>
               </div>
             </div>
+    
+            <!-- case info card --> 
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">Case Info</div>
+              </div>
 
-             <!-- case plan card -->
-             <div class="col-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Plan for Case</div>
-                </div>
+              <div class="card-body">
+                <div class="row">
+                  <!-- consultaion method -->
+                  <div class="col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <label for="defaultSelect">Branch :</label>
+                      <select class="choices form-select form-control">
+                        <option selected value="telephone">branch 1</option>
+                        <option value="email" >branch 2</option>
+                        <option value="in_person">branch 3</option>
+                      </select>
+                    </div>
+                  </div>
 
-                <div class="card-body">
+                  <!-- case type -->
+                  <div class="col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <label for="defaultSelect">Case Type : </label>
+                      <select class="choices form-select form-control" id="case_type">
+                        <option id="alert_add_another_way" value="add_another_way">
+                          add new type
+                        </option>
+                        <option disabled selected value="">Select Case Type</option>
+                        <option>type 1</option>
+                        <option>type 2</option>
+                        <option>type 3</option>
+                      </select>
+                    </div>
+                  </div>
+
                   <!-- Description -->
                   <div class="col-md-12 col-lg-12">
                     <div class="form-group">
-                      <label for="notes">Plan :</label>
+                      <label for="notes">Description :</label>
                       <textarea style="height: 100px;" class="notes" id="notes" placeholder="Description"></textarea>
                     </div>
                   </div>
+
+                  <!-- Case status -->
+                  <div class="col-md-5 col-lg-5">
+                    <div class="form-group">
+                      <label>Status :</label><br />
+                      <div class="d-flex">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="case_status" id="open" checked />
+                          <label class="form-check-label" for="open">
+                            open
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="case_status" id="closed" />
+                          <label class="form-check-label" for="closed">
+                            closed
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-            </div>
+           
 
-             <!-- Consultaions card -->
-             <div class="col-12">
-              <div class="card">
-                <div class="card-header">
+              <div class="ms-4 me-4 mb-5"> 
+                <div class="card-header bg-bage d-flex justify-content-between">
                   <div class="card-title">consultaion Info</div>
+                  <div class="d-flex justify-content-end">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContactInfo" aria-expanded="false" aria-controls="collapseAppointments">
+                      expand <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
                 </div>
-
-                <div class="card-body">
+  
+                <div class="card-body collapse"  id="collapseContactInfo">
                   <div class="row">    
                     <!-- consultant -->
                     <div class="col-md-6 col-lg-6">
@@ -821,7 +766,7 @@
                         <a href="#case_owner">Ahed Sulieman</a>
                       </div>
                     </div>
-
+  
                   
                     <!-- Description -->
                     <div class="col-md-12 col-lg-12">
@@ -830,7 +775,7 @@
                         <textarea style="height: 100px;" class="notes" id="notes" placeholder="content"></textarea>
                       </div>
                     </div>
-
+  
                     <!-- consultaion method -->
                     <div class="col-md-6 col-lg-6">
                       <div class="form-group">
@@ -849,7 +794,7 @@
                         <input class="form-control" type="text" name="consult_place" id="">
                       </div>
                     </div>
-
+  
                     <!-- date and duration -->
                     <div class="col-md-12 col-lg-12 d-flex">
                       <div class="col-4">
@@ -877,8 +822,35 @@
                   </div>
                 </div>
               </div>
+             
             </div>
 
+          
+            <!-- case plan card -->
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <div class="card-title">Plan for Case</div>
+                <div class="d-flex justify-content-end">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlan" aria-expanded="false" aria-controls="collapseAppointments">
+                    expand <i class="fas fa-chevron-down"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card-body collapse"  id="collapsePlan">
+                <p> form input - Description</p>
+                <div id="full">
+                    <p>Hello World!</p>
+                    <p>Some initial <strong>bold</strong> text</p>
+                    <p><br></p>
+                </div>
+              </div>
+            </div>
+          
+             <!-- Consultaions card -->
+            <div class="card">
+            </div>
+          
             <!-- submit card -->
             <div class="card-action d-flex justify-content-end">
               <button class="btn me-2 btn-round btn-danger">Cancel</button>
@@ -886,7 +858,7 @@
               <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add </button>  
               <!-- </div> -->
             </div>
-          </div>
+          
 
 
         </div>
@@ -900,25 +872,21 @@
   <script src="../../assets/js/core/popper.min.js"></script>
   <script src="../../assets/js/core/bootstrap.min.js"></script>
 
+  <script src="../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../../assets/vendors/quill/quill.min.js"></script>
+  <script src="../../assets/js/form-editor.js"></script>
+
   <!-- jQuery Scrollbar -->
   <script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
  
-  <!-- jQuery Sparkline -->
-  <script src="../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
-  <!-- Chart Circle -->
-  <script src="../../assets/js/plugin/chart-circle/circles.min.js"></script>
-
-  <!-- Bootstrap Notify -->
-  <script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
 
   <!-- Sweet Alert -->
   <script src="../../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
   <!-- Kaiadmin JS -->
   <script src="../../assets/js/kaiadmin.min.js"></script>
-
   <script src="../../assets/js/choices.js/choices.min.js"></script>
 
 
