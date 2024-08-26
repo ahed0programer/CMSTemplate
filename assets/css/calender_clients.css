@@ -2,40 +2,45 @@
     max-width: 90%;
     margin: 0 auto;
 }
-.calendar_appointments table {
-    width: 100%;
-    /* border-collapse: collapse; */
-}
 
-table {
+.calendar_appointments table {
     border-collapse: separate;
     border-spacing: 10px;
-  }
-  th, td {
-    border: 1px solid black;
-    border-radius: 50px;
-    padding: 10px;
-  }
+    width: 100%;
+}
 
-.calendar_appointments th, .calendar_appointments td {
-    border: 1px solid #ddd;
+
+
+.calendar_appointments th,
+.calendar_appointments td {
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 5px;
     text-align: center;
     padding: 5px;
 }
+
+.calendar_appointments td:hover {
+    border: 1.5px solid rgb(0, 0, 0);
+}
+
 .calendar_appointments th {
     background-color: #f2f2f2;
 }
+
 .calendar_appointments td {
     cursor: pointer;
 }
+
 .selected {
     background-color: lightblue;
 }
+
 .navigation {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
+
 .navigation button {
     padding: 5px 10px;
     /* background-color: #007bff; */
@@ -44,6 +49,7 @@ table {
     cursor: pointer;
     border-radius: 5px;
 }
+
 .selected {
     background-color: rgb(169, 176, 237);
 }
@@ -61,23 +67,26 @@ table {
     border-radius: 50%;
     display: inline-block;
     text-align: center;
-    font-weight: bold; 
+    font-weight: bold;
     line-height: 40px;
     cursor: pointer;
     margin: 10px;
     /* border: 1.5px solid black; */
 }
+
+.day-circle:hover{
+    color: rgb(114, 48, 211) !important;
+}
+
 .selected-circle {
     border: 2px solid rgb(114, 48, 211);
     color: rgb(114, 48, 211) !important;
 }
-.color-sat{
-    color:rgb(225, 77, 77);
+
+.color-sat {
+    color: rgb(225, 77, 77);
 }
 
-.color-fri{
-    color:rgb(86, 160, 225);
+.color-fri {
+    color: rgb(86, 160, 225);
 }
-
-
-
