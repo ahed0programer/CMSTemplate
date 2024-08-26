@@ -18,7 +18,13 @@
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../../assets/css/demo.css" />
-
+  
+  <style>
+    .rotate {
+        transform: rotate(180deg);
+        transition: transform 0.5s;
+    }
+</style>
 </head>
 
 <body>
@@ -987,7 +993,7 @@
                 <div class="card-header d-flex justify-content-between">
                   <div class="card-title">Partners :</div>
                   <div>
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePartners" aria-expanded="false" aria-controls="collapsePartners">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePartners" aria-expanded="false" aria-controls="collapsePartners" onclick="changeIconPartners()">
                       expand <i class="fas fa-chevron-down"></i>
                     </button>
                   </div>
@@ -1759,6 +1765,13 @@
         noPartnerMsg.style.display = "none";
       }
     }
+  </script>
+
+  <script>
+     function changeIconPartners() {
+            let icon = document.querySelector('.fas.fa-chevron-down');
+            icon.classList.toggle('rotate');
+        }
   </script>
 </body>
 

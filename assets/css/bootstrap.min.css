@@ -13918,7 +13918,7 @@ fieldset:disabled .btn {
     font-size: 1rem;
     border-color: #ebedf2;
     padding: .6rem 1rem;
-    height: 200px;
+    height: 23vh;
     border-width: 2px;
     display: block;
     width: 100%;
@@ -13935,6 +13935,7 @@ fieldset:disabled .btn {
     border: var(--bs-border-width) solid var(--bs-border-color);
     border-radius: var(--bs-border-radius);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    resize: none; 
 }
 
 .notes_partner {
