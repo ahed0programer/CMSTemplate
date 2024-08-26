@@ -80,6 +80,9 @@ $(document).ready(function() {
     $('#nextMonthbtn').click(showNextMonth);
     $('#prevMonthbtn').click(showPrevMonth);
 
+    $('#nextMonthbtn2').click(showNextMonth);
+    $('#prevMonthbtn2').click(showPrevMonth);
+
 
     if (currentMonth===11) {
     nextMonth=0

@@ -11,29 +11,27 @@
 
 
 
-.calendar_appointments th,
+/* .calendar_appointments th, */
 .calendar_appointments td {
-    border: 1px solid rgb(170, 170, 170);
+    border: 2px solid #ddd;
     border-radius: 5px;
     text-align: center;
-    padding: 5px;
+    padding: 7px;
 }
 
 .calendar_appointments td:hover {
-    border: 1.5px solid rgb(0, 0, 0);
+    border: 2px solid #1a2035 
 }
 
-.calendar_appointments th {
-    background-color: #f2f2f2;
-}
+
 
 .calendar_appointments td {
     cursor: pointer;
 }
 
-.selected {
+/* .selected {
     background-color: lightblue;
-}
+} */
 
 .navigation {
     display: flex;
@@ -52,6 +50,7 @@
 
 .selected {
     background-color: rgb(169, 176, 237);
+    
 }
 
 
@@ -71,7 +70,7 @@
     line-height: 40px;
     cursor: pointer;
     margin: 10px;
-    /* border: 1.5px solid black; */
+    border: 2px solid rgb(199, 199, 199);
 }
 
 .day-circle:hover{
@@ -89,4 +88,20 @@
 
 .color-fri {
     color: rgb(86, 160, 225);
+}
+
+
+
+#time_appointments_Weekly p,
+#time_appointments p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 8px;
 }

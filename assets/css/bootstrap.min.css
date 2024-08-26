@@ -13993,3 +13993,7 @@ fieldset:disabled .btn {
     color : #000bff
 }
 
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+  }

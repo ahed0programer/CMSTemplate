@@ -21,7 +21,7 @@
 
 <body>
   <div class="wrapper">
-    
+
     <!-- Sidebar -->
     <div class="sidebar" data-background-color="dark">
       <div class="sidebar-logo">
@@ -64,7 +64,7 @@
               </div>
             </li>
             <!-- added pages links ahed-->
-             <!-- * Business Section-->
+            <!-- * Business Section-->
             <li class="nav-section">
               <span class="sidebar-mini-icon">
                 <i class="fa fa-ellipsis-h"></i>
@@ -79,12 +79,12 @@
             </li>
             <li class="nav-item">
               <a href="pages/cases/cases.html" class="collapsed" aria-expanded="false">
-                <i class="fas fa-briefcase"></i> 
+                <i class="fas fa-briefcase"></i>
                 <!-- <i class="far fa-newspaper"></i>
                 <i class="fas fa-file-archive"></i> 
                 <i class="fas fa-file-alt"></i>  -->
 
-                <p>Cases</p> 
+                <p>Cases</p>
               </a>
             </li>
             <li class="nav-item">
@@ -107,7 +107,7 @@
             </li>
 
             <!-- manage section -->
-            
+
             <li class="nav-section">
               <span class="sidebar-mini-icon">
                 <i class="fa fa-ellipsis-h"></i>
@@ -132,7 +132,7 @@
                 <p>Team members</p>
               </a>
             </li>
-         
+
             <li class="nav-item">
               <a href="pages/members.html" class="collapsed" aria-expanded="false">
                 <i class="icon-settings"></i>
@@ -145,7 +145,7 @@
                 <i class="fab fa-superpowers"></i>
                 <p>support</p>
               </a>
-            </li> 
+            </li>
           </ul>
         </div>
       </div>
@@ -444,8 +444,8 @@
 
       <div class="container">
         <div class="page-inner">
-            <!-- * calendar -->
-           <div class="card">
+          <!-- * calendar -->
+          <div class="card">
             <div class="card-header">
               <div class="card-title d-flex justify-content-between">
                 <div><i class="far fa-calendar-alt"></i> Appointments & Tasks</div>
@@ -457,35 +457,55 @@
             </div>
             <div class="card-body">
               <div class="row mt-4 mb-4">
-                <div class="col-md-3">
-                    <!-- * current motnth calendar section -->
-                    <div class="col-12 text-center">
-                        <div class="d-flex justify-content-around">
-                            <i id="prevMonthbtn" class="fas fa-angle-left prev month-nav"></i>  
-                            <h6 id="currentMonth"></h6>
-                            <i id="nextMonthbtn" class="fas fa-angle-right next month-nav"></i>
-                        </div>
-                        <div id="calendar1" class="calendar mt-2 mb-5">
-                            <!-- Calendar will be generated here -->
-                        </div>
+                <div class=" col-lg-6">
+                  <!-- * current motnth calendar section -->
+                  <div class="col-12 text-center">
+                    <div class="d-flex justify-content-around">
+                      <i id="prevMonthbtn" class="fas fa-angle-left prev month-nav"></i>
+                      <h6 id="currentMonth"></h6>
+                      <i id="nextMonthbtn" class="fas fa-angle-right next month-nav"></i>
                     </div>
-                       <!-- * next motnth calendar section -->
-                    <div class="col-12 text-center">
-                      <div class="d-flex justify-content-around">
-                          <i id="prevMonthbtn" class="fas fa-angle-left prev month-nav"></i> 
-                          <h6 id="nextMonth"></h6>
-                          <i id="nextMonthbtn" class="fas fa-angle-right next month-nav"></i> 
-                      </div>
-                      <div id="calendar2" class="calendar mt-2">
-                          <!-- Calendar will be generated here -->
-                      </div>
+                    <div id="calendar1" class="calendar mt-2 mb-5">
+                      <!-- Calendar will be generated here -->
+                    </div>
                   </div>
-                    
+                  <!-- * next motnth calendar section -->
+                  <div class="col-12 text-center">
+                    <div class="d-flex justify-content-around">
+                      <i id="prevMonthbtn2" class="fas fa-angle-left prev month-nav"></i>
+                      <h6 id="nextMonth"></h6>
+                      <i id="nextMonthbtn2" class="fas fa-angle-right next month-nav"></i>
+                    </div>
+                    <div id="calendar2" class="calendar mt-2">
+                      <!-- Calendar will be generated here -->
+                    </div>
+                  </div>
+
                 </div>
-               
+
+                <!-- <div class="col-md-1">
+                </div> -->
                 <!-- * Tasks section table -->
-                <div class="col-md-9"> 
-                  <div class="d-flex justify-content-around mb-3">
+                <div class="col-md-6">
+                  <div class="container">
+
+                    <div class="today-date">
+                      <div class="event-day">Tue</div>
+                      <div class="event-date">27 August 2024</div>
+                    </div>
+
+                    <div class="events"><div class="event">
+                      <div class="title">
+                        <i class="fas fa-circle"></i>
+                        <h3 class="event-title">fadi</h3>
+                      </div>
+                      <div class="event-time">
+                        <span class="event-time">12: PM - 12: PM</span>
+                      </div>
+                  </div></div>
+
+                  </div>
+                  <!-- <div class="d-flex justify-content-around mb-3">
                     <div class="col-1">t\d
                       <div style="position: absolute;width: 6%;background-color: white;opacity: 70%;height: 100px;z-index: 1000;"></div>
                     </div>
@@ -498,8 +518,8 @@
                     <div class="col text-center">
                       <h4>2/8/2024</h4>
                     </div>
-                  </div>
-                  <div class="row time-table">
+                  </div> -->
+                  <!-- <div class="row time-table">
                     <div class="col-1 inherit-height">
                       <div class = "element-hour">01:00 AM</div>
                       <div class = "element-hour">02:00 AM</div>
@@ -544,53 +564,55 @@
 
                       </div>
                     </div>
-                  </div>
-                    
+                  </div> -->
+
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
                     <div class="modal-content">
-                        <div class="modal-header">
+                      <div class="modal-header">
                         <h5 class="modal-title" id="staticBackdropLabel">Add Task</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body ">
-                            <form>
-                            <div class="mb-3">
-                                <label for="task-title" class="col-form-label">title: </label>
-                                <input type="text" class="form-control" id="task-title">
+                      </div>
+                      <div class="modal-body ">
+                        <form>
+                          <div class="mb-3">
+                            <label for="task-title" class="col-form-label">title: </label>
+                            <input type="text" class="form-control" id="task-title">
+                          </div>
+                          <div class="mb-3">
+                            <label for="task-description" class="col-form-label">description: </label>
+                            <textarea class="modal-form-control modal-txtarea" id="task-description"></textarea>
+                          </div>
+                          <div class="element-hour">
+                            <div class="mb-3 d-flex justify-content-between">
+                              <div class="col-5">
+                                <label for="task-time" class="col-form-label">From: </label>
+                                <input type="time" class="form-control me-3" id="task-time"></input>
+                              </div>
+                              <div class="col-5">
+                                <label for="task-time" class="col-form-label">To: </label>
+                                <input type="time" class="form-control" id="task-time"></input>
+                              </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="task-description" class="col-form-label">description: </label>
-                                <textarea class="modal-form-control modal-txtarea" id="task-description"></textarea>
-                            </div>
-                            <div class = "element-hour"> 
-                                <div class="mb-3 d-flex justify-content-between">
-                                <div class="col-5">
-                                    <label for="task-time" class="col-form-label">From: </label>
-                                    <input type="time" class="form-control me-3" id="task-time"></input>
-                                </div>
-                                <div class="col-5">
-                                    <label for="task-time" class="col-form-label">To: </label>
-                                    <input type="time" class="form-control" id="task-time"></input>
-                                </div>
-                                </div>
-                            </div>
-                            
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="add_task()" data-bs-dismiss="modal">Add</button>
-                        </div>
+                          </div>
+
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="add_task()"
+                          data-bs-dismiss="modal">Add</button>
+                      </div>
                     </div>
-                    </div>
+                  </div>
                 </div>
               </div>
-            </div>         
-           </div>
+            </div>
+          </div>
           <!-- * end calendar -->
         </div>
       </div>
@@ -616,7 +638,7 @@
             2024, made with <i class="fa fa-heart heart text-danger"></i> by
             <a href="http://www.themekita.com">ThemeKita</a>
           </div>
-          <div class = "element-hour">
+          <div class="element-hour">
             Distributed by
             <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
           </div>

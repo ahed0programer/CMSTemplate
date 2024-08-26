@@ -20,10 +20,7 @@
   <link rel="stylesheet" href="../../assets/css/demo.css" />
 
   <style>
-    .rotate {
-      transform: rotate(180deg);
-      transition: transform 0.5s;
-    }
+    
   </style>
 </head>
 
@@ -1195,10 +1192,14 @@
                           </div>
                         </div>
 
-                        <div class="col-md-6 col-lg-5">
+                        <div class="col-md-6 col-lg-4">
                           <div class="time_appointments_Weekly" id="time_appointments_Weekly">
-
+                            <p id="no_appointments_weekly">No Appointments Yet</p>
                           </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-1">
+
                         </div>
 
                       </div>
@@ -1215,99 +1216,105 @@
                           <div class="calendar_appointments"></div>
                         </div>
 
-                        <div class="col-md-6 col-lg-5">
+                        <div class="col-md-6 col-lg-4">
                           <div class="time_appointments" id="time_appointments">
-
+                            <p id="no_appointments">No Appointments Yet</p>
                           </div>
                         </div>
-                      </div>
 
+                        <div class="col-md-6 col-lg-1">
+
+                        </div>
+                      </div>
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- submit card -->
-            <div class="card-action d-flex justify-content-end">
-              <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
-              <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
-
-              <button class="btn me-2 btn-round btn-label-info">save draft</button>
-              <button class="btn me-2 btn-round btn-danger">Cancel</button>
-
-            </div>
           </div>
-        </div>
 
+          <!-- submit card -->
+          <div class="card-action d-flex justify-content-end">
+            <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
+            <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
 
-        <footer class="footer">
-          <div class="container-fluid d-flex justify-content-between">
-            <nav class="pull-left">
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="http://www.themekita.com">
-                    ThemeKita
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Help </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Licenses </a>
-                </li>
-              </ul>
-            </nav>
-            <div class="copyright">
-              2024, made with <i class="fa fa-heart heart text-danger"></i> by
-              <a href="http://www.themekita.com">ThemeKita</a>
-            </div>
-            <div>
-              Distributed by
-              <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
-            </div>
-          </div>
-        </footer>
-      </div>
+            <button class="btn me-2 btn-round btn-label-info">save draft</button>
+            <button class="btn me-2 btn-round btn-danger">Cancel</button>
 
-    </div>
-
-    <div class="modal" id="timeModalMonthly">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Enter Time</h5>
-            <button type="button" class="close" id="timeColse" data-dismiss="modal"
-              onclick="closeTimeMonthly()">&times;</button>
-          </div>
-          <div class="modal-body">
-            <input type="time" id="timeInput" class="form-control" placeholder="Enter time (e.g., 10:00 AM)" required>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" onclick="saveTimeMonthly()">Save</button>
           </div>
         </div>
       </div>
+
+
+      <footer class="footer">
+        <div class="container-fluid d-flex justify-content-between">
+          <nav class="pull-left">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="http://www.themekita.com">
+                  ThemeKita
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Help </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Licenses </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright">
+            2024, made with <i class="fa fa-heart heart text-danger"></i> by
+            <a href="http://www.themekita.com">ThemeKita</a>
+          </div>
+          <div>
+            Distributed by
+            <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
+          </div>
+        </div>
+      </footer>
     </div>
 
+  </div>
 
-    <div class="modal" id="timeModalWeekly">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Enter Time</h5>
-            <button type="button" class="close" id="timeColse" data-dismiss="modal"
-              onclick="closeTimeWeekly()">&times;</button>
-          </div>
-          <div class="modal-body">
-            <input type="time" id="timeInputWeekly" class="form-control" placeholder="Enter time (e.g., 10:00 AM)" required>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" onclick="saveTimeWeekly()">Save</button>
-          </div>
+  <div class="modal" id="timeModalMonthly">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Enter Time</h5>
+          <button type="button" class="close" id="timeColse" data-dismiss="modal"
+            onclick="closeTimeMonthly()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <input type="time" id="timeInput" class="form-control" placeholder="Enter time (e.g., 10:00 AM)" required>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="saveTimeMonthly()">Save</button>
         </div>
       </div>
     </div>
+  </div>
+
+
+  <div class="modal" id="timeModalWeekly">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Enter Time</h5>
+          <button type="button" class="close" id="timeColse" data-dismiss="modal"
+            onclick="closeTimeWeekly()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <input type="time" id="timeInputWeekly" class="form-control" placeholder="Enter time (e.g., 10:00 AM)"
+            required>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="saveTimeWeekly()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   </div>
@@ -1832,13 +1839,12 @@
     let currentMonth = new Date().getMonth();
     let currentYear = new Date().getFullYear();
     let selectedDates = [];
-
+    let noAappointments = document.getElementById('no_appointments');
     function generateCalendar() {
       const calendarDiv = document.querySelector('.calendar_appointments');
       const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-      let calendarHTML = `<div class="navigation">
-      </div>
+      let calendarHTML = `
       <table>
           <thead>
               <tr>
@@ -1904,6 +1910,13 @@
           timePara.remove();
           console.log(selectedDates);
         }
+
+        if (selectedDates.length === 0) {
+            console.log('empty');
+            console.log(selectedDays);
+            noAappointments.style.display = 'block'
+          }
+
         generateCalendar();
       } else {
         timeInput.setAttribute('data-dayValue', day);
@@ -1924,6 +1937,7 @@
         timePara.id = `time-${day}`;
         timePara.textContent = `Time selected for day ${day} is : ${time}`;
         timeDiv.appendChild(timePara);
+        noAappointments.style.display = 'none'
         // تحديث التقويم
         $('#timeModalMonthly').modal('hide');
 
@@ -1944,12 +1958,15 @@
     let dayValue;
     const dayCircles = document.querySelectorAll('.day-circle');
     const DaysWeek = document.getElementById('days_week');
+    let noAappointmentsWeekly = document.getElementById('no_appointments_weekly');
     dayCircles.forEach(circle => {
       circle.addEventListener('click', () => {
 
         dayValue = circle.dataset.day;
 
         if (selectedDays.includes(dayValue)) {
+
+
           circle.classList.toggle('selected-circle');
           selectedDays = selectedDays.filter(date => date !== dayValue);
 
@@ -1974,8 +1991,13 @@
             timeDiv.removeChild(timePara);
           }
 
-        }
+          if (selectedDays.length === 0) {
+            console.log('empty');
+            console.log(selectedDays);
+            noAappointmentsWeekly.style.display = 'block'
+          }
 
+        }
 
 
         else {
@@ -2008,6 +2030,7 @@
         timePara.id = `time-${dayValue}`;
         timePara.textContent = `Time selected for day ${dayValue} is : ${time}`;
         timeDiv.appendChild(timePara);
+        noAappointmentsWeekly.style.display = 'none'
         // تحديث التقويم
         $('#timeModalWeekly').modal('hide');
 
