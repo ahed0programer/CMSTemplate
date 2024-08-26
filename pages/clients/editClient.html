@@ -337,8 +337,6 @@
     </div>
     <!-- End Sidebar -->
 
-
-
     <div class="main-panel">
       <div class="main-header">
         <div class="main-header-logo">
@@ -655,377 +653,184 @@
           </div>
 
 
-          <!-- Left container card -->
+          <!-- personal , note info -->
           <div class="row">
-            <div class="col-lg-8 col-md-12">
+            <!-- left side cards -->
 
-              <!-- Personal Info card -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <div class="card-title">Personal Info</div>
+            <!-- Personal Info card -->
+            <div class="col-md-6 col-lg-8">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Personal Info</div>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+
+                    <!-- Anonymous check -->
+                    <div class="col-md-12 col-lg-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="anonymous_client"
+                          onclick="renameFirstLastNameToAnonymous()" />
+                        <label class="form-check-label" for="anonymous_client">
+                          Anonymous Client
+                        </label>
+                      </div>
                     </div>
 
-                    <div class="card-body">
-                      <div class="row">
 
-                        <!-- Anonymous check -->
-                        <div class="col-md-12 col-lg-12">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="anonymous_client"
-                              onclick="renameFirstLastNameToAnonymous()" />
-                            <label class="form-check-label" for="anonymous_client">
-                              Anonymous Client
-                            </label>
-                          </div>
-                        </div>
 
-                        <!-- Primery Secandry Client -->
-                        <!-- <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                        <label>Client Status</label>
+                    <!-- First Name -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="f_name">First Name *</label>
+                        <input type="text" class="form-control" id="f_name" placeholder="Enter First Name" required />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small> -->
+                      </div>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="l_name">Last Name *</label>
+                        <input type="text" class="form-control" id="l_name" placeholder="Enter Last Name" required />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small> -->
+                      </div>
+                    </div>
+
+                    <!-- gender -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="form-group">
+                        <label>Gender</label><br />
                         <div class="d-flex">
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="primery_secandry_client"
-                              id="primery_client" checked onchange="notAllowEnterCase()" />
-                            <label class="form-check-label" for="primery_client">
-                              Primery Client
+                            <input class="form-check-input" type="radio" name="gender" id="Male" checked />
+                            <label class="form-check-label" for="Male">
+                              Male
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="primery_secandry_client"
-                              id="secandry_client" onchange="allowEnterCase()" />
-                            <label class="form-check-label" for="secandry_client">
-                              Secandry Client
+                            <input class="form-check-input" type="radio" name="gender" id="Female" />
+                            <label class="form-check-label" for="Female">
+                              Female
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="Other" />
+                            <label class="form-check-label" for="Other">
+                              Other
                             </label>
                           </div>
                         </div>
                       </div>
-                    </div> -->
+                    </div>
 
-                        <!-- First Name -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="f_name">First Name *</label>
-                            <input type="text" class="form-control" id="f_name" placeholder="Enter First Name"
-                              required />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- Last Name -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="l_name">Last Name *</label>
-                            <input type="text" class="form-control" id="l_name" placeholder="Enter Last Name"
-                              required />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- gender -->
-                        <div class="col-md-6 col-lg-4">
-                          <div class="form-group">
-                            <label>Gender</label><br />
-                            <div class="d-flex">
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="Male" checked />
-                                <label class="form-check-label" for="Male">
-                                  Male
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="Female" />
-                                <label class="form-check-label" for="Female">
-                                  Female
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="Other" />
-                                <label class="form-check-label" for="Other">
-                                  Other
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Age -->
-                        <div class="col-md-6 col-lg-4">
-                          <div class="form-group">
-                            <label for="defaultSelect">Marital Status</label>
-                            <select class="form-select form-control" id="marital_status">
-                              <option disabled selected value="">Marital Status</option>
-                              <option>18-30</option>
-                              <option>31-45</option>
-                              <option>46-60</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Age -->
-                        <div class="col-md-6 col-lg-4">
-                          <div class="form-group">
-                            <label for="defaultSelect">Age</label>
-                            <select class="form-select form-control" id="age">
-                              <option disabled selected value="">Select Age</option>
-                              <option>18-30</option>
-                              <option>31-45</option>
-                              <option>46-60</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Nationality -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="defaultSelect">Nationality</label>
-
-                            <select class="choices form-select form-control" id="nationality">
-                              <option disabled selected value="">Select Nationality</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Seond Nationality -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="defaultSelect">Seond Nationality</label>
-
-                            <select class="choices form-select form-control" id="seond_nationality">
-                              <option disabled selected value="">Select Seond Nationality</option>
-                              <option>none</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-
+                    <!-- Marital Status -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="form-group">
+                        <label for="defaultSelect">Marital Status</label>
+                        <select class="form-select form-control" id="marital_status">
+                          <option disabled selected value="">Marital Status</option>
+                          <option>18-30</option>
+                          <option>31-45</option>
+                          <option>46-60</option>
+                        </select>
                       </div>
                     </div>
+
+                    <!-- Age -->
+                    <div class="col-md-6 col-lg-4">
+                      <div class="form-group">
+                        <label for="defaultSelect">Age</label>
+                        <select class="form-select form-control" id="age">
+                          <option disabled selected value="">Select Age</option>
+                          <option>18-30</option>
+                          <option>31-45</option>
+                          <option>46-60</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Nationality -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="defaultSelect">Nationality</label>
+
+                        <select class="choices form-select form-control" id="nationality">
+                          <option disabled selected value="">Select Nationality</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Seond Nationality -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="defaultSelect">Seond Nationality</label>
+
+                        <select class="choices form-select form-control" id="seond_nationality">
+                          <option disabled selected value="">Select Seond Nationality</option>
+                          <option>none</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
-
-
-              <!-- Contact Info card -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <div class="card-title">Contact Info</div>
-                    </div>
-
-                    <div class="card-body">
-                      <div class="row">
-
-
-
-                        <!-- Email -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter Email" />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- phone_number -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="phone_number">Phone Number</label>
-                            <input type="text" class="form-control" id="phone_number" placeholder="Enter Phone Number"
-                              oninput="validatePhoneNumber()" />
-                            <small id="error_message_phone_number" class="form-text text-muted">
-                              Please Enter Only Number
-                            </small>
-                          </div>
-                        </div>
-
-                        <!-- Counrty -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="defaultSelect">Counrty</label>
-                            <select class="choices form-select form-control" id="counrty">
-                              <option disabled selected value="">Select Counrty</option>
-                              <option>Germany</option>
-                              <option>Denmark</option>
-                              <option>France</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- City -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="defaultSelect">City</label>
-                            <select class="choices form-select form-control" id="city">
-                              <option disabled selected value="">Select City</option>
-                              <option>18-30</option>
-                              <option>31-45</option>
-                              <option>46-60</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <!-- Street -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="street">Street</label>
-                            <input type="text" class="form-control" id="street" placeholder="Enter Street" />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-                        <!-- Street Number -->
-                        <div class="col-md-6 col-lg-3">
-                          <div class="form-group">
-                            <label for="street_number">Street Number</label>
-                            <input type="text" class="form-control" id="street_number"
-                              placeholder="Enter Street Number" />
-                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small> -->
-                          </div>
-                        </div>
-
-
-                        <!-- Place Residence -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="Place_Residence">Place Residence</label>
-                            <select class="choices form-select form-control" id="Place_Residence">
-                              <option disabled selected value="">Select Place Residence</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                        </div>
-
-
-                        <div class="col-md-6 col-lg-6">
-                          <div class="row">
-                            <!-- Type Residence -->
-                            <div class="col-md-12" id="div_type_residence">
-                              <div class="form-group">
-                                <label for="type_Residence">Type Residence</label>
-                                <select class="form-select form-control" id="type_Residence">
-                                  <option disabled selected value="">Select Type Residence</option>
-                                  <option>Sitizen</option>
-                                  <option>Permanent</option>
-                                  <option>Temporary</option>
-                                </select>
-                              </div>
-                            </div>
-                            <!-- Date Residence -->
-                            <div class="col-md-5" id="div_date_residence">
-                              <div class="form-group">
-                                <label for="date_residence">Date Residence</label>
-                                <input type="date" class="form-control" id="date_residence"
-                                  placeholder="Enter Date Residence" name="date_residence" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- three card -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <div class="card-title">Form Elements</div>
-                    </div>
-
-                    <div class="card-body">
-                      <div class="row">
-
-
-
-                        <!-- First Name -->
-                        <div class="col-md-6 col-lg-6">
-                          <div class="form-group">
-                            <label for="f_name">First Name *</label>
-                            <input type="text" class="form-control" id="f_name" placeholder="Enter First Name"
-                              required />
-
-                          </div>
-                        </div>
-
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
             </div>
 
 
+            <!-- right side card -->
 
-            <!-- left container card -->
-            <div class="col-lg-4 col-md-12">
+            <!-- Other Info card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card" id="otherInfo">
+                <div class="card-header">
+                  <div class="card-title">Other Info</div>
+                </div>
 
-              <!-- Other Info card -->
-              <div class="row">
-                <div class="col-md-12" >
-                  <div class="card" id="otherInfo">
-                    <div class="card-header">
-                      <div class="card-title">Other Info</div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <!-- How Did You Learn About Us! -->
+                    <div class="col-md-12 col-lg-12">
+                      <div class="form-group">
+                        <label for="how_did_you_learn_about_us">How Did You Learn About Us!</label>
+                        <select class="form-select form-control" id="how_did_you_learn_about_us">
+                          <option disabled selected value="">How Did You Learn About Us</option>
+                          <option>Internet</option>
+                          <option>Frinds</option>
+                          <option id="alert_add_another_way" value="add_another_way">
+                            Add Another Way
+                          </option>
+                        </select>
+                      </div>
                     </div>
-                    
-
-                    <div class="card-body">
-                      <div class="row">
-                        <!-- How Did You Learn About Us! -->
-                        <div class="col-md-12 col-lg-12">
-                          <div class="form-group">
-                            <label for="how_did_you_learn_about_us">How Did You Learn About Us!</label>
-                            <select class="form-select form-control" id="how_did_you_learn_about_us">
-                              <option disabled selected value="">How Did You Learn About Us</option>
-                              <option>Internet</option>
-                              <option>Frinds</option>
-                              <option id="alert_add_another_way" value="add_another_way">
-                                Add Another Way
-                              </option>
-                            </select>
-                          </div>
-                        </div>
 
 
-                        <!-- Notes -->
-                        <div class="col-md-12 col-lg-12">
-                          <div class="form-group">
-                            <label for="notes">Notes</label>
-                            <textarea class="notes" id="notes" placeholder="Notes"></textarea>
-                          </div>
-                        </div>
+                    <!-- Notes -->
+                    <div class="col-md-12 col-lg-12">
+                      <div class="form-group">
+                        <label for="notes">Notes</label>
+                        <textarea class="notes" id="notes" placeholder="Notes"></textarea>
+                      </div>
+                    </div>
 
 
-                        <!-- Case -->
-                        <!-- <div class="col-md-6 col-lg-6">
+                    <!-- Case -->
+                    <!-- <div class="col-md-6 col-lg-6">
                       <div class="form-group">
                         <label for="case">Case</label>
                         <select class="form-select form-control" id="case" disabled>
@@ -1037,64 +842,420 @@
                       </div>
                     </div> -->
 
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- contact , partners , consultaions  and appointments  -->
+          <div class="row">
+            <!-- Contact Info card -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Contact Info</div>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+
+
+
+                    <!-- Email -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email" />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
                       </div>
+                    </div>
+
+                    <!-- phone_number -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="text" class="form-control" id="phone_number" placeholder="Enter Phone Number"
+                          oninput="validatePhoneNumber()" />
+                        <small id="error_message_phone_number" class="form-text text-muted">
+                          Please Enter Only Number
+                        </small>
+                      </div>
+                    </div>
+
+                    <!-- Counrty -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="defaultSelect">Counrty</label>
+                        <select class="choices form-select form-control" id="counrty">
+                          <option disabled selected value="">Select Counrty</option>
+                          <option>Germany</option>
+                          <option>Denmark</option>
+                          <option>France</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- City -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="defaultSelect">City</label>
+                        <select class="choices form-select form-control" id="city">
+                          <option disabled selected value="">Select City</option>
+                          <option>18-30</option>
+                          <option>31-45</option>
+                          <option>46-60</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Street -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="street">Street</label>
+                        <input type="text" class="form-control" id="street" placeholder="Enter Street" />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                      </div>
+                    </div>
+
+                    <!-- Street Number -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="form-group">
+                        <label for="street_number">Street Number</label>
+                        <input type="text" class="form-control" id="street_number" placeholder="Enter Street Number" />
+                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                      </div>
+                    </div>
 
 
+                    <!-- Place Residence -->
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="Place_Residence">Place Residence</label>
+                        <select class="choices form-select form-control" id="Place_Residence">
+                          <option disabled selected value="">Select Place Residence</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-6">
+                      <div class="row">
+                        <!-- Type Residence -->
+                        <div class="col-md-12" id="div_type_residence">
+                          <div class="form-group">
+                            <label for="type_Residence">Type Residence</label>
+                            <select class="form-select form-control" id="type_Residence">
+                              <option disabled selected value="">Select Type Residence</option>
+                              <option>Sitizen</option>
+                              <option>Permanent</option>
+                              <option>Temporary</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!-- Date Residence -->
+                        <div class="col-md-5" id="div_date_residence">
+                          <div class="form-group">
+                            <label for="date_residence">Date Residence</label>
+                            <input type="date" class="form-control" id="date_residence"
+                              placeholder="Enter Date Residence" name="date_residence" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- partners card -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="card-title">Partners :</div>
+                  <div>
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePartners" aria-expanded="false" aria-controls="collapsePartners">
+                      expand <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body collapse"  id="collapsePartners">
+                  <div class="text-center">
+                    <div class="card-sub" id="noPartner">
+                      No Partners
+                    </div>
+
+                    <div class="table-responsive">
+                      <table class="table mt-3" id="tablePartner">
+                        <thead>
+                          <tr>
+                            <th scope="col">Partner Type</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Relationship Type \ Position</th>
+                            <th scope="col">Organization</th>
+                            <th scope="col">Notes</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+
+                        <tbody id="partnerTableBody">
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn me-2 " data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    onclick="add_Partner_form()">
+                    <i class="fas fa-user-plus"></i> Add Partner
+                  </button>
+
+                  <!-- Modal Add Partner -->
+
+                  <div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static"
+                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered ">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title " id="staticBackdropLabel">Add Partner</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                          <form id="partner_form">
+                            <div class="row">
+
+                              <!-- Partner Type -->
+                              <div class="col-md-6 col-lg-12" id="partner_type">
+                                <div class="form-group">
+                                  <label>Partner Type</label><br />
+                                  <div class="d-flex">
+
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="partner_type"
+                                        id="family_partner" checked  value="family"/>
+                                      <label class="form-check-label" for="family_partner">
+                                        Family
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="partner_type"
+                                        id="other_partner" value="other" />
+                                      <label class="form-check-label" for="other_partner">
+                                        Other
+                                      </label>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </div>
+
+
+                              <!-- First Name -->
+                              <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                  <label for="f_name_partner">First Name *</label>
+                                  <input type="text" class="form-control" id="f_name_partner"
+                                    placeholder="Enter First Name" required />
+                                </div>
+                              </div>
+
+                              <!-- Last Name -->
+                              <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                  <label for="l_name_partner">Last Name *</label>
+                                  <input type="text" class="form-control" id="l_name_partner"
+                                    placeholder="Enter Last Name" required />
+                                </div>
+                              </div>
+
+                              <!-- Email -->
+                              <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                  <label for="email_partner">Email Address</label>
+                                  <input type="email" class="form-control" id="email_partner"
+                                    placeholder="Enter Email" />
+                                  <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small> -->
+                                </div>
+                              </div>
+
+                              <!-- phone_number -->
+                              <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                  <label for="phone_number_partner">Phone Number</label>
+                                  <input type="text" class="form-control" id="phone_number_partner"
+                                    placeholder="Enter Phone Number" />
+                                  <!-- <small id="error_message_phone_number" class="form-text text-muted">
+                                        Please Enter Only Number
+                                      </small> -->
+                                </div>
+                              </div>
+
+
+                              <!-- Relationship Type -->
+                              <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                  <label for="relationship_type_partner"
+                                    id="lable_name_relationship_type_partner">Relationship Type</label>
+                                  <select class="choices form-select form-control" id="relationship_type_partner">
+                                    <option disabled selected value="">Select</option>
+                                    <option>0none</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                  </select>
+                                </div>
+                              </div>
+
+
+                              <!-- Organization -->
+                              <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                  <label for="organization_partner">Organization</label>
+                                  <input type="text" class="form-control" id="organization_partner"
+                                    placeholder="Enter Organization" required />
+                                </div>
+                              </div>
+
+
+                              <!-- Notes -->
+                              <div class="col-md-12 col-lg-12">
+                                <div class="form-group">
+                                  <label for="note_partner">Notes</label>
+                                  <textarea class="notes_partner" id="note_partner" placeholder="Notes"></textarea>
+                                </div>
+                              </div>
+
+                            </div>
+                          </form>
+                          <!-- </div> -->
+
+
+                        </div>
+
+                        <!-- </div> -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" onclick="add_partner()" data-bs-dismiss="modal"
+                            id="add_partner_button">Add</button>
+
+                          <button type="button" class="btn btn-primary d-none"
+                            onclick="edit_partner(this.getAttribute('data-row-id'))" data-bs-dismiss="modal"
+                            id="edit_partner_button">Edit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- appointments schedule card -->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="card-title">appointments shcedule</div>
+                  <div>
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAppointments" aria-expanded="false" aria-controls="collapseAppointments">
+                      expand <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body collapse"  id="collapseAppointments">
+                  <div class="mb-4">
+                    <ul class="nav nav-tabs card-header-tabs" id="pills-tab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-week-tab" data-bs-toggle="pill" href="#pills-week"
+                        role="tab" aria-controls="pills-week" aria-selected="true">Weekly</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link"d="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab"
+                        aria-controls="pills-month" aria-selected="false">Monthly</a>
+                      </li>
+                    </ul>
+                  </div> 
+                  <div class="tab-content mt-2 mb-3 text-center" id="pills-tabContent">
+                    <div class="tab-pane fade show active"  id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
+                      <h5 class="card-title">Weekly</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
+                      <h5 class="card-title">Month</h5>
+                      <p class="card-text">adklaldsk calsdkfmald mf;alksdfma;lksd f.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
-
-
 
             <!-- submit card -->
-            <div class="col-md-12 col-lg-3">
-              <div class="card">
-                <div class="card-action">
-                  <button class="btn btn-success" id="button_add">Add</button>
-                  <button class="btn btn-success" id="button_add_with_case">Add With Case</button>
-                  <button class="btn btn-danger">Cancel</button>
-                </div>
-              </div>
+            <div class="card-action d-flex justify-content-end">
+              <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
+              <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
+              
+              <button class="btn me-2 btn-round btn-label-info">save draft</button>
+              <button class="btn me-2 btn-round btn-danger">Cancel</button>
+              
             </div>
           </div>
-
-
         </div>
+
+
+        <footer class="footer">
+          <div class="container-fluid d-flex justify-content-between">
+            <nav class="pull-left">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="http://www.themekita.com">
+                    ThemeKita
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Help </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Licenses </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="copyright">
+              2024, made with <i class="fa fa-heart heart text-danger"></i> by
+              <a href="http://www.themekita.com">ThemeKita</a>
+            </div>
+            <div>
+              Distributed by
+              <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
+            </div>
+          </div>
+        </footer>
       </div>
 
-
-      <footer class="footer">
-        <div class="container-fluid d-flex justify-content-between">
-          <nav class="pull-left">
-            <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link" href="http://www.themekita.com">
-                  ThemeKita
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Help </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Licenses </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright">
-            2024, made with <i class="fa fa-heart heart text-danger"></i> by
-            <a href="http://www.themekita.com">ThemeKita</a>
-          </div>
-          <div>
-            Distributed by
-            <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
-          </div>
-        </div>
-      </footer>
     </div>
-
   </div>
   <!--   Core JS Files   -->
   <script src="../../assets/js/core/jquery-3.7.1.min.js"></script>
@@ -1135,8 +1296,6 @@
   <script src="../../assets/js/setting-demo2.js"></script>
 
   <script src="../../assets/js/choices.js/choices.min.js"></script>
-
-
 
   <script>
     $("#displayNotif").on("click", function () {
@@ -1249,6 +1408,8 @@
   <script>
     // init loded page
     document.addEventListener("DOMContentLoaded", function () {
+      disabledInabledOrganizationInput();
+      updateTableVisibility();
       date_residence
       var errorMessage = document.getElementById("error_message_phone_number");
       var dateResidence = document.getElementById("div_date_residence");
@@ -1399,21 +1560,206 @@
   </script>
 
 
-<script>
-  $(document).ready(function() {
-  var section = $('#otherInfo');
-  var sectionOffset = section.offset().top;
+  <script>
+    let rowCounter = 0;
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > 80) {
-      section.addClass('fixed_card_other_info');
-    } else {
-      section.removeClass('fixed_card_other_info');
+    function add_partner() {
+
+      rowCounter++;
+
+      const partnerType = document.querySelector('input[name="partner_type"]:checked').value;
+      const firstName = document.getElementById('f_name_partner').value || 'Null';
+      const lastName = document.getElementById('l_name_partner').value || 'Null';
+      const phoneNumber = document.getElementById('phone_number_partner').value || 'Null';
+      const email = document.getElementById('email_partner').value || 'Null';
+      const relationshipType = document.getElementById('relationship_type_partner').value || 'Null';
+      const notes = document.getElementById('note_partner').value || 'Null';
+      const partnerOrganization = document.getElementById('organization_partner').value || 'Null';
+
+      // Create a new row with a unique ID
+      const newRow = `
+        <tr id="row_${rowCounter}">
+        <td>${partnerType}</td>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${email}</td>
+        <td>${phoneNumber}</td>
+        <td>${relationshipType}</td>
+        <td>${partnerOrganization}</td>
+        <td>${notes}</td>
+        <td>
+                            <div class="form-button-action">
+
+
+                              <button type="button" class="btn me-2 " data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="edit_Partner_form(${rowCounter})">
+                                <i class="fa fa-edit"></i>
+                              </button>
+
+
+                              <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
+                                data-original-title="Remove" >
+                                <i class="fas fa-trash" onclick="delet_Partner(${rowCounter})"></i>
+                              </button>
+                            </div>
+                          </td>
+      </tr>
+    `;
+
+      // Append the new row to the table
+      document.getElementById('partnerTableBody').insertAdjacentHTML('beforeend', newRow);
+      updateTableVisibility();
     }
-  });
-});
-</script>
-</script>
+
+
+  </script>
+
+
+  <script>
+    function edit_Partner_form(rowId) {partner_type
+      const row = document.getElementById(`row_${rowId}`);
+      const addPartnerButton = document.getElementById('add_partner_button');
+      const editPartnerButton = document.getElementById('edit_partner_button');
+      const partnerType = document.getElementById('partner_type');
+
+      partnerType.classList.add('d-none');
+      addPartnerButton.classList.add('d-none');
+      editPartnerButton.classList.remove('d-none');
+
+      const cells = row.getElementsByTagName('td');
+
+      const partnerTypeRadioFamily = document.getElementById('family_partner');
+      const partnerTypeRadioOther = document.getElementById('other_partner');
+
+      console.log(cells[0])
+
+      if (cells[0].textContent === 'family') {
+        console.log("Family")
+          partnerTypeRadioFamily.checked = true;
+          partnerTypeRadioOther.checked = false;
+      } else {
+        console.log("other")
+          partnerTypeRadioFamily.checked = false;
+          partnerTypeRadioOther.checked = true;
+      }
+
+      disabledInabledOrganizationInput()
+      document.getElementById('f_name_partner').value = cells[1].textContent;
+      document.getElementById('l_name_partner').value = cells[2].textContent;
+      document.getElementById('phone_number_partner').value = cells[4].textContent;
+      document.getElementById('email_partner').value = cells[3].textContent;
+      document.getElementById('relationship_type_partner').value = cells[5].textContent;
+      document.getElementById('note_partner').value = cells[7].textContent;
+      document.getElementById('organization_partner').value = cells[6].textContent;
+
+      document.querySelector('#edit_partner_button').setAttribute('data-row-id', rowId);
+    }
+  </script>
+
+
+  <script>
+    function edit_partner(rowId) {
+
+      // const partnerType = document.querySelector('input[name="partner_type"]:checked').nextElementSibling.textContent;
+      const firstName = document.getElementById('f_name_partner').value || 'Null';
+      const lastName = document.getElementById('l_name_partner').value || 'Null';
+      const email = document.getElementById('email_partner').value || 'Null';
+      const phoneNumber = document.getElementById('phone_number_partner').value || 'Null';
+      const relationshipType = document.getElementById('relationship_type_partner').value || 'Null';
+      const notes = document.getElementById('note_partner').value || 'Null';
+      const partnerOrganization = document.getElementById('organization_partner').value || 'Null';
+
+      const row = document.getElementById(`row_${rowId}`);
+      const cells = row.getElementsByTagName('td');
+
+      // cells[0].textContent = partnerType
+      cells[1].textContent = firstName
+      cells[2].textContent = lastName
+      cells[3].textContent = email
+      cells[4].textContent = phoneNumber
+      cells[5].textContent = relationshipType
+      cells[6].textContent = partnerOrganization
+      cells[7].textContent = notes
+    }
+
+
+  </script>
+
+
+  <script>
+    function add_Partner_form() {
+      document.getElementById('partner_form').reset();
+      disabledInabledOrganizationInput();
+      const addPartnerButton = document.getElementById('add_partner_button');
+      const editPartnerButton = document.getElementById('edit_partner_button');
+      const partnerType = document.getElementById('partner_type');
+
+      partnerType.classList.remove('d-none');
+      editPartnerButton.classList.add('d-none');
+      addPartnerButton.classList.remove('d-none');
+    }
+  </script>
+
+  <script>
+    function delet_Partner(rowId) {
+      const row = document.getElementById(`row_${rowId}`);
+      // const cells = row.getElementsByTagName('td');
+      row.remove()
+      updateTableVisibility()
+    }
+  </script>
+
+
+  <script>
+    function disabledInabledOrganizationInput() {
+      const familyRadio = document.getElementById('family_partner');
+      const organizationInput = document.getElementById('organization_partner');
+      const lableNnameRelationshipTypePartner = document.getElementById('lable_name_relationship_type_partner');
+
+      // Check if "Family" radio button is selected on page load
+      if (familyRadio.checked) {
+        organizationInput.disabled = true;
+        organizationInput.value = ""
+        lableNnameRelationshipTypePartner.textContent = "Relationship Type"
+
+      }
+
+      // Listen for changes in the "Partner Type" radio buttons
+      familyRadio.addEventListener('change', function () {
+        organizationInput.disabled = this.checked;
+        organizationInput.value = ""
+        lableNnameRelationshipTypePartner.textContent = "Relationship Type"
+
+      });
+
+      const otherRadio = document.getElementById('other_partner');
+
+      if (otherRadio.checked) {
+        lableNnameRelationshipTypePartner.textContent = "Position"
+      }
+
+      otherRadio.addEventListener('change', function () {
+        organizationInput.disabled = !this.checked;
+        lableNnameRelationshipTypePartner.textContent = "Position"
+
+      });
+    }
+  </script>
+
+
+  <script>
+    function updateTableVisibility() {
+      var table = document.getElementById("tablePartner");
+      var noPartnerMsg = document.getElementById("noPartner");
+
+      if (table.getElementsByTagName("tr").length <= 1) {
+        table.style.display = "none";
+        noPartnerMsg.style.display = "block";
+      } else {
+        table.style.display = "table";
+        noPartnerMsg.style.display = "none";
+      }
+    }
+  </script>
 </body>
 
 </html>

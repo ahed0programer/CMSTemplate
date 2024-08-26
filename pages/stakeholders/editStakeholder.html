@@ -3,19 +3,22 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Clients</title>
+  <title>Create Case</title>
   <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
   <link rel="icon" href="../../assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
-
-
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../../assets/css/plugins.min.css" />
   <link rel="stylesheet" href="../../assets/css/kaiadmin.min.css" />
 
+  <!-- Include Choices CSS -->
+  <link rel="stylesheet" href="../../assets/js/choices.js/choices.min.css" />
+
+
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../../assets/css/demo.css" />
+
 </head>
 
 <body>
@@ -71,7 +74,7 @@
               <h4 class="text-section">Business</h4>
             </li>
             <li class="nav-item">
-              <a href="clients.html" class="collapsed" aria-expanded="false">
+              <a href="../clients/clients.html" class="collapsed" aria-expanded="false">
                 <i class="fas fa-user-friends"></i>
                 <p>Clients</p>
               </a>
@@ -94,7 +97,7 @@
               <h4 class="text-section">Manage</h4>
             </li>
             <li class="nav-item">
-              <a href="members.html" class="collapsed" aria-expanded="false">
+              <a href="pages/members.html" class="collapsed" aria-expanded="false">
                 <i class="fas fa-home"></i>
                 <p>Team members</p>
               </a>
@@ -625,10 +628,11 @@
         <!-- End Navbar -->
       </div>
 
-      <div class="container">
+      <!-- Form -->
+      <div class="container" id="case_owner">
         <div class="page-inner">
           <div class="page-header">
-            <h3 class="fw-bold mb-3">Clients</h3>
+            <h3 class="fw-bold mb-3">Create Stakeholder </h3>
             <ul class="breadcrumbs mb-3">
               <li class="nav-home">
                 <a href="#">
@@ -639,217 +643,111 @@
                 <i class="icon-arrow-right"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Business</a>
+                <a href="#">Client</a>
               </li>
               <li class="separator">
                 <i class="icon-arrow-right"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Clients</a>
+                <a href="#">Create</a>
               </li>
             </ul>
           </div>
 
-          <!-- Table clients -->
           <div class="row">
-
-
-            <div class="col-md-12">
-              <div class="card">
-
-
+            <!-- Advisory info card -->
+            <div class="card">
                 <div class="card-header">
-                  <div class="d-flex align-items-center">
-                    <h4 class="card-title">Clients</h4>
-
-                    <button class="btn btn-primary btn-round ms-auto" data-bs-toggle="modal" id="create_client">
-
-                      <i class="fa fa-plus"></i>
-                      Add client
-
-                    </button>
-
-                  </div>
+                    <div class="card-title">Stakeholder Info</div>
                 </div>
 
                 <div class="card-body">
-                  <div class="table-responsive">
-                    <table id="multi-filter-select" class="display table table-striped table-hover">
-                      <thead>
-                        <tr>
-                          <th>Name</th>
-                          <th>Phone</th>
-                          <th>Created by</th>
-                          <th>Priority</th>
-                          <th>Created at</th>
-                          <th>status</th>
-                          <th style="width: 10%">Action</th>
-                        </tr>
-                      </thead>
-                      <tfoot>
-                        <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                          <th>Action</th>
-                        </tr>
-                      </tfoot>
-                      <tbody>
-                        <tr>
-                          <td>Ahed Sulieman</td>
-                          <td>+963 996840955</td>
-                          <td>Mutaz Suleiman</td>
-                          <td>very high</td>
-                          <td>2011/04/25 3:00 PM</td>
-                          <td>active</td>
-                          <td>
-                            <div class="form-button-action">
-
-                              <button type="button" data-bs-toggle="tooltip" title=""
-                                class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                <a href="editClient.html"><i class="fa fa-edit"></i></a>
-                              </button>
-
-                              <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
-                                data-original-title="Remove" >
-                                <i class="fas fa-trash" onclick="swalfunction()"></i>
-                              </button>
+                    <div class="row">        
+                        <!-- contact info -->
+                        <div class="col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="">Name:</label>
+                                <input class="form-control" type="text" name="name" id="" placeholder="ex. Mutaz Sulieman">
+                            </div> 
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="">Email:</label>
+                                <input class="form-control" type="email" name="email" id="" placeholder="example@gmail.xom">
                             </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Fadi Asali</td>
-                          <td>+963 996840955</td>
-                          <td>Mutaz Suleiman</td>
-                          <td>high</td>
-                          <td>2024/04/25 4:00 PM</td>
-                          <td>active</td>
-                          <td>
-                            <div class="form-button-action">
-
-                              <button type="button" data-bs-toggle="tooltip" title=""
-                                class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                <a href="editClient.html"><i class="fa fa-edit"></i></a>
-                              </button>
-
-                              <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
-                                data-original-title="Remove" >
-                                <i class="fas fa-trash" onclick="swalfunction()"></i>
-                              </button>
+                        </div>
+                        <div class="col-md-12 col-lg-12">
+                          <div class="form-group">
+                              <label for="">Organization :</label>
+                              <input class="form-control" type="email" name="organization" id="">
+                          </div>
+                      </div>
+                        <div class="col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="">Phone:</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">German +411</span>
+                                    <input class="form-control flex-grow" type="text" name="advisory_phone" id="">
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="">Position :</label>
+                                <input class="form-control" type="email" name="position" id="">
                             </div>
-                          </td>
-                        </tr>
+                        </div>
+                        <!-- end contact -->
 
-                      </tbody>
-                    </table>
-                  </div>
+                        <!-- address -->
+                        <div class="col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label for="">Street:</label>
+                                <input class="form-control" type="email" name="advisoryu_name" id="" placeholder="ex.. losiana">
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label for="">Street number:</label>
+                                <input class="form-control" type="email" name="advisoryu_name" id="" placeholder="ex.. 34">
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3">
+                            <div class="form-group">
+                            <label for="defaultSelect">City : </label>
+                            <select class="choices form-select" id="case_type">
+                                <option disabled selected value="">Select a city</option>
+                                <option>Frakfurt</option>
+                                <option>city 1</option>
+                                <option>city 2</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label for="">Post code:</label>
+                                <input class="form-control" type="email" name="post_code" id="">
+                            </div>
+                        </div>
+                        <!-- end address -->
+                    
+                    </div>
                 </div>
-              </div>
             </div>
-
-
+        
+            <!-- submit section -->
+            <div class="card-action d-flex justify-content-end">
+              <button class="btn me-2 btn-round btn-danger">Cancel</button>
+              <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add</button>
+              <!-- </div> -->
+            </div>
           </div>
+
 
         </div>
       </div>
 
-      <footer class="footer">
-        <div class="container-fluid d-flex justify-content-between">
-          <nav class="pull-left">
-            <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link" href="http://www.themekita.com">
-                  ThemeKita
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Help </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Licenses </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright">
-            2024, made with <i class="fa fa-heart heart text-danger"></i> by
-            <a href="http://www.themekita.com">ThemeKita</a>
-          </div>
-          <div>
-            Distributed by
-            <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
-          </div>
-        </div>
-      </footer>
     </div>
-
-
-
-    <!-- Custom template | don't include it in your project! -->
-    <div class="custom-template">
-      <div class="title">Settings</div>
-      <div class="custom-content">
-        <div class="switcher">
-          <div class="switch-block">
-            <h4>Logo Header</h4>
-            <div class="btnSwitch">
-              <button type="button" class="selected changeLogoHeaderColor" data-color="dark"></button>
-              <button type="button" class="selected changeLogoHeaderColor" data-color="blue"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="purple"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="light-blue"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="green"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="orange"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="red"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="white"></button>
-              <br />
-              <button type="button" class="changeLogoHeaderColor" data-color="dark2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="blue2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="purple2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="light-blue2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="green2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="orange2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="red2"></button>
-            </div>
-          </div>
-          <div class="switch-block">
-            <h4>Navbar Header</h4>
-            <div class="btnSwitch">
-              <button type="button" class="changeTopBarColor" data-color="dark"></button>
-              <button type="button" class="changeTopBarColor" data-color="blue"></button>
-              <button type="button" class="changeTopBarColor" data-color="purple"></button>
-              <button type="button" class="changeTopBarColor" data-color="light-blue"></button>
-              <button type="button" class="changeTopBarColor" data-color="green"></button>
-              <button type="button" class="changeTopBarColor" data-color="orange"></button>
-              <button type="button" class="changeTopBarColor" data-color="red"></button>
-              <button type="button" class="changeTopBarColor" data-color="white"></button>
-              <br />
-              <button type="button" class="changeTopBarColor" data-color="dark2"></button>
-              <button type="button" class="selected changeTopBarColor" data-color="blue2"></button>
-              <button type="button" class="changeTopBarColor" data-color="purple2"></button>
-              <button type="button" class="changeTopBarColor" data-color="light-blue2"></button>
-              <button type="button" class="changeTopBarColor" data-color="green2"></button>
-              <button type="button" class="changeTopBarColor" data-color="orange2"></button>
-              <button type="button" class="changeTopBarColor" data-color="red2"></button>
-            </div>
-          </div>
-          <div class="switch-block">
-            <h4>Sidebar</h4>
-            <div class="btnSwitch">
-              <button type="button" class="selected changeSideBarColor" data-color="white"></button>
-              <button type="button" class="changeSideBarColor" data-color="dark"></button>
-              <button type="button" class="changeSideBarColor" data-color="dark2"></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="custom-toggle">
-        <i class="icon-settings"></i>
-      </div>
-    </div>
-    <!-- End Custom template -->
-
 
   </div>
   <!--   Core JS Files   -->
@@ -859,26 +757,25 @@
 
   <!-- jQuery Scrollbar -->
   <script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
-  <!-- Datatables -->
-  <script src="../../assets/js/plugin/datatables/datatables.min.js"></script>
+ 
+  <!-- jQuery Sparkline -->
+  <script src="../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
 
   <!-- Chart Circle -->
   <script src="../../assets/js/plugin/chart-circle/circles.min.js"></script>
 
+  <!-- Bootstrap Notify -->
+  <script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+
+  <!-- Sweet Alert -->
+  <script src="../../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
   <!-- Kaiadmin JS -->
   <script src="../../assets/js/kaiadmin.min.js"></script>
 
-   <!-- Bootstrap Notify -->
-   <script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+  <script src="../../assets/js/choices.js/choices.min.js"></script>
 
- <!-- Sweet Alert -->
- <script src="../../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-
-  <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-  <script src="../../assets/js/setting-demo2.js"></script>
-
- 
 
 
   <script>
@@ -931,106 +828,80 @@
     });
   </script>
 
+
+  <!-- to show alert add new option -->
   <script>
-    $(document).ready(function () {
-      $("#basic-datatables").DataTable({});
+    
+    var currentCaseType = $("#case_type").val()
 
-      $("#multi-filter-select").DataTable({
-        pageLength: 5,
-        initComplete: function () {
-          this.api()
-            .columns()
-            .every(function () {
-              var column = this;
-              var select = $(
-                '<select class="form-select"><option value=""></option></select>'
-              )
-                .appendTo($(column.footer()).empty())
-                .on("change", function () {
-                  var val = $.fn.dataTable.util.escapeRegex($(this).val());
-
-                  column
-                    .search(val ? "^" + val + "$" : "", true, false)
-                    .draw();
-                });
-
-              column
-                .data()
-                .unique()
-                .sort()
-                .each(function (d, j) {
-                  select.append(
-                    '<option value="' + d + '">' + d + "</option>"
-                  );
-                });
-            });
-        },
-      });
-
-      // Add Row
-      $("#add-row").DataTable({
-        pageLength: 5,
-      });
-
-      var action =
-        '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
-
-      $("#addRowButton").click(function () {
-        $("#add-row")
-          .dataTable()
-          .fnAddData([
-            $("#addName").val(),
-            $("#addPosition").val(),
-            $("#addOffice").val(),
-            action,
-          ]);
-        $("#addRowModal").modal("hide");
-      });
-    });
-  </script>
-
-  <script>
-    document.getElementById('create_client').addEventListener('click', function () {
-      window.location.href = 'createClient.html';
-    });
-  </script>
-
-  <script>
-    function swalfunction() {
-      console.log("ahed ddd");
-      swal({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        type: "warning",
-        buttons: {
-          confirm: {
-            text: "Yes, delete it!",
-            className: "btn btn-success",
-          },
-          cancel: {
-            visible: true,
-            className: "btn btn-danger",
-          },
-        },
-      }).then((Delete) => {
-        if (Delete) {
+    var SweetAlert2Demo = (function () {
+      //== Demos
+      var initDemos = function () {
+        //== Sweetalert Demo 1
+        $('#case_type').change(function (e) {
+          var selectedValue = $(this).val();
+          if (selectedValue != 'add_another_way') {
+            console.log("Add Another Way selected");
+            return
+          }
           swal({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            type: "success",
+            title: "Input Option",
+            html: '<br><input class="form-control" placeholder="Input Option" id="input-field">',
+            content: {
+              element: "input",
+              attributes: {
+                placeholder: "Input Option",
+                type: "text",
+                id: "input-field",
+                className: "form-control",
+              },
+            },
             buttons: {
+              cancel: {
+                visible: true,
+                className: "btn btn-danger",
+              },
               confirm: {
                 className: "btn btn-success",
               },
             },
+          }).then((value) => {
+            if (value) {
+              var newOption = $("#input-field").val();
+              if (newOption !== "") {
+                var $select = $("#case_type");
+                $select.find("option:last").before('<option>' + newOption + '</option>');
+                $select.val(newOption);
+                swal("", "New option added: " + newOption, "success");
+              } else {
+                var $select = $("#case_type");
+                $select.find("option:last").before('<option>' + newOption + '</option>');
+                $select.val(newOption);
+                swal("", "Please enter a valid option", "error");
+              }
+            } else {
+              swal.close();
+            }
           });
-        } else {
-          swal.close();
-        }
-      });
-    }
-    
+        });
+
+
+      };
+
+      return {
+        //== Init
+        init: function () {
+          initDemos();
+        },
+      };
+    });
+
+    //== Class Initialization
+    jQuery(document).ready(function () {
+      SweetAlert2Demo.init();
+    });
   </script>
 
 </body>
+
 </html>

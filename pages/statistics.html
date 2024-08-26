@@ -805,7 +805,7 @@
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
               <div class="card">
                 <div class="card-header">
                   <div class="card-title">Cases</div>
@@ -820,8 +820,27 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Contact methods</div>
+                </div>
+                <div class="card-body row">
+                  <div class="chart-container">
+                    <canvas
+                      id="pieChart"
+                      style="width: 50%; height: 50%"
+                    ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
+          <div class="row">
+           
+          </div>
+          <!-- WORLD MAP -->
           <div class="row">
             <div class="col-md-12">
               <div class="card card-transparent">
@@ -1276,6 +1295,47 @@
           },
         },
       });
+
+    var myPieChart = new Chart(pieChart, {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: [50, 35, 15 , 3],
+            backgroundColor: ["#1d7af3", "#f3545d", "#fdaf4b" ],
+            borderWidth: 0,
+          },
+        ],
+        labels: ["phone", "in person", "email" , "other"],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          position: "bottom",
+          labels: {
+            fontColor: "rgb(154, 154, 154)",
+            fontSize: 11,
+            usePointStyle: true,
+            padding: 20,
+          },
+        },
+        pieceLabel: {
+          render: "percentage",
+          fontColor: "white",
+          fontSize: 14,
+        },
+        tooltips: false,
+        layout: {
+          padding: {
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 20,
+          },
+        },
+      },
+    });
 
   </script>
 

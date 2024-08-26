@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Clients</title>
+  <title>Events</title>
   <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
   <link rel="icon" href="../../assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
 
@@ -628,7 +628,7 @@
       <div class="container">
         <div class="page-inner">
           <div class="page-header">
-            <h3 class="fw-bold mb-3">Clients</h3>
+            <h3 class="fw-bold mb-3">Events</h3>
             <ul class="breadcrumbs mb-3">
               <li class="nav-home">
                 <a href="#">
@@ -645,30 +645,47 @@
                 <i class="icon-arrow-right"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Clients</a>
+                <a href="#">events</a>
               </li>
             </ul>
           </div>
 
-          <!-- Table clients -->
+          <div class="col-md-4">
+            <div class="card card-secondary bg-secondary-gradient">
+              <div class="card-body skew-shadow">
+                
+             
+                <h2 class="py-4 mb-0"><i class="fas fa-star" style="color: yellow;"></i> polic offic party</h2>
+                <div class="row">
+                  <div class="col-8 pe-0">
+                    <h3 class="fw-bold mb-1">off Meeting</h3>
+                    <div class="text-small text-uppercase fw-bold op-8">
+                      Card Holder
+                    </div>
+                  </div>
+                  <div class="col-4 ps-0 text-end">
+                    <h3 class="fw-bold mb-1">800 e</h3>
+                    <div class="text-small text-uppercase fw-bold op-8">
+                      1/2/2009
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- Table stakeholders -->
           <div class="row">
-
-
             <div class="col-md-12">
               <div class="card">
-
-
                 <div class="card-header">
                   <div class="d-flex align-items-center">
-                    <h4 class="card-title">Clients</h4>
-
-                    <button class="btn btn-primary btn-round ms-auto" data-bs-toggle="modal" id="create_client">
-
+                    <h4 class="card-title">Events</h4>
+                    <button class="btn btn-primary btn-round ms-auto" id="create_stakeholder">
                       <i class="fa fa-plus"></i>
-                      Add client
-
+                      Add event
                     </button>
-
                   </div>
                 </div>
 
@@ -678,64 +695,34 @@
                       <thead>
                         <tr>
                           <th>Name</th>
-                          <th>Phone</th>
-                          <th>Created by</th>
-                          <th>Priority</th>
-                          <th>Created at</th>
-                          <th>status</th>
+                          <th>event type</th>
+                          <th>Location</th>
+                          <th>Budget</th>
+                          <th>num of participants</th>
                           <th style="width: 10%">Action</th>
                         </tr>
                       </thead>
                       <tfoot>
                         <tr>
-                          <th>Name</th>
+                          <th class="d-none"></th>
+                          <th>Organization</th>
                           <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                          <th>Action</th>
+                          <th class="d-none">phone</th>
+                          <th class="d-none">Email</th>
                         </tr>
                       </tfoot>
                       <tbody>
                         <tr>
-                          <td>Ahed Sulieman</td>
-                          <td>+963 996840955</td>
-                          <td>Mutaz Suleiman</td>
-                          <td>very high</td>
-                          <td>2011/04/25 3:00 PM</td>
-                          <td>active</td>
+                          <td>Police meeting</td>
+                          <td>in person</td>
+                          <td>Berlin Police office</td>
+                          <td>4000$</td>
+                          <td>24</td>
                           <td>
                             <div class="form-button-action">
-
-                              <button type="button" data-bs-toggle="tooltip" title=""
-                                class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                <a href="editClient.html"><i class="fa fa-edit"></i></a>
-                              </button>
-
-                              <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
-                                data-original-title="Remove" >
-                                <i class="fas fa-trash" onclick="swalfunction()"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Fadi Asali</td>
-                          <td>+963 996840955</td>
-                          <td>Mutaz Suleiman</td>
-                          <td>high</td>
-                          <td>2024/04/25 4:00 PM</td>
-                          <td>active</td>
-                          <td>
-                            <div class="form-button-action">
-
-                              <button type="button" data-bs-toggle="tooltip" title=""
-                                class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                <a href="editClient.html"><i class="fa fa-edit"></i></a>
-                              </button>
-
-                              <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
+                              <a class="btn btn-link btn-primary"  href="view.html"><i class="fas fa-eye"></i>  </a>
+                              <a class="btn btn-link btn-primary"  href="editStakeholder.html"><i class="fa fa-edit"></i></a>
+                              <button type="button" class="btn btn-link btn-danger"
                                 data-original-title="Remove" >
                                 <i class="fas fa-trash" onclick="swalfunction()"></i>
                               </button>
@@ -752,7 +739,6 @@
 
 
           </div>
-
         </div>
       </div>
 
@@ -784,71 +770,6 @@
         </div>
       </footer>
     </div>
-
-
-
-    <!-- Custom template | don't include it in your project! -->
-    <div class="custom-template">
-      <div class="title">Settings</div>
-      <div class="custom-content">
-        <div class="switcher">
-          <div class="switch-block">
-            <h4>Logo Header</h4>
-            <div class="btnSwitch">
-              <button type="button" class="selected changeLogoHeaderColor" data-color="dark"></button>
-              <button type="button" class="selected changeLogoHeaderColor" data-color="blue"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="purple"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="light-blue"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="green"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="orange"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="red"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="white"></button>
-              <br />
-              <button type="button" class="changeLogoHeaderColor" data-color="dark2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="blue2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="purple2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="light-blue2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="green2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="orange2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="red2"></button>
-            </div>
-          </div>
-          <div class="switch-block">
-            <h4>Navbar Header</h4>
-            <div class="btnSwitch">
-              <button type="button" class="changeTopBarColor" data-color="dark"></button>
-              <button type="button" class="changeTopBarColor" data-color="blue"></button>
-              <button type="button" class="changeTopBarColor" data-color="purple"></button>
-              <button type="button" class="changeTopBarColor" data-color="light-blue"></button>
-              <button type="button" class="changeTopBarColor" data-color="green"></button>
-              <button type="button" class="changeTopBarColor" data-color="orange"></button>
-              <button type="button" class="changeTopBarColor" data-color="red"></button>
-              <button type="button" class="changeTopBarColor" data-color="white"></button>
-              <br />
-              <button type="button" class="changeTopBarColor" data-color="dark2"></button>
-              <button type="button" class="selected changeTopBarColor" data-color="blue2"></button>
-              <button type="button" class="changeTopBarColor" data-color="purple2"></button>
-              <button type="button" class="changeTopBarColor" data-color="light-blue2"></button>
-              <button type="button" class="changeTopBarColor" data-color="green2"></button>
-              <button type="button" class="changeTopBarColor" data-color="orange2"></button>
-              <button type="button" class="changeTopBarColor" data-color="red2"></button>
-            </div>
-          </div>
-          <div class="switch-block">
-            <h4>Sidebar</h4>
-            <div class="btnSwitch">
-              <button type="button" class="selected changeSideBarColor" data-color="white"></button>
-              <button type="button" class="changeSideBarColor" data-color="dark"></button>
-              <button type="button" class="changeSideBarColor" data-color="dark2"></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="custom-toggle">
-        <i class="icon-settings"></i>
-      </div>
-    </div>
-    <!-- End Custom template -->
 
 
   </div>
@@ -990,8 +911,8 @@
   </script>
 
   <script>
-    document.getElementById('create_client').addEventListener('click', function () {
-      window.location.href = 'createClient.html';
+    document.getElementById('create_stakeholder').addEventListener('click', function () {
+      window.location.href = 'create.html';
     });
   </script>
 

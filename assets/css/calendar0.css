@@ -10,3 +10,15 @@
 .inherit-height{
     height: inherit;
 }
+
+.calendar-day-column{
+    height: 100%;
+}
+
+.calendar-task{
+    background-color: rgb(163, 163, 255);
+    border-radius: 0px 8px 8px 8px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}

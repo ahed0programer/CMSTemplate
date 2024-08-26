@@ -16,6 +16,11 @@
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../../assets/css/demo.css" />
+
+
+  <!-- custome ahed fadi -->
+  <link rel="stylesheet" href="../../assets/css/profile.css">
+
 </head>
 
 <body>
@@ -627,132 +632,160 @@
 
       <div class="container">
         <div class="page-inner">
-          <div class="page-header">
-            <h3 class="fw-bold mb-3">Clients</h3>
-            <ul class="breadcrumbs mb-3">
-              <li class="nav-home">
-                <a href="#">
-                  <i class="icon-home"></i>
-                </a>
-              </li>
-              <li class="separator">
-                <i class="icon-arrow-right"></i>
-              </li>
-              <li class="nav-item">
-                <a href="#">Business</a>
-              </li>
-              <li class="separator">
-                <i class="icon-arrow-right"></i>
-              </li>
-              <li class="nav-item">
-                <a href="#">Clients</a>
-              </li>
-            </ul>
+          <div class="page-header align-items-center">
+            <h3 class="fw-bold mb-3">Stakeholders</h3>
+            
+            <div class="flex-fill d-flex justify-content-end">
+              <div class="nav-search me-1">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button type="submit" class="btn btn-search pe-1">
+                      <i class="fa fa-search search-icon"></i>
+                    </button>
+                  </div>
+                  <input type="text" placeholder="Search ..." class="form-control">
+                </div>
+              </div>
+              <button class="btn btn-primary btn-round " data-bs-toggle="modal" id="create_stakeholder">
+                <i class="fa fa-plus"></i>
+                Add Stakeholder
+              </button>
+            </div>
           </div>
 
-          <!-- Table clients -->
           <div class="row">
-
-
-            <div class="col-md-12">
-              <div class="card">
-
-
-                <div class="card-header">
-                  <div class="d-flex align-items-center">
-                    <h4 class="card-title">Clients</h4>
-
-                    <button class="btn btn-primary btn-round ms-auto" data-bs-toggle="modal" id="create_client">
-
-                      <i class="fa fa-plus"></i>
-                      Add client
-
-                    </button>
-
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-3">
+                  <!-- <img src="../../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle"> -->
+                  <img src="../../assets/img/user.png" class="avatar-img rounded mb-1" alt="...">
+                  <div class="avatar">
+                    <span class="avatar-title rounded-circle border border-white">CF</span>
                   </div>
+                  <!-- <i class="fas fa-user-tie"></i> -->
                 </div>
-
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table id="multi-filter-select" class="display table table-striped table-hover">
-                      <thead>
-                        <tr>
-                          <th>Name</th>
-                          <th>Phone</th>
-                          <th>Created by</th>
-                          <th>Priority</th>
-                          <th>Created at</th>
-                          <th>status</th>
-                          <th style="width: 10%">Action</th>
-                        </tr>
-                      </thead>
-                      <tfoot>
-                        <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                          <th>Action</th>
-                        </tr>
-                      </tfoot>
-                      <tbody>
-                        <tr>
-                          <td>Ahed Sulieman</td>
-                          <td>+963 996840955</td>
-                          <td>Mutaz Suleiman</td>
-                          <td>very high</td>
-                          <td>2011/04/25 3:00 PM</td>
-                          <td>active</td>
-                          <td>
-                            <div class="form-button-action">
-
-                              <button type="button" data-bs-toggle="tooltip" title=""
-                                class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                <a href="editClient.html"><i class="fa fa-edit"></i></a>
-                              </button>
-
-                              <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
-                                data-original-title="Remove" >
-                                <i class="fas fa-trash" onclick="swalfunction()"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Fadi Asali</td>
-                          <td>+963 996840955</td>
-                          <td>Mutaz Suleiman</td>
-                          <td>high</td>
-                          <td>2024/04/25 4:00 PM</td>
-                          <td>active</td>
-                          <td>
-                            <div class="form-button-action">
-
-                              <button type="button" data-bs-toggle="tooltip" title=""
-                                class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                <a href="editClient.html"><i class="fa fa-edit"></i></a>
-                              </button>
-
-                              <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
-                                data-original-title="Remove" >
-                                <i class="fas fa-trash" onclick="swalfunction()"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-
-                      </tbody>
-                    </table>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title">Ahed Suleiman</h5>
+                    <p class="card-text mb-1"><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p class="card-text"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                   </div>
                 </div>
               </div>
             </div>
-
-
           </div>
 
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card profile-card">
+                <div class="card-header">
+                  <h3>Ahed Suleiman</h3>
+                  <p>back-end Web Developer</p>
+                </div>
+                <div class="card-body">
+                  <!-- <img src="https://via.placeholder.com/120" alt="Profile Picture"> -->
+                  <ul class="list-unstyled mt-3">
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> john.doe@example.com</li>
+                    <li><i class="fas fa-briefcase"></i> Senior Developer at TechCorp</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown</li>
+                    <!-- <li><i class="fas fa-birthday-cake"></i> August 14, 1985</li> -->
+                  </ul>
+                </div>
+              </div>
+            </div> 
+            <div class="col-md-4">
+              <div class="card profile-card">
+                <div class="card-header">
+                  <h3>Mutaz  Suleiman</h3>
+                  <p>Web Developer</p>
+                </div>
+                <div class="card-body">
+                  <!-- <img src="https://via.placeholder.com/120" alt="Profile Picture"> -->
+                  <ul class="list-unstyled mt-3">
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> john.doe@example.com</li>
+                    <li><i class="fas fa-briefcase"></i> Senior Developer at TechCorp</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown</li>
+                    <!-- <li><i class="fas fa-birthday-cake"></i> August 14, 1985</li> -->
+                  </ul>
+                </div>
+              </div>
+            </div> 
+            <div class="col-md-4">
+              <div class="card profile-card">
+                <div class="card-header">
+                  <h3>John Doe</h3>
+                  <p>Web Developer</p>
+                </div>
+                <div class="card-body">
+                  <!-- <img src="https://via.placeholder.com/120" alt="Profile Picture"> -->
+                  <ul class="list-unstyled mt-3">
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> john.doe@example.com</li>
+                    <li><i class="fas fa-briefcase"></i> Senior Developer at TechCorp</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown</li>
+                    <!-- <li><i class="fas fa-birthday-cake"></i> August 14, 1985</li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>  
+            <div class="col-md-4">
+              <div class="card profile-card">
+                <div class="card-header">
+                  <h3>John Doe</h3>
+                  <p>Web Developer</p>
+                </div>
+                <div class="card-body">
+                  <!-- <img src="https://via.placeholder.com/120" alt="Profile Picture"> -->
+                  <ul class="list-unstyled mt-3">
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> john.doe@example.com</li>
+                    <li><i class="fas fa-briefcase"></i> Senior Developer at TechCorp</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown</li>
+                    <!-- <li><i class="fas fa-birthday-cake"></i> August 14, 1985</li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>  
+            <div class="col-md-4">
+              <div class="card profile-card">
+                <div class="card-header">
+                  <h3>John Doe</h3>
+                  <p>Web Developer</p>
+                </div>
+                <div class="card-body">
+                  <!-- <img src="https://via.placeholder.com/120" alt="Profile Picture"> -->
+                  <ul class="list-unstyled mt-3">
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> john.doe@example.com</li>
+                    <li><i class="fas fa-briefcase"></i> Senior Developer at TechCorp</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown</li>
+                    <!-- <li><i class="fas fa-birthday-cake"></i> August 14, 1985</li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>  
+            <div class="col-md-4">
+              <div class="card profile-card">
+                <div class="card-header">
+                  <h3>John Doe</h3>
+                  <p>Web Developer</p>
+                </div>
+                <div class="card-body">
+                  <!-- <img src="https://via.placeholder.com/120" alt="Profile Picture"> -->
+                  <ul class="list-unstyled mt-3">
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> john.doe@example.com</li>
+                    <li><i class="fas fa-briefcase"></i> Senior Developer at TechCorp</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown</li>
+                    <!-- <li><i class="fas fa-birthday-cake"></i> August 14, 1985</li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>  
+          </div>
         </div>
       </div>
 
@@ -786,76 +819,12 @@
     </div>
 
 
-
-    <!-- Custom template | don't include it in your project! -->
-    <div class="custom-template">
-      <div class="title">Settings</div>
-      <div class="custom-content">
-        <div class="switcher">
-          <div class="switch-block">
-            <h4>Logo Header</h4>
-            <div class="btnSwitch">
-              <button type="button" class="selected changeLogoHeaderColor" data-color="dark"></button>
-              <button type="button" class="selected changeLogoHeaderColor" data-color="blue"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="purple"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="light-blue"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="green"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="orange"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="red"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="white"></button>
-              <br />
-              <button type="button" class="changeLogoHeaderColor" data-color="dark2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="blue2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="purple2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="light-blue2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="green2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="orange2"></button>
-              <button type="button" class="changeLogoHeaderColor" data-color="red2"></button>
-            </div>
-          </div>
-          <div class="switch-block">
-            <h4>Navbar Header</h4>
-            <div class="btnSwitch">
-              <button type="button" class="changeTopBarColor" data-color="dark"></button>
-              <button type="button" class="changeTopBarColor" data-color="blue"></button>
-              <button type="button" class="changeTopBarColor" data-color="purple"></button>
-              <button type="button" class="changeTopBarColor" data-color="light-blue"></button>
-              <button type="button" class="changeTopBarColor" data-color="green"></button>
-              <button type="button" class="changeTopBarColor" data-color="orange"></button>
-              <button type="button" class="changeTopBarColor" data-color="red"></button>
-              <button type="button" class="changeTopBarColor" data-color="white"></button>
-              <br />
-              <button type="button" class="changeTopBarColor" data-color="dark2"></button>
-              <button type="button" class="selected changeTopBarColor" data-color="blue2"></button>
-              <button type="button" class="changeTopBarColor" data-color="purple2"></button>
-              <button type="button" class="changeTopBarColor" data-color="light-blue2"></button>
-              <button type="button" class="changeTopBarColor" data-color="green2"></button>
-              <button type="button" class="changeTopBarColor" data-color="orange2"></button>
-              <button type="button" class="changeTopBarColor" data-color="red2"></button>
-            </div>
-          </div>
-          <div class="switch-block">
-            <h4>Sidebar</h4>
-            <div class="btnSwitch">
-              <button type="button" class="selected changeSideBarColor" data-color="white"></button>
-              <button type="button" class="changeSideBarColor" data-color="dark"></button>
-              <button type="button" class="changeSideBarColor" data-color="dark2"></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="custom-toggle">
-        <i class="icon-settings"></i>
-      </div>
-    </div>
-    <!-- End Custom template -->
-
-
   </div>
   <!--   Core JS Files   -->
   <script src="../../assets/js/core/jquery-3.7.1.min.js"></script>
   <script src="../../assets/js/core/popper.min.js"></script>
   <script src="../../assets/js/core/bootstrap.min.js"></script>
+
 
   <!-- jQuery Scrollbar -->
   <script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
@@ -990,8 +959,8 @@
   </script>
 
   <script>
-    document.getElementById('create_client').addEventListener('click', function () {
-      window.location.href = 'createClient.html';
+    document.getElementById('create_stakeholder').addEventListener('click', function () {
+      window.location.href = 'create.html';
     });
   </script>
 
