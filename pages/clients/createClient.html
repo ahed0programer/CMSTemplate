@@ -11,20 +11,20 @@
   <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../../assets/css/plugins.min.css" />
   <link rel="stylesheet" href="../../assets/css/kaiadmin.min.css" />
-
+  <link rel="stylesheet" href="../../assets/css/calender_clients.css" />
   <!-- Include Choices CSS -->
   <link rel="stylesheet" href="../../assets/js/choices.js/choices.min.css" />
 
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../../assets/css/demo.css" />
-  
+
   <style>
     .rotate {
-        transform: rotate(180deg);
-        transition: transform 0.5s;
+      transform: rotate(180deg);
+      transition: transform 0.5s;
     }
-</style>
+  </style>
 </head>
 
 <body>
@@ -993,12 +993,13 @@
                 <div class="card-header d-flex justify-content-between">
                   <div class="card-title">Partners :</div>
                   <div>
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePartners" aria-expanded="false" aria-controls="collapsePartners" onclick="changeIconPartners()">
-                      expand <i class="fas fa-chevron-down"></i>
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePartners"
+                      aria-expanded="false" aria-controls="collapsePartners" onclick="changeIconPartners()">
+                      expand <i class="fas fa-chevron-down partners"></i>
                     </button>
                   </div>
                 </div>
-                <div class="card-body collapse"  id="collapsePartners">
+                <div class="card-body collapse" id="collapsePartners">
                   <div class="text-center">
                     <div class="card-sub" id="noPartner">
                       No Partners
@@ -1057,7 +1058,7 @@
 
                                     <div class="form-check">
                                       <input class="form-check-input" type="radio" name="partner_type"
-                                        id="family_partner" checked  value="family"/>
+                                        id="family_partner" checked value="family" />
                                       <label class="form-check-label" for="family_partner">
                                         Family
                                       </label>
@@ -1185,34 +1186,73 @@
                 <div class="card-header d-flex justify-content-between">
                   <div class="card-title">appointments shcedule</div>
                   <div>
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAppointments" aria-expanded="false" aria-controls="collapseAppointments">
-                      expand <i class="fas fa-chevron-down"></i>
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAppointments"
+                      aria-expanded="false" aria-controls="collapseAppointments" onclick="changeIconAppointments()">
+                      expand <i class="fas fa-chevron-down appointments"></i>
                     </button>
                   </div>
+
                 </div>
-                <div class="card-body collapse"  id="collapseAppointments">
+                <div class="card-body collapse" id="collapseAppointments">
                   <div class="mb-4">
                     <ul class="nav nav-tabs card-header-tabs" id="pills-tab" role="tablist">
                       <li class="nav-item">
                         <a class="nav-link active" id="pills-week-tab" data-bs-toggle="pill" href="#pills-week"
-                        role="tab" aria-controls="pills-week" aria-selected="true">Weekly</a>
+                          role="tab" aria-controls="pills-week" aria-selected="true">Weekly</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link"d="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab"
-                        aria-controls="pills-month" aria-selected="false">Monthly</a>
+                        <a class="nav-link" d="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab"
+                          aria-controls="pills-month" aria-selected="false">Monthly</a>
                       </li>
                     </ul>
-                  </div> 
+                  </div>
                   <div class="tab-content mt-2 mb-3 text-center" id="pills-tabContent">
-                    <div class="tab-pane fade show active"  id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
-                      <h5 class="card-title">Weekly</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="tab-pane fade show active" id="pills-week" role="tabpanel"
+                      aria-labelledby="pills-week-tab">
+
+
+                      <div class="row">
+                        <div class="col-l-md-6 col-lg-7">
+                          <div class="days_week" id="days_week"></div>
+
+                          <div>
+                            <div class="day-circle" data-day="Sun">S</div>
+                            <div class="day-circle" data-day="Mon">M</div>
+                            <div class="day-circle" data-day="Tus">T</div>
+                            <div class="day-circle" data-day="Wed">W</div>
+                            <div class="day-circle" data-day="Thu">T</div>
+                            <div class="day-circle color-fri" data-day="Fri">F</div>
+                            <div class="day-circle color-sat" data-day="Sat">S</div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-5">
+                          <div class="time_appointments_Weekly" id="time_appointments_Weekly">
+
+                          </div>
+                        </div>
+
+                      </div>
+
+
+
                     </div>
                     <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
-                      <h5 class="card-title">Month</h5>
-                      <p class="card-text">adklaldsk calsdkfmald mf;alksdfma;lksd f.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <!-- <h5 class="card-title">Month</h5> -->
+                      <!-- <p class="card-text">adklaldsk calsdkfmald mf;alksdfma;lksd f.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                      <div class="row">
+                        <div class="col-md-6 col-lg-7">
+                          <div class="calendar_appointments"></div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-5">
+                          <div class="time_appointments" id="time_appointments">
+
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -1223,10 +1263,10 @@
             <div class="card-action d-flex justify-content-end">
               <button class="btn me-2 btn-round btn-info" id="button_add">Add</button>
               <button class="btn me-2 btn-round btn-success" id="button_add_with_case">Add Case</button>
-              
+
               <button class="btn me-2 btn-round btn-label-info">save draft</button>
               <button class="btn me-2 btn-round btn-danger">Cancel</button>
-              
+
             </div>
           </div>
         </div>
@@ -1262,6 +1302,45 @@
       </div>
 
     </div>
+
+    <div class="modal" id="timeModalMonthly">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Enter Time</h5>
+            <button type="button" class="close" id="timeColse" data-dismiss="modal"
+              onclick="closeTimeMonthly()">&times;</button>
+          </div>
+          <div class="modal-body">
+            <input type="time" id="timeInput" class="form-control" placeholder="Enter time (e.g., 10:00 AM)">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="saveTimeMonthly()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal" id="timeModalWeekly">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Enter Time</h5>
+            <button type="button" class="close" id="timeColse" data-dismiss="modal"
+              onclick="closeTimeWeekly()">&times;</button>
+          </div>
+          <div class="modal-body">
+            <input type="time" id="timeInputWeekly" class="form-control" placeholder="Enter time (e.g., 10:00 AM)">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="saveTimeWeekly()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
   <!--   Core JS Files   -->
   <script src="../../assets/js/core/jquery-3.7.1.min.js"></script>
@@ -1621,7 +1700,8 @@
 
 
   <script>
-    function edit_Partner_form(rowId) {partner_type
+    function edit_Partner_form(rowId) {
+      partner_type
       const row = document.getElementById(`row_${rowId}`);
       const addPartnerButton = document.getElementById('add_partner_button');
       const editPartnerButton = document.getElementById('edit_partner_button');
@@ -1640,19 +1720,19 @@
 
       if (cells[0].textContent === 'family') {
         console.log("Family")
-          partnerTypeRadioFamily.checked = true;
-          partnerTypeRadioOther.checked = false;
+        partnerTypeRadioFamily.checked = true;
+        partnerTypeRadioOther.checked = false;
       } else {
         console.log("other")
-          partnerTypeRadioFamily.checked = false;
-          partnerTypeRadioOther.checked = true;
+        partnerTypeRadioFamily.checked = false;
+        partnerTypeRadioOther.checked = true;
       }
 
       disabledInabledOrganizationInput()
       document.getElementById('f_name_partner').value = cells[1].textContent;
       document.getElementById('l_name_partner').value = cells[2].textContent;
       document.getElementById('phone_number_partner').value = cells[4].textContent;
-      document.getElementById('email_partner').value = cells[3].textContent;0
+      document.getElementById('email_partner').value = cells[3].textContent; 0
       document.getElementById('relationship_type_partner').value = cells[5].textContent;
       document.getElementById('note_partner').value = cells[7].textContent;
       document.getElementById('organization_partner').value = cells[6].textContent;
@@ -1768,10 +1848,214 @@
   </script>
 
   <script>
-     function changeIconPartners() {
-            let icon = document.querySelector('.fas.fa-chevron-down');
-            icon.classList.toggle('rotate');
+    function changeIconPartners() {
+      let icon = document.querySelector('.fas.fa-chevron-down.partners');
+      icon.classList.toggle('rotate');
+    }
+
+    function changeIconAppointments() {
+      let icon = document.querySelector('.fas.fa-chevron-down.appointments');
+      icon.classList.toggle('rotate');
+    }
+  </script>
+
+  <script>
+    let currentMonth = new Date().getMonth();
+    let currentYear = new Date().getFullYear();
+    let selectedDates = [];
+
+    function generateCalendar() {
+      const calendarDiv = document.querySelector('.calendar_appointments');
+      const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+      let calendarHTML = `<div class="navigation">
+      </div>
+      <table>
+          <thead>
+              <tr>
+                  <th>Sun</th>
+                  <th>Mon</th>
+                  <th>Tue</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+              </tr>
+          </thead>
+          <tbody>`;
+
+      const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+      const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+      let dayCount = 1;
+      for (let i = 0; i < 6; i++) {
+        calendarHTML += '<tr>';
+        for (let j = 0; j < 7; j++) {
+          if (i === 0 && j < firstDay) {
+            calendarHTML += '<td></td>';
+          } else if (dayCount > daysInMonth) {
+            break;
+          } else {
+            let cellClass = selectedDates.includes(dayCount) ? 'selected' : '';
+            calendarHTML += `<td class="${cellClass}" onclick="selectDay(${dayCount})">${dayCount}</td>`;
+            dayCount++;
+          }
         }
+        calendarHTML += '</tr>';
+      }
+
+      calendarHTML += '</tbody></table>';
+      calendarDiv.innerHTML = calendarHTML;
+    }
+
+    function nextMonth() {
+      currentMonth++;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      generateCalendar();
+    }
+
+    function prevMonth() {
+      currentMonth--;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      generateCalendar();
+    }
+
+
+    function selectDay(day) {
+      if (selectedDates.includes(day)) {
+        selectedDates = selectedDates.filter(date => date !== day);
+        const timePara = document.querySelector(`#time-${day}`);
+        if (timePara) {
+          timePara.remove();
+          console.log(selectedDates);
+        }
+        generateCalendar();
+      } else {
+        timeInput.setAttribute('data-dayValue', day);
+        $('#timeModalMonthly').modal('show');
+      }
+    }
+
+
+    function saveTimeMonthly() {
+      const day = parseInt(timeInput.getAttribute('data-dayValue'));
+      selectedDates.push(day);
+      console.log(selectedDates);
+
+      const time = document.getElementById('timeInput').value;
+      const timeDiv = document.querySelector('.time_appointments');
+      if (time) {
+        const timePara = document.createElement('p');
+        timePara.id = `time-${day}`;
+        timePara.textContent = `Time selected for day ${day} is : ${time}`;
+        timeDiv.appendChild(timePara);
+        // تحديث التقويم
+        $('#timeModalMonthly').modal('hide');
+
+      }
+      generateCalendar();
+    }
+
+    function closeTimeMonthly() {
+
+      $('#timeModalMonthly').modal('hide');
+    }
+
+    generateCalendar();
+  </script>
+
+  <script>
+    let selectedDays = [];
+    let dayValue;
+    const dayCircles = document.querySelectorAll('.day-circle');
+    const DaysWeek = document.getElementById('days_week');
+    dayCircles.forEach(circle => {
+      circle.addEventListener('click', () => {
+
+        dayValue = circle.dataset.day;
+
+        if (selectedDays.includes(dayValue)) {
+          circle.classList.toggle('selected-circle');
+          selectedDays = selectedDays.filter(date => date !== dayValue);
+
+          // إزالة العنصر ذو القيمة dayValue من selectedDates
+          // selectedDates = selectedDates.filter(date => date !== dayValue);
+
+          const dayPara = document.querySelector(`[data-day-monthly="${dayValue}"]`);
+
+          if (dayPara) {
+            dayPara.remove();
+            console.log(selectedDates);
+          }
+
+          console.log("remove");
+          console.log(selectedDays);
+          show_days_week();
+
+          const time = document.getElementById('timeInputWeekly').value;
+          const timeDiv = document.querySelector('.time_appointments_Weekly');
+          const timePara = document.getElementById(`time-${dayValue}`);
+          if (timePara) {
+            timeDiv.removeChild(timePara);
+          }
+
+        }
+
+
+
+        else {
+          $('#timeModalWeekly').modal('show');
+
+          console.log('add');
+          console.log(selectedDays);
+
+
+        }
+
+      });
+    });
+
+
+
+    function saveTimeWeekly() {
+      let selectedCircle = document.querySelector(`[data-day="${dayValue}"]`);
+      if (selectedCircle) {
+        selectedCircle.classList.toggle('selected-circle');
+      }
+      selectedDays.push(dayValue);
+      show_days_week();
+
+
+      const time = document.getElementById('timeInputWeekly').value;
+      const timeDiv = document.querySelector('.time_appointments_Weekly');
+      if (time) {
+        const timePara = document.createElement('p');
+        timePara.id = `time-${dayValue}`;
+        timePara.textContent = `Time selected for day ${dayValue} is : ${time}`;
+        timeDiv.appendChild(timePara);
+        // تحديث التقويم
+        $('#timeModalWeekly').modal('hide');
+
+      }
+    }
+
+    function closeTimeWeekly() {
+
+      $('#timeModalWeekly').modal('hide');
+    }
+
+    function show_days_week() {
+      const DaysWeek = document.getElementById('days_week');
+
+      DaysWeek.textContent = selectedDays.join(', ');
+      DaysWeek.innerHTML = selectedDays.map(day => `<span> ${day} </span>`).join('-');
+    }
   </script>
 </body>
 
