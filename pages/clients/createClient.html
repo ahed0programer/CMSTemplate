@@ -733,9 +733,9 @@
                         <label for="defaultSelect">Marital Status</label>
                         <select class="form-select form-control" id="marital_status">
                           <option disabled selected value="">Marital Status</option>
-                          <option>18-30</option>
-                          <option>31-45</option>
-                          <option>46-60</option>
+                          <option value="">18-30</option>
+                          <option value="">31-45</option>
+                          <option value="">46-60</option>
                         </select>
                       </div>
                     </div>
@@ -746,9 +746,9 @@
                         <label for="defaultSelect">Age</label>
                         <select class="form-select form-control" id="age">
                           <option disabled selected value="">Select Age</option>
-                          <option>18-30</option>
-                          <option>31-45</option>
-                          <option>46-60</option>
+                          <option value="">18-30</option>
+                          <option value="">31-45</option>
+                          <option value="">46-60</option>
                         </select>
                       </div>
                     </div>
@@ -760,11 +760,11 @@
 
                         <select class="choices form-select form-control" id="nationality">
                           <option disabled selected value="">Select Nationality</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
                         </select>
                       </div>
                     </div>
@@ -776,12 +776,12 @@
 
                         <select class="choices form-select form-control" id="seond_nationality">
                           <option disabled selected value="">Select Seond Nationality</option>
-                          <option>none</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
+                          <option value="">none</option>
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
                         </select>
                       </div>
                     </div>
@@ -1118,12 +1118,12 @@
                                     id="lable_name_relationship_type_partner">Relationship Type</label>
                                   <select class="choices form-select form-control" id="relationship_type_partner">
                                     <option disabled selected value="">Select</option>
-                                    <option>0none</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
+                                    <option value="0none">0none</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
                                   </select>
                                 </div>
                               </div>
@@ -1646,7 +1646,7 @@
       document.getElementById('f_name_partner').value = cells[1].textContent;
       document.getElementById('l_name_partner').value = cells[2].textContent;
       document.getElementById('phone_number_partner').value = cells[4].textContent;
-      document.getElementById('email_partner').value = cells[3].textContent;
+      document.getElementById('email_partner').value = cells[3].textContent;0
       document.getElementById('relationship_type_partner').value = cells[5].textContent;
       document.getElementById('note_partner').value = cells[7].textContent;
       document.getElementById('organization_partner').value = cells[6].textContent;
