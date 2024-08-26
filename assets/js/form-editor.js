@@ -5,7 +5,35 @@ var bubble = new Quill('#bubble', {
     theme: 'bubble'
 });
 
-new Quill("#full", { 
+new Quill("#full-1", { 
+    bounds: "#full-container .editor", 
+    modules: { 
+        toolbar: [
+            [{ font: [] }, { size: [] }], 
+            ["bold", "italic", "underline", "strike"], 
+            [
+                { color: [] }, 
+                { background: [] }
+            ], 
+            [
+                { script: "super" }, 
+                { script: "sub" }
+            ], 
+            [
+                { list: "ordered" }, 
+                { list: "bullet" }, 
+                { indent: "-1" }, 
+                { indent: "+1" }
+            ], 
+            ["direction", { align: [] }], 
+            ["link"], 
+            ["clean"]] 
+        }, 
+        theme: "snow" 
+    })
+
+
+new Quill("#full-2", { 
     bounds: "#full-container .editor", 
     modules: { 
         toolbar: [

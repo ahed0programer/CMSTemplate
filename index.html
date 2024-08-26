@@ -550,7 +550,37 @@
 
           <!-- * charts -->
           <div class="row">
-            <div class="row col-md-6">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Cases</div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-container">
+                    <canvas
+                      id="doughnutChart"
+                      style="width: 50%; height: 50%"
+                    ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Cases</div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-container">
+                    <canvas
+                      id="doughnutChart"
+                      style="width: 50%; height: 50%"
+                    ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
               <div class="col-12 card card-round">
                 <div class="card-body pb-0">
                   <div class="h1 fw-bold float-end text-primary">+5%</div>
@@ -567,147 +597,20 @@
                   <h2 class="mb-2">23</h2>
                   <p class="text-muted">Clients this week</p>
                   <div class="pull-in sparkline-fix">
-                    <div id="lineChart"></div>
+                    <div id="quick-clients-chart"></div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Cases</div>
-                </div>
-                <div class="card-body">
-                  <div class="chart-container">
-                    <canvas
-                      id="doughnutChart"
-                      style="width: 50%; height: 50%"
-                    ></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
           <!-- * end Charts -->
 
-          <!-- * recent cases -->
+          <!-- * recent cases & soon tasks-->
           <div class="row">
-            <div class="col-md-4">
-              <div class="card card-round">
-                <div class="card-body">
-                  <div class="card-head-row card-tools-still-right">
-                    <div class="card-title">Close Members</div>
-                    <div class="card-tools">
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-icon btn-clean me-0"
-                          type="button"
-                          id="dropdownMenuButton"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <i class="fas fa-ellipsis-h"></i>
-                        </button>
-                        <div
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton"
-                        >
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#"
-                            >Something else here</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-list py-4">
-                    <div class="item-list">
-                      <div class="avatar">
-                        <img
-                          src="assets/img/jm_denis.jpg"
-                          alt="..."
-                          class="avatar-img rounded-circle"
-                        />
-                      </div>
-                      <div class="info-user ms-3">
-                        <div class="username">Jimmy Denis</div>
-                        <div class="status">Graphic Designer</div>
-                      </div>
-                      <button class="btn btn-icon btn-link op-8 me-1">
-                        <i class="far fa-envelope"></i>
-                      </button>
-                      <button class="btn btn-icon btn-link btn-danger op-8">
-                        <i class="fas fa-ban"></i>
-                      </button>
-                    </div>
-                    <div class="item-list">
-                      <div class="avatar">
-                        <span
-                          class="avatar-title rounded-circle border border-white"
-                          >CF</span
-                        >
-                      </div>
-                      <div class="info-user ms-3">
-                        <div class="username">Chandra Felix</div>
-                        <div class="status">Sales Promotion</div>
-                      </div>
-                      <button class="btn btn-icon btn-link op-8 me-1">
-                        <i class="far fa-envelope"></i>
-                      </button>
-                      <button class="btn btn-icon btn-link btn-danger op-8">
-                        <i class="fas fa-ban"></i>
-                      </button>
-                    </div>
-                    <div class="item-list">
-                      <div class="avatar">
-                        <img
-                          src="assets/img/talha.jpg"
-                          alt="..."
-                          class="avatar-img rounded-circle"
-                        />
-                      </div>
-                      <div class="info-user ms-3">
-                        <div class="username">Talha</div>
-                        <div class="status">Front End Designer</div>
-                      </div>
-                      <button class="btn btn-icon btn-link op-8 me-1">
-                        <i class="far fa-envelope"></i>
-                      </button>
-                      <button class="btn btn-icon btn-link btn-danger op-8">
-                        <i class="fas fa-ban"></i>
-                      </button>
-                    </div>
-                    <div class="item-list">
-                      <div class="avatar">
-                        <img
-                          src="assets/img/chadengle.jpg"
-                          alt="..."
-                          class="avatar-img rounded-circle"
-                        />
-                      </div>
-                      <div class="info-user ms-3">
-                        <div class="username">Chad</div>
-                        <div class="status">CEO Zeleaf</div>
-                      </div>
-                      <button class="btn btn-icon btn-link op-8 me-1">
-                        <i class="far fa-envelope"></i>
-                      </button>
-                      <button class="btn btn-icon btn-link btn-danger op-8">
-                        <i class="fas fa-ban"></i>
-                      </button>
-                    </div> 
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-8">
-              <div class="card card-round">
+            <div class="col-md-7  mb-4">
+              <div class="card card-round h-100">
                 <div class="card-header">
-                  <div class="card-head-row card-tools-still-right">
+                  <div class="card-head-row card-tools-still-right ">
                     <div class="card-title">Recent cases</div>
                     <div class="card-tools">
                       <div class="dropdown">
@@ -739,50 +642,43 @@
                   <div class="table-responsive">
                     <!-- Projects table -->
                     <table class="table align-items-center mb-0">
-                      <!-- <thead class="thead-light">
-                        <tr>
-                          <th scope="col">Title</th>
-                          <th scope="col" class="text-end">Date & Time</th>
-                          <th scope="col" class="text-end">action</th>
-                        </tr>
-                      </thead> -->
+                      <thead class="thead-light">
+                        <!-- <tr>
+                          <th scope="col">case</th>
+                          <th scope="col">client</th>
+                          <th scope="col" class="text-center">Date & time</th>
+                          <th  class="text-end"></th>
+                        </tr> -->
+                      </thead>
                       <tbody>
                         <tr>
                           <th scope="row">
                             sample1
                           </th>
                           <td>Ahed Suleiman</td>
-                          <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                          <td class="text-center">Mar 19, 2020, 2.45pm</td>
                           <td class="text-end">
                             <a href="#"><span class="badge badge-success">show</span></a>
                           </td>
                         </tr>
                         <tr>
                           <th scope="row">
-                            <button
-                              class="btn btn-icon btn-round btn-success btn-sm me-2"
-                            >
-                              <i class="fa fa-check"></i>
-                            </button>
-                            Payment from #10231
+                            sample1
                           </th>
-                          <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                          <td>Ahed Suleiman</td>
+                          <td class="text-center">Mar 19, 2020, 2.45pm</td>
                           <td class="text-end">
-                             <a href="#"><span class="badge badge-success">show</span></a>
+                            <a href="#"><span class="badge badge-success">show</span></a>
                           </td>
                         </tr>
                         <tr>
                           <th scope="row">
-                            <button
-                              class="btn btn-icon btn-round btn-success btn-sm me-2"
-                            >
-                              <i class="fa fa-check"></i>
-                            </button>
-                            Payment from #10231
+                            sample1
                           </th>
-                          <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                          <td>Ahed Suleiman</td>
+                          <td class="text-center">Mar 19, 2020, 2.45pm</td>
                           <td class="text-end">
-                             <a href="#"><span class="badge badge-success">show</span></a>
+                            <a href="#"><span class="badge badge-success">show</span></a>
                           </td>
                         </tr>
                       </tbody>
@@ -791,6 +687,66 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-5 mb-4">
+              <div class="card card-round h-100 ">
+                <div class="card-body">
+                  <div class="card-head-row card-tools-still-right">
+                    <div class="card-title">To do soon</div>
+                    <div class="card-tools">
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-icon btn-clean me-0"
+                          type="button"
+                          id="dropdownMenuButton"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                        <div
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton"
+                        >
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-list py-4 h-100 overflow-auto">
+                    <div class="item-list">
+                      <div class="info-user ms-3">
+                        <div class="username">Playing football</div>
+                        <div class="status"><i class="fas fa-clock"></i> 11:11 PM</div>
+                      </div>
+                      <button class="btn btn-icon btn-link op-8 me-1">
+                        <i class="far fa-envelope"></i>
+                      </button>
+                      <button class="btn btn-icon btn-link btn-danger op-8">
+                        <i class="fas fa-ban"></i>
+                      </button>
+                    </div>
+                    <div class="item-list">
+                      <div class="info-user ms-3">
+                        <div class="username">Playing football</div>
+                        <div class="status"><i class="fas fa-clock"></i> 11:11 PM</div>
+                      </div>
+                      <button class="btn btn-icon btn-link op-8 me-1">
+                        <i class="far fa-envelope"></i>
+                      </button>
+                      <button class="btn btn-icon btn-link btn-danger op-8">
+                        <i class="fas fa-ban"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
           <!-- * recent cases end-->
 
@@ -1042,22 +998,13 @@
       fillColor: "rgba(23, 125, 255, 0.14)",
     });
 
-    $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
+    $("#quick-clients-chart").sparkline([99, 125, 122, 105, 110, 124, 115], {
       type: "line",
       height: "70",
       width: "100%",
       lineWidth: "2",
       lineColor: "#f3545d",
       fillColor: "rgba(243, 84, 93, .14)",
-    });
-
-    $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
-      type: "line",
-      height: "70",
-      width: "100%",
-      lineWidth: "2",
-      lineColor: "#ffa534",
-      fillColor: "rgba(255, 165, 52, .14)",
     });
 
 
