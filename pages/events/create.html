@@ -764,27 +764,27 @@
                 </div>
                 <div class="card-body">
                   <div class="text-center">
-                    <div class="card-sub" id="noPartner">
+                    <div class="card-sub" id="noParticipant">
                       No Participants
                     </div>
   
                     <div class="table-responsive">
-                      <table class="table mt-3" id="tablePartner">
+                      <table class="table mt-3" id="tableParticipant">
                         <thead>
                           <tr>
-                            <th scope="col">Partner Type</th>
+                            <!-- <th scope="col">Participant Type</th> -->
                             <th scope="col">First Name</th>
                             <th scope="col">Last Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Phone Number</th>
                             <th scope="col">Relationship Type \ Position</th>
-                            <th scope="col">Organization</th>
+                            <!-- <th scope="col">Organization</th> -->
                             <th scope="col">Notes</th>
                             <th scope="col">Action</th>
                           </tr>
                         </thead>
   
-                        <tbody id="partnerTableBody">
+                        <tbody id="ParticipantTableBody">
   
   
                         </tbody>
@@ -794,64 +794,64 @@
   
                   <!-- Button trigger modal -->
                   <button type="button" class="btn me-2 " data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                    onclick="add_Partner_form()">
-                    <i class="fas fa-user-plus"></i> Add Partner
+                    onclick="add_Participant_form()">
+                    <i class="fas fa-user-plus"></i> Add Participant
                   </button>
   
-                  <!-- Modal Add Partner -->
+                  <!-- Modal Add Participant -->
                   <div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static"
                     data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered ">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title " id="staticBackdropLabel">Add Partner</h5>
+                          <h5 class="modal-title " id="staticBackdropLabel">Add Participant</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
   
                         <div class="modal-body">
-                          <form id="partner_form">
+                          <form id="Participant_form">
                             <div class="row">
   
-                              <!-- Partner Type -->
-                              <div class="col-md-6 col-lg-12" id="partner_type">
+                              <!-- Participant Type -->
+                              <!-- <div class="col-md-6 col-lg-12" id="Participant_type">
                                 <div class="form-group">
-                                  <label>Partner Type</label><br />
+                                  <label>Participant Type</label><br />
                                   <div class="d-flex">
   
                                     <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="partner_type"
-                                        id="family_partner" checked value="family" />
-                                      <label class="form-check-label" for="family_partner">
+                                      <input class="form-check-input" type="radio" name="Participant_type"
+                                        id="family_Participant" checked value="family" />
+                                      <label class="form-check-label" for="family_Participant">
                                         Family
                                       </label>
                                     </div>
                                     <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="partner_type"
-                                        id="other_partner" value="other" />
-                                      <label class="form-check-label" for="other_partner">
+                                      <input class="form-check-input" type="radio" name="Participant_type"
+                                        id="other_Participant" value="other" />
+                                      <label class="form-check-label" for="other_Participant">
                                         Other
                                       </label>
                                     </div>
   
                                   </div>
                                 </div>
-                              </div>
+                              </div> -->
   
   
                               <!-- First Name -->
                               <div class="col-md-6 col-lg-6">
                                 <div class="form-group">
-                                  <label for="f_name_partner">First Name *</label>
-                                  <input type="text" class="form-control" id="f_name_partner"
-                                    placeholder="Enter First Name" required />
+                                  <label for="f_name_Participant">First Name *</label>
+                                  <input type="text" class="form-control" id="f_name_Participant"
+                                    placeholder="Enter First Name" value="" required />
                                 </div>
                               </div>
   
                               <!-- Last Name -->
                               <div class="col-md-6 col-lg-6">
                                 <div class="form-group">
-                                  <label for="l_name_partner">Last Name *</label>
-                                  <input type="text" class="form-control" id="l_name_partner"
+                                  <label for="l_name_Participant">Last Name *</label>
+                                  <input type="text" class="form-control" id="l_name_Participant"
                                     placeholder="Enter Last Name" required />
                                 </div>
                               </div>
@@ -859,8 +859,8 @@
                               <!-- Email -->
                               <div class="col-md-6 col-lg-6">
                                 <div class="form-group">
-                                  <label for="email_partner">Email Address</label>
-                                  <input type="email" class="form-control" id="email_partner"
+                                  <label for="email_Participant">Email Address</label>
+                                  <input type="email" class="form-control" id="email_Participant"
                                     placeholder="Enter Email" />
                                   <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
                                     else.</small> -->
@@ -870,8 +870,8 @@
                               <!-- phone_number -->
                               <div class="col-md-6 col-lg-6">
                                 <div class="form-group">
-                                  <label for="phone_number_partner">Phone Number</label>
-                                  <input type="text" class="form-control" id="phone_number_partner"
+                                  <label for="phone_number_Participant">Phone Number</label>
+                                  <input type="text" class="form-control" id="phone_number_Participant"
                                     placeholder="Enter Phone Number" />
                                   <!-- <small id="error_message_phone_number" class="form-text text-muted">
                                         Please Enter Only Number
@@ -883,9 +883,9 @@
                               <!-- Relationship Type -->
                               <div class="col-md-6 col-lg-6">
                                 <div class="form-group">
-                                  <label for="relationship_type_partner"
-                                    id="lable_name_relationship_type_partner">Relationship Type</label>
-                                  <select class="choices form-select form-control" id="relationship_type_partner">
+                                  <label for="relationship_type_Participant"
+                                    id="lable_name_relationship_type_Participant">Relationship Type</label>
+                                  <select class="choices form-select form-control" id="relationship_type_Participant">
                                     <option disabled selected value="">Select</option>
                                     <option value="0none">0none</option>
                                     <option value="1">1</option>
@@ -899,20 +899,20 @@
   
   
                               <!-- Organization -->
-                              <div class="col-md-6 col-lg-6">
+                              <!-- <div class="col-md-6 col-lg-6">
                                 <div class="form-group">
-                                  <label for="organization_partner">Organization</label>
-                                  <input type="text" class="form-control" id="organization_partner"
+                                  <label for="organization_Participant">Organization</label>
+                                  <input type="text" class="form-control" id="organization_Participant"
                                     placeholder="Enter Organization" required />
                                 </div>
-                              </div>
+                              </div> -->
   
   
                               <!-- Notes -->
                               <div class="col-md-12 col-lg-12">
                                 <div class="form-group">
-                                  <label for="note_partner">Notes</label>
-                                  <textarea class="notes_partner" id="note_partner" placeholder="Notes"></textarea>
+                                  <label for="note_Participant">Notes</label>
+                                  <textarea class="notes" id="note_Participant" placeholder="Notes"></textarea>
                                 </div>
                               </div>
   
@@ -926,12 +926,12 @@
                         <!-- </div> -->
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary" onclick="add_partner()" data-bs-dismiss="modal"
-                            id="add_partner_button">Add</button>
+                          <button type="button" class="btn btn-primary" onclick="add_Participant()" data-bs-dismiss="modal"
+                            id="add_Participant_button">Add</button>
   
                           <button type="button" class="btn btn-primary d-none"
-                            onclick="edit_partner(this.getAttribute('data-row-id'))" data-bs-dismiss="modal"
-                            id="edit_partner_button">Edit</button>
+                            onclick="edit_Participant(this.getAttribute('data-row-id'))" data-bs-dismiss="modal"
+                            id="edit_Participant_button">Edit</button>
                         </div>
                       </div>
                     </div>
@@ -942,7 +942,9 @@
               </div>
             </div>
             <div class="col-4 mb-4">
-              <div class="card h-100"></div>
+              <div class="card h-100">
+                <p>fad</p>
+              </div>
             </div>
             
         
@@ -987,7 +989,11 @@
 
   <script src="../../assets/js/choices.js/choices.min.js"></script>
 
-
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      updateTableVisibility();
+    });
+</script>
 
   <script>
     $("#displayNotif").on("click", function () {
@@ -1042,42 +1048,37 @@
 <script>
   let rowCounter = 0;
 
-  function add_partner() {
+  function add_Participant() {
 
     rowCounter++;
 
-    const partnerType = document.querySelector('input[name="partner_type"]:checked').value;
-    const firstName = document.getElementById('f_name_partner').value || 'Null';
-    const lastName = document.getElementById('l_name_partner').value || 'Null';
-    const phoneNumber = document.getElementById('phone_number_partner').value || 'Null';
-    const email = document.getElementById('email_partner').value || 'Null';
-    const relationshipType = document.getElementById('relationship_type_partner').value || 'Null';
-    const notes = document.getElementById('note_partner').value || 'Null';
-    const partnerOrganization = document.getElementById('organization_partner').value || 'Null';
+    const firstName = document.getElementById('f_name_Participant').value || 'Null';
+    const lastName = document.getElementById('l_name_Participant').value || 'Null';
+    const phoneNumber = document.getElementById('phone_number_Participant').value || 'Null';
+    const email = document.getElementById('email_Participant').value || 'Null';
+    const relationshipType = document.getElementById('relationship_type_Participant').value || 'Null';
+    const notes = document.getElementById('note_Participant').value || 'Null';
 
-    // Create a new row with a unique ID
     const newRow = `
       <tr id="row_${rowCounter}">
-      <td>${partnerType}</td>
       <td>${firstName}</td>
       <td>${lastName}</td>
       <td>${email}</td>
       <td>${phoneNumber}</td>
       <td>${relationshipType}</td>
-      <td>${partnerOrganization}</td>
       <td>${notes}</td>
       <td>
                           <div class="form-button-action">
 
 
-                            <button type="button" class="btn me-2 " data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="edit_Partner_form(${rowCounter})">
+                            <button type="button" class="btn me-2 " data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="edit_Participant_form(${rowCounter})">
                               <i class="fa fa-edit"></i>
                             </button>
 
 
                             <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
                               data-original-title="Remove" >
-                              <i class="fas fa-trash" onclick="delet_Partner(${rowCounter})"></i>
+                              <i class="fas fa-trash" onclick="delet_Participant(${rowCounter})"></i>
                             </button>
                           </div>
                         </td>
@@ -1085,152 +1086,93 @@
   `;
 
     // Append the new row to the table
-    document.getElementById('partnerTableBody').insertAdjacentHTML('beforeend', newRow);
+    document.getElementById('ParticipantTableBody').insertAdjacentHTML('beforeend', newRow);
     updateTableVisibility();
   }
 </script>
 
 
 <script>
-  function edit_partner(rowId) {
+  function edit_Participant_form(rowId) {
+    const row = document.getElementById(`row_${rowId}`);
+    const addParticipantButton = document.getElementById('add_Participant_button');
+    const editParticipantButton = document.getElementById('edit_Participant_button');
 
-    // const partnerType = document.querySelector('input[name="partner_type"]:checked').nextElementSibling.textContent;
-    const firstName = document.getElementById('f_name_partner').value || 'Null';
-    const lastName = document.getElementById('l_name_partner').value || 'Null';
-    const email = document.getElementById('email_partner').value || 'Null';
-    const phoneNumber = document.getElementById('phone_number_partner').value || 'Null';
-    const relationshipType = document.getElementById('relationship_type_partner').value || 'Null';
-    const notes = document.getElementById('note_partner').value || 'Null';
-    const partnerOrganization = document.getElementById('organization_partner').value || 'Null';
+    addParticipantButton.classList.add('d-none');
+    console.log('fadi');
+    editParticipantButton.classList.remove('d-none');
+
+    const cells = row.getElementsByTagName('td');
+
+    
+
+    document.getElementById('f_name_Participant').value = cells[0].textContent;
+    document.getElementById('l_name_Participant').value = cells[1].textContent;
+    document.getElementById('email_Participant').value = cells[2].textContent;
+    document.getElementById('phone_number_Participant').value = cells[3].textContent;
+    document.getElementById('relationship_type_Participant').value = cells[4].textContent;
+    document.getElementById('note_Participant').value = cells[5].textContent;
+
+    document.querySelector('#edit_Participant_button').setAttribute('data-row-id', rowId);
+  }
+</script>
+
+<script>
+  function edit_Participant(rowId) {
+
+    const firstName = document.getElementById('f_name_Participant').value || 'Null';
+    const lastName = document.getElementById('l_name_Participant').value || 'Null';
+    const email = document.getElementById('email_Participant').value || 'Null';
+    const phoneNumber = document.getElementById('phone_number_Participant').value || 'Null';
+    const relationshipType = document.getElementById('relationship_type_Participant').value || 'Null';
+    const notes = document.getElementById('note_Participant').value || 'Null';
 
     const row = document.getElementById(`row_${rowId}`);
     const cells = row.getElementsByTagName('td');
 
-    // cells[0].textContent = partnerType
-    cells[1].textContent = firstName
-    cells[2].textContent = lastName
-    cells[3].textContent = email
-    cells[4].textContent = phoneNumber
-    cells[5].textContent = relationshipType
-    cells[6].textContent = partnerOrganization
-    cells[7].textContent = notes
+    cells[0].textContent = firstName
+    cells[1].textContent = lastName
+    cells[2].textContent = email
+    cells[3].textContent = phoneNumber
+    cells[4].textContent = relationshipType
+    cells[5].textContent = notes
+  }
+</script>
+
+
+
+<script>
+  function add_Participant_form() {
+    document.getElementById('Participant_form').reset();
+    const addParticipantButton = document.getElementById('add_Participant_button');
+    const editParticipantButton = document.getElementById('edit_Participant_button');
+
+    editParticipantButton.classList.add('d-none');
+    addParticipantButton.classList.remove('d-none');
   }
 </script>
 
 <script>
-  function edit_Partner_form(rowId) {
-    partner_type
+  function delet_Participant(rowId) {
     const row = document.getElementById(`row_${rowId}`);
-    const addPartnerButton = document.getElementById('add_partner_button');
-    const editPartnerButton = document.getElementById('edit_partner_button');
-    const partnerType = document.getElementById('partner_type');
-
-    partnerType.classList.add('d-none');
-    addPartnerButton.classList.add('d-none');
-    editPartnerButton.classList.remove('d-none');
-
-    const cells = row.getElementsByTagName('td');
-
-    const partnerTypeRadioFamily = document.getElementById('family_partner');
-    const partnerTypeRadioOther = document.getElementById('other_partner');
-
-    console.log(cells[0])
-
-    if (cells[0].textContent === 'family') {
-      console.log("Family")
-      partnerTypeRadioFamily.checked = true;
-      partnerTypeRadioOther.checked = false;
-    } else {
-      console.log("other")
-      partnerTypeRadioFamily.checked = false;
-      partnerTypeRadioOther.checked = true;
-    }
-
-    disabledInabledOrganizationInput()
-    document.getElementById('f_name_partner').value = cells[1].textContent;
-    document.getElementById('l_name_partner').value = cells[2].textContent;
-    document.getElementById('phone_number_partner').value = cells[4].textContent;
-    document.getElementById('email_partner').value = cells[3].textContent; 0
-    document.getElementById('relationship_type_partner').value = cells[5].textContent;
-    document.getElementById('note_partner').value = cells[7].textContent;
-    document.getElementById('organization_partner').value = cells[6].textContent;
-
-    document.querySelector('#edit_partner_button').setAttribute('data-row-id', rowId);
-  }
-</script>
-
-<script>
-  function add_Partner_form() {
-    document.getElementById('partner_form').reset();
-    disabledInabledOrganizationInput();
-    const addPartnerButton = document.getElementById('add_partner_button');
-    const editPartnerButton = document.getElementById('edit_partner_button');
-    const partnerType = document.getElementById('partner_type');
-
-    partnerType.classList.remove('d-none');
-    editPartnerButton.classList.add('d-none');
-    addPartnerButton.classList.remove('d-none');
-  }
-</script>
-
-<script>
-  function delet_Partner(rowId) {
-    const row = document.getElementById(`row_${rowId}`);
-    // const cells = row.getElementsByTagName('td');
     row.remove()
     updateTableVisibility()
   }
 </script>
 
 
-<script>
-  function disabledInabledOrganizationInput() {
-    const familyRadio = document.getElementById('family_partner');
-    const organizationInput = document.getElementById('organization_partner');
-    const lableNnameRelationshipTypePartner = document.getElementById('lable_name_relationship_type_partner');
-
-    // Check if "Family" radio button is selected on page load
-    if (familyRadio.checked) {
-      organizationInput.disabled = true;
-      organizationInput.value = ""
-      lableNnameRelationshipTypePartner.textContent = "Relationship Type"
-
-    }
-
-    // Listen for changes in the "Partner Type" radio buttons
-    familyRadio.addEventListener('change', function () {
-      organizationInput.disabled = this.checked;
-      organizationInput.value = ""
-      lableNnameRelationshipTypePartner.textContent = "Relationship Type"
-
-    });
-
-    const otherRadio = document.getElementById('other_partner');
-
-    if (otherRadio.checked) {
-      lableNnameRelationshipTypePartner.textContent = "Position"
-    }
-
-    otherRadio.addEventListener('change', function () {
-      organizationInput.disabled = !this.checked;
-      lableNnameRelationshipTypePartner.textContent = "Position"
-
-    });
-  }
-</script>
-
 
 <script>
   function updateTableVisibility() {
-    var table = document.getElementById("tablePartner");
-    var noPartnerMsg = document.getElementById("noPartner");
+    var table = document.getElementById("tableParticipant");
+    var noParticipantMsg = document.getElementById("noParticipant");
 
     if (table.getElementsByTagName("tr").length <= 1) {
       table.style.display = "none";
-      noPartnerMsg.style.display = "block";
+      noParticipantMsg.style.display = "block";
     } else {
       table.style.display = "table";
-      noPartnerMsg.style.display = "none";
+      noParticipantMsg.style.display = "none";
     }
   }
 </script>
@@ -1238,7 +1180,7 @@
 
 
   <!-- to show alert add new option -->
-  <script>
+  <!-- <script>
     
     var currentCaseType = $("#case_type").val()
 
@@ -1308,7 +1250,7 @@
     jQuery(document).ready(function () {
       SweetAlert2Demo.init();
     });
-  </script>
+  </script> -->
 
 </body>
 

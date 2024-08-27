@@ -202,7 +202,7 @@ function show_tasks_in_date(date) {
                             </button>
                         </h2>
                         <div id="collapse-${index + 1}" class="accordion-collapse collapse" aria-labelledby="${headingId}" data-bs-parent="#${accordionId}">
-                            <div class="accordion-body">
+                            <div class="accordion-body accordion-body_padding_left">
                                 <strong>This is the ${index + 1} item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                             </div>
                         </div>

@@ -13997,3 +13997,7 @@ fieldset:disabled .btn {
     transform: rotate(180deg);
     transition: transform 0.5s;
   }
+
+.accordion-body_padding_left{
+    padding-left: 50px;
+}
