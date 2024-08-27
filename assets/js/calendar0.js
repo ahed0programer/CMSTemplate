@@ -179,19 +179,35 @@ function show_tasks_in_date(date) {
         `;
         tasksListElement.append(todayDate);
 
-        tasks.forEach(taskObj => {
+        tasks.forEach((taskObj, index) => {
+            const accordionId = `accordion-${index + 1}`;
+            const headingId = `heading${index + 1}`;
+            
             const event = `
-            <div class="events">
-                <div class="event">
-                    <div class="title">
-                        <i class="fas fa-circle"></i>
-                        <h3 class="event-title">${taskObj.task}</h3>
-                    </div>
-                    <div class="event-time">
-                        <span class="event-time">${taskObj.time}</span>
+                <div class="accordion" id="${accordionId}">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="${headingId}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${index + 1}" aria-expanded="false" aria-controls="collapse-${index + 1}">
+                                <div class="events">
+                                    <div class="event">
+                                        <div class="title">
+                                            <i class="fas fa-circle"></i>
+                                            <h3 class="event-title">${taskObj.task}</h3>
+                                        </div>
+                                        <div class="event-time">
+                                            <span class="event-time">${taskObj.time}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="collapse-${index + 1}" class="accordion-collapse collapse" aria-labelledby="${headingId}" data-bs-parent="#${accordionId}">
+                            <div class="accordion-body">
+                                <strong>This is the ${index + 1} item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
             `;
             tasksListElement.append(event);
         });
