@@ -826,325 +826,317 @@
 
           <!-- contact , partners , consultaions  and appointments  -->
           <div class="row">
-            <!-- Contact Info card -->
-            <div class="col-md-12">
+            <!-- Contact Info and Partners card -->
+             <div class="col-12">
               <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Contact Info</div>
-                </div>
-
-                <div class="card-body">
-                  <div class="row">
-
-
-
-                    <!-- Email -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter Email" />
-                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small> -->
-                      </div>
+                <ul class="nav nav-tabs pt-2" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <div class="card-title"> 
+                      <button class="nav-link active card-title" id="contact-info-tab" data-bs-toggle="tab" data-bs-target="#contact-info" type="button" role="tab" aria-controls="contact-info" aria-selected="true">Contact Info</button>
                     </div>
-
-                    <!-- phone_number -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="phone_number">Phone Number</label>
-                        <input type="text" class="form-control" id="phone_number" placeholder="Enter Phone Number"
-                          oninput="validatePhoneNumber()" />
-                        <small id="error_message_phone_number" class="form-text text-muted">
-                          Please Enter Only Number
-                        </small>
-                      </div>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <div class="card-title"> 
+                      <button class="nav-link card-title" id="partners-tab" data-bs-toggle="tab" data-bs-target="#partners" type="button" role="tab" aria-controls="partners" aria-selected="false">Partners</button>
                     </div>
-
-                    <!-- Counrty -->
-                    <div class="col-md-6 col-lg-3">
-                      <div class="form-group">
-                        <label for="defaultSelect">Counrty</label>
-                        <select class="choices form-select form-control" id="counrty">
-                          <option disabled selected value="">Select Counrty</option>
-                          <option>Germany</option>
-                          <option>Denmark</option>
-                          <option>France</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <!-- City -->
-                    <div class="col-md-6 col-lg-3">
-                      <div class="form-group">
-                        <label for="defaultSelect">City</label>
-                        <select class="choices form-select form-control" id="city">
-                          <option disabled selected value="">Select City</option>
-                          <option>18-30</option>
-                          <option>31-45</option>
-                          <option>46-60</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <!-- Street -->
-                    <div class="col-md-6 col-lg-3">
-                      <div class="form-group">
-                        <label for="street">Street</label>
-                        <input type="text" class="form-control" id="street" placeholder="Enter Street" />
-                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small> -->
-                      </div>
-                    </div>
-
-                    <!-- Street Number -->
-                    <div class="col-md-6 col-lg-3">
-                      <div class="form-group">
-                        <label for="street_number">Street Number</label>
-                        <input type="text" class="form-control" id="street_number" placeholder="Enter Street Number" />
-                        <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small> -->
-                      </div>
-                    </div>
-
-
-                    <!-- Place Residence -->
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="Place_Residence">Place Residence</label>
-                        <select class="choices form-select form-control" id="Place_Residence">
-                          <option disabled selected value="">Select Place Residence</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-lg-6">
+                  </li>
+                </ul>
+                <div class="card-body pb-4">
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="contact-info" role="tabpanel" aria-labelledby="contact-info-tab">
                       <div class="row">
-                        <!-- Type Residence -->
-                        <div class="col-md-12" id="div_type_residence">
+                        <!-- Email -->
+                        <div class="col-md-6 col-lg-6">
                           <div class="form-group">
-                            <label for="type_Residence">Type Residence</label>
-                            <select class="form-select form-control" id="type_Residence">
-                              <option disabled selected value="">Select Type Residence</option>
-                              <option>Sitizen</option>
-                              <option>Permanent</option>
-                              <option>Temporary</option>
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email" />
+                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                          </div>
+                        </div>
+    
+                        <!-- phone_number -->
+                        <div class="col-md-6 col-lg-6">
+                          <div class="form-group">
+                            <label for="phone_number">Phone Number</label>
+                            <input type="text" class="form-control" id="phone_number" placeholder="Enter Phone Number"
+                              oninput="validatePhoneNumber()" />
+                            <small id="error_message_phone_number" class="form-text text-muted">
+                              Please Enter Only Number
+                            </small>
+                          </div>
+                        </div>
+    
+                        <!-- Counrty -->
+                        <div class="col-md-6 col-lg-3">
+                          <div class="form-group">
+                            <label for="defaultSelect">Counrty</label>
+                            <select class="choices form-select form-control" id="counrty">
+                              <option disabled selected value="">Select Counrty</option>
+                              <option>Germany</option>
+                              <option>Denmark</option>
+                              <option>France</option>
                             </select>
                           </div>
                         </div>
-                        <!-- Date Residence -->
-                        <div class="col-md-5" id="div_date_residence">
+    
+                        <!-- City -->
+                        <div class="col-md-6 col-lg-3">
                           <div class="form-group">
-                            <label for="date_residence">Date Residence</label>
-                            <input type="date" class="form-control" id="date_residence"
-                              placeholder="Enter Date Residence" name="date_residence" />
+                            <label for="defaultSelect">City</label>
+                            <select class="choices form-select form-control" id="city">
+                              <option disabled selected value="">Select City</option>
+                              <option>18-30</option>
+                              <option>31-45</option>
+                              <option>46-60</option>
+                            </select>
+                          </div>
+                        </div>
+    
+                        <!-- Street -->
+                        <div class="col-md-6 col-lg-3">
+                          <div class="form-group">
+                            <label for="street">Street</label>
+                            <input type="text" class="form-control" id="street" placeholder="Enter Street" />
+                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                          </div>
+                        </div>
+    
+                        <!-- Street Number -->
+                        <div class="col-md-6 col-lg-3">
+                          <div class="form-group">
+                            <label for="street_number">Street Number</label>
+                            <input type="text" class="form-control" id="street_number" placeholder="Enter Street Number" />
+                            <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                          </div>
+                        </div>
+    
+    
+                        <!-- Place Residence -->
+                        <div class="col-md-6 col-lg-6">
+                          <div class="form-group">
+                            <label for="Place_Residence">Place Residence</label>
+                            <select class="choices form-select form-control" id="Place_Residence">
+                              <option disabled selected value="">Select Place Residence</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                        </div>
+    
+    
+                        <div class="col-md-6 col-lg-6">
+                          <div class="row">
+                            <!-- Type Residence -->
+                            <div class="col-md-12" id="div_type_residence">
+                              <div class="form-group">
+                                <label for="type_Residence">Type Residence</label>
+                                <select class="form-select form-control" id="type_Residence">
+                                  <option disabled selected value="">Select Type Residence</option>
+                                  <option>Sitizen</option>
+                                  <option>Permanent</option>
+                                  <option>Temporary</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- Date Residence -->
+                            <div class="col-md-5" id="div_date_residence">
+                              <div class="form-group">
+                                <label for="date_residence">Date Residence</label>
+                                <input type="date" class="form-control" id="date_residence"
+                                  placeholder="Enter Date Residence" name="date_residence" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+    
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="partners" role="tabpanel" aria-labelledby="partners-tab">
+                      <div class="text-center">
+                        <div class="card-sub" id="noPartner">
+                          No Partners
+                        </div>
+    
+                        <div class="table-responsive">
+                          <table class="table mt-3" id="tablePartner">
+                            <thead>
+                              <tr>
+                                <th scope="col">Partner Type</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone Number</th>
+                                <th scope="col">Relationship Type \ Position</th>
+                                <th scope="col">Organization</th>
+                                <th scope="col">Notes</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+    
+                            <tbody id="partnerTableBody">
+    
+    
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+    
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn me-2 " data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        onclick="add_Partner_form()">
+                        <i class="fas fa-user-plus"></i> Add Partner
+                      </button>
+    
+                      <!-- Modal Add Partner -->
+                      <div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered ">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title " id="staticBackdropLabel">Add Partner</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+    
+                            <div class="modal-body">
+                              <form id="partner_form">
+                                <div class="row">
+    
+                                  <!-- Partner Type -->
+                                  <div class="col-md-6 col-lg-12" id="partner_type">
+                                    <div class="form-group">
+                                      <label>Partner Type</label><br />
+                                      <div class="d-flex">
+    
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="partner_type"
+                                            id="family_partner" checked value="family" />
+                                          <label class="form-check-label" for="family_partner">
+                                            Family
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="partner_type"
+                                            id="other_partner" value="other" />
+                                          <label class="form-check-label" for="other_partner">
+                                            Other
+                                          </label>
+                                        </div>
+    
+                                      </div>
+                                    </div>
+                                  </div>
+    
+    
+                                  <!-- First Name -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="f_name_partner">First Name *</label>
+                                      <input type="text" class="form-control" id="f_name_partner"
+                                        placeholder="Enter First Name" required />
+                                    </div>
+                                  </div>
+    
+                                  <!-- Last Name -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="l_name_partner">Last Name *</label>
+                                      <input type="text" class="form-control" id="l_name_partner"
+                                        placeholder="Enter Last Name" required />
+                                    </div>
+                                  </div>
+    
+                                  <!-- Email -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="email_partner">Email Address</label>
+                                      <input type="email" class="form-control" id="email_partner"
+                                        placeholder="Enter Email" />
+                                      <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
+                                        else.</small> -->
+                                    </div>
+                                  </div>
+    
+                                  <!-- phone_number -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="phone_number_partner">Phone Number</label>
+                                      <input type="text" class="form-control" id="phone_number_partner"
+                                        placeholder="Enter Phone Number" />
+                                      <!-- <small id="error_message_phone_number" class="form-text text-muted">
+                                            Please Enter Only Number
+                                          </small> -->
+                                    </div>
+                                  </div>
+    
+    
+                                  <!-- Relationship Type -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="relationship_type_partner"
+                                        id="lable_name_relationship_type_partner">Relationship Type</label>
+                                      <select class="choices form-select form-control" id="relationship_type_partner">
+                                        <option disabled selected value="">Select</option>
+                                        <option value="0none">0none</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                      </select>
+                                    </div>
+                                  </div>
+    
+    
+                                  <!-- Organization -->
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="organization_partner">Organization</label>
+                                      <input type="text" class="form-control" id="organization_partner"
+                                        placeholder="Enter Organization" required />
+                                    </div>
+                                  </div>
+    
+    
+                                  <!-- Notes -->
+                                  <div class="col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                      <label for="note_partner">Notes</label>
+                                      <textarea class="notes_partner" id="note_partner" placeholder="Notes"></textarea>
+                                    </div>
+                                  </div>
+    
+                                </div>
+                              </form>
+                              <!-- </div> -->
+    
+    
+                            </div>
+    
+                            <!-- </div> -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary" onclick="add_partner()" data-bs-dismiss="modal"
+                                id="add_partner_button">Add</button>
+    
+                              <button type="button" class="btn btn-primary d-none"
+                                onclick="edit_partner(this.getAttribute('data-row-id'))" data-bs-dismiss="modal"
+                                id="edit_partner_button">Edit</button>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>
-            </div>
+             </div>
 
-            <!-- partners card -->
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header d-flex justify-content-between">
-                  <div class="card-title">Partners :</div>
-                  <div>
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePartners"
-                      aria-expanded="false" aria-controls="collapsePartners" onclick="changeIconPartners()">
-                      expand <i class="fas fa-chevron-down partners"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="card-body collapse" id="collapsePartners">
-                  <div class="text-center">
-                    <div class="card-sub" id="noPartner">
-                      No Partners
-                    </div>
-
-                    <div class="table-responsive">
-                      <table class="table mt-3" id="tablePartner">
-                        <thead>
-                          <tr>
-                            <th scope="col">Partner Type</th>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Phone Number</th>
-                            <th scope="col">Relationship Type \ Position</th>
-                            <th scope="col">Organization</th>
-                            <th scope="col">Notes</th>
-                            <th scope="col">Action</th>
-                          </tr>
-                        </thead>
-
-                        <tbody id="partnerTableBody">
-
-
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  <!-- Button trigger modal -->
-                  <button type="button" class="btn me-2 " data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                    onclick="add_Partner_form()">
-                    <i class="fas fa-user-plus"></i> Add Partner
-                  </button>
-
-                  <!-- Modal Add Partner -->
-
-                  <div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static"
-                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered ">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title " id="staticBackdropLabel">Add Partner</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body">
-                          <form id="partner_form">
-                            <div class="row">
-
-                              <!-- Partner Type -->
-                              <div class="col-md-6 col-lg-12" id="partner_type">
-                                <div class="form-group">
-                                  <label>Partner Type</label><br />
-                                  <div class="d-flex">
-
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="partner_type"
-                                        id="family_partner" checked value="family" />
-                                      <label class="form-check-label" for="family_partner">
-                                        Family
-                                      </label>
-                                    </div>
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="partner_type"
-                                        id="other_partner" value="other" />
-                                      <label class="form-check-label" for="other_partner">
-                                        Other
-                                      </label>
-                                    </div>
-
-                                  </div>
-                                </div>
-                              </div>
-
-
-                              <!-- First Name -->
-                              <div class="col-md-6 col-lg-6">
-                                <div class="form-group">
-                                  <label for="f_name_partner">First Name *</label>
-                                  <input type="text" class="form-control" id="f_name_partner"
-                                    placeholder="Enter First Name" required />
-                                </div>
-                              </div>
-
-                              <!-- Last Name -->
-                              <div class="col-md-6 col-lg-6">
-                                <div class="form-group">
-                                  <label for="l_name_partner">Last Name *</label>
-                                  <input type="text" class="form-control" id="l_name_partner"
-                                    placeholder="Enter Last Name" required />
-                                </div>
-                              </div>
-
-                              <!-- Email -->
-                              <div class="col-md-6 col-lg-6">
-                                <div class="form-group">
-                                  <label for="email_partner">Email Address</label>
-                                  <input type="email" class="form-control" id="email_partner"
-                                    placeholder="Enter Email" />
-                                  <!-- <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone
-                                    else.</small> -->
-                                </div>
-                              </div>
-
-                              <!-- phone_number -->
-                              <div class="col-md-6 col-lg-6">
-                                <div class="form-group">
-                                  <label for="phone_number_partner">Phone Number</label>
-                                  <input type="text" class="form-control" id="phone_number_partner"
-                                    placeholder="Enter Phone Number" />
-                                  <!-- <small id="error_message_phone_number" class="form-text text-muted">
-                                        Please Enter Only Number
-                                      </small> -->
-                                </div>
-                              </div>
-
-
-                              <!-- Relationship Type -->
-                              <div class="col-md-6 col-lg-6">
-                                <div class="form-group">
-                                  <label for="relationship_type_partner"
-                                    id="lable_name_relationship_type_partner">Relationship Type</label>
-                                  <select class="choices form-select form-control" id="relationship_type_partner">
-                                    <option disabled selected value="">Select</option>
-                                    <option value="0none">0none</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                  </select>
-                                </div>
-                              </div>
-
-
-                              <!-- Organization -->
-                              <div class="col-md-6 col-lg-6">
-                                <div class="form-group">
-                                  <label for="organization_partner">Organization</label>
-                                  <input type="text" class="form-control" id="organization_partner"
-                                    placeholder="Enter Organization" required />
-                                </div>
-                              </div>
-
-
-                              <!-- Notes -->
-                              <div class="col-md-12 col-lg-12">
-                                <div class="form-group">
-                                  <label for="note_partner">Notes</label>
-                                  <textarea class="notes_partner" id="note_partner" placeholder="Notes"></textarea>
-                                </div>
-                              </div>
-
-                            </div>
-                          </form>
-                          <!-- </div> -->
-
-
-                        </div>
-
-                        <!-- </div> -->
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary" onclick="add_partner()" data-bs-dismiss="modal"
-                            id="add_partner_button">Add</button>
-
-                          <button type="button" class="btn btn-primary d-none"
-                            onclick="edit_partner(this.getAttribute('data-row-id'))" data-bs-dismiss="modal"
-                            id="edit_partner_button">Edit</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- </div> -->
-                  <!-- </div> -->
-                </div>
-              </div>
-            </div>
 
             <!-- appointments schedule card -->
             <div class="col-md-12">
