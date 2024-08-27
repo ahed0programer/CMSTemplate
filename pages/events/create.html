@@ -970,7 +970,17 @@
 
 
                         </tbody>
+
+
+                        <tfoot id="costsTablefooter">
+
+                          <th scope="col">Total Cost</th>
+                          <td id="totalCostValue"></td>
+
+                        </tfoot>
+
                       </table>
+
                     </div>
                   </div>
 
@@ -979,6 +989,8 @@
                     onclick="add_costs_form()">
                     <i class="fas fa-user-plus"></i> Add costs
                   </button>
+
+
 
                   <!-- Modal Add costs -->
                   <div class="modal fade modal-xl" id="staticBackdropcost" data-bs-backdrop="static"
@@ -1012,7 +1024,8 @@
                               <div class="col-md-6 col-lg-6">
                                 <div class="form-group">
                                   <label for="cost">cost</label>
-                                  <input type="number" class="form-control" id="cost" placeholder="Enter cost" oninput="hideError('error_name_cost')"/>
+                                  <input type="number" class="form-control" id="cost" placeholder="Enter cost"
+                                    oninput="hideError('error_name_cost')" />
                                   <small id="error_cost" class="form-text text-muted d-none">please enter cost</small>
                                 </div>
                               </div>
@@ -1342,6 +1355,7 @@
 
         // Append the new row to the table
         document.getElementById('costsTableBody').insertAdjacentHTML('beforeend', newRow);
+        calculateTotalCost();
         updateTableVisibilitycost();
       }
     }
@@ -1382,7 +1396,7 @@
 
       cells[0].textContent = name_costs
       cells[1].textContent = cost
-
+      calculateTotalCost();
     }
   </script>
 
@@ -1403,7 +1417,9 @@
     function delet_costs(rowId) {
       const row = document.getElementById(`row_${rowId}`);
       row.remove()
+      calculateTotalCost();
       updateTableVisibilitycost()
+      
     }
   </script>
 
@@ -1412,9 +1428,11 @@
   <script>
     function updateTableVisibilitycost() {
       var table = document.getElementById("tablecosts");
+      var bodyTable = document.getElementById("costsTableBody");
+
       var nocostsMsg = document.getElementById("nocosts");
 
-      if (table.getElementsByTagName("tr").length <= 1) {
+      if (bodyTable.getElementsByTagName("tr").length <= 0) {
         table.style.display = "none";
         nocostsMsg.style.display = "block";
       } else {
@@ -1422,6 +1440,20 @@
         nocostsMsg.style.display = "none";
       }
     }
+  </script>
+
+  <script>
+    function calculateTotalCost() {
+  let totalCost = 0;
+  const rows = document.getElementById("costsTableBody").getElementsByTagName("tr");
+
+  for (let i = 0; i < rows.length; i++) {
+    const costCell = rows[i].getElementsByTagName("td")[1]; // العمود الثاني يحتوي على تكلفة
+    totalCost += parseFloat(costCell.innerText);
+  }
+
+  document.getElementById("totalCostValue").innerText = totalCost;
+}
   </script>
 
   <!-- end price -->
