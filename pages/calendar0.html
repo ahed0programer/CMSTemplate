@@ -486,23 +486,26 @@
                 <!-- <div class="col-md-1">
                 </div> -->
                 <!-- * Tasks section table -->
+
                 <div class="col-md-6">
-                  <div class="container">
+                  <div class="container" id="tasks">
 
                     <div class="today-date">
                       <div class="event-day">Tue</div>
                       <div class="event-date">27 August 2024</div>
                     </div>
 
-                    <div class="events"><div class="event">
-                      <div class="title">
-                        <i class="fas fa-circle"></i>
-                        <h3 class="event-title">fadi</h3>
+                    <div class="events">
+                      <div class="event">
+                        <div class="title">
+                          <i class="fas fa-circle"></i>
+                          <h3 class="event-title">fadi</h3>
+                        </div>
+                        <div class="event-time">
+                          <span class="event-time">12: PM - 12: PM</span>
+                        </div>
                       </div>
-                      <div class="event-time">
-                        <span class="event-time">12: PM - 12: PM</span>
-                      </div>
-                  </div></div>
+                    </div>
 
                   </div>
                   <!-- <div class="d-flex justify-content-around mb-3">
@@ -610,89 +613,89 @@
                     </div>
                   </div>
                 </div>
+                <!-- </div> -->
               </div>
             </div>
+            <!-- * end calendar -->
           </div>
-          <!-- * end calendar -->
         </div>
+
+        <footer class="footer">
+          <div class="container-fluid d-flex justify-content-between">
+            <nav class="pull-left">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="http://www.themekita.com">
+                    ThemeKita
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Help </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Licenses </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="copyright">
+              2024, made with <i class="fa fa-heart heart text-danger"></i> by
+              <a href="http://www.themekita.com">ThemeKita</a>
+            </div>
+            <div class="element-hour">
+              Distributed by
+              <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
+            </div>
+          </div>
+        </footer>
       </div>
 
-      <footer class="footer">
-        <div class="container-fluid d-flex justify-content-between">
-          <nav class="pull-left">
-            <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link" href="http://www.themekita.com">
-                  ThemeKita
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Help </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Licenses </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright">
-            2024, made with <i class="fa fa-heart heart text-danger"></i> by
-            <a href="http://www.themekita.com">ThemeKita</a>
-          </div>
-          <div class="element-hour">
-            Distributed by
-            <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
-          </div>
-        </div>
-      </footer>
     </div>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
 
-  </div>
-  <!--   Core JS Files   -->
-  <script src="../assets/js/core/jquery-3.7.1.min.js"></script>
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
+    <!-- jQuery Scrollbar -->
+    <script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
-  <!-- jQuery Scrollbar -->
-  <script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <!-- Datatables -->
+    <script src="../assets/js/plugin/datatables/datatables.min.js"></script>
 
-  <!-- Datatables -->
-  <script src="../assets/js/plugin/datatables/datatables.min.js"></script>
+    <!-- Bootstrap Notify -->
+    <script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
-  <!-- Bootstrap Notify -->
-  <script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
-  <!-- Sweet Alert -->
-  <script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+    <!-- Kaiadmin JS -->
+    <script src="../assets/js/kaiadmin.min.js"></script>
 
-  <!-- Kaiadmin JS -->
-  <script src="../assets/js/kaiadmin.min.js"></script>
+    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    <script src="../assets/js/setting-demo.js"></script>
+    <script src="../assets/js/setting-demo2.js"></script>
 
-  <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-  <script src="../assets/js/setting-demo.js"></script>
-  <script src="../assets/js/setting-demo2.js"></script>
-
-  <script src="../assets/js/calendar0.js"></script>
+    <script src="../assets/js/calendar0.js"></script>
 
 
-  <!-- Fonts and icons -->
-  <script src="../assets/js/plugin/webfont/webfont.min.js"></script>
-  <script>
-    WebFont.load({
-      google: { families: ["Public Sans:300,400,500,600,700"] },
-      custom: {
-        families: [
-          "Font Awesome 5 Solid",
-          "Font Awesome 5 Regular",
-          "Font Awesome 5 Brands",
-          "simple-line-icons",
-        ],
-        urls: ["../assets/css/fonts.min.css"],
-      },
-      active: function () {
-        sessionStorage.fonts = true;
-      },
-    });
-  </script>
+    <!-- Fonts and icons -->
+    <script src="../assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["../assets/css/fonts.min.css"],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
+    </script>
 </body>
 
 </html>

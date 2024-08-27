@@ -58,9 +58,7 @@
   color: #878895;
 }
 
-.container{
-    width: 85%;
-}
+
 
 .events {
     width: 100%;
@@ -70,8 +68,7 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    padding-left: 4px;
-  }
+    padding-bottom: 10px;  }
 
   .events .event {
     position: relative;
