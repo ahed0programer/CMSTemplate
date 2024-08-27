@@ -18,6 +18,8 @@
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../../assets/css/demo.css" />
+  <link rel="stylesheet" href="../../assets/css/agenda.css">
+
 
   <style>
     
@@ -1221,6 +1223,90 @@
                     </div>
 
                   </div>
+                  <div class="mt-4">
+                    <div class="card-text">
+                      Sunday's agenda
+                    </div>
+                    <!-- AM Timeline -->
+                    <div class="timeline-agneda d-flex justify-content-start">
+                        <div class="timeline-hour">01:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">02:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">03:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">04:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">05:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">06:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">07:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">08:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">09:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">10:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">11:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">12:00 AM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- PM Timeline -->
+                    <div class="timeline-agneda d-flex justify-content-start">
+                        <div class="timeline-hour">01:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">02:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">03:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">04:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">05:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">06:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">07:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">08:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">09:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">10:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">11:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                        <div class="timeline-hour">12:00 PM
+                            <div class="timeline-hour-start-dash"></div>
+                        </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1349,6 +1435,44 @@
   <script src="../../assets/js/setting-demo2.js"></script>
 
   <script src="../../assets/js/choices.js/choices.min.js"></script>
+
+  <!-- JS Script to plot tasks -->
+  <script >
+    const tasks = [
+        { time: "03:30 AM", title: "Task 1: Morning Exercise" },
+        { time: "11:15 PM", title: "Task 2: Bedtime Reading" }
+    ];
+
+    function plotTasks() {
+        tasks.forEach(task => {
+            let [hour, minutes] = task.time.split(/:| /);
+            const period = task.time.split(" ")[1]; // AM or PM
+
+            const timeline = period === "AM" ? document.querySelectorAll('.timeline-agneda')[0] : document.querySelectorAll('.timeline-agneda')[1];
+            const hours = timeline.querySelectorAll('.timeline-hour');
+
+            let hourIndex = parseInt(hour, 10) - 1;
+            if (hourIndex < 0) hourIndex = 11; // Handle 12 AM/PM
+
+            const hourBlock = hours[hourIndex];
+            const taskDot = document.createElement("button");
+            taskDot.className = "task-dot";
+            taskDot.setAttribute("data-bs-toggle", "tooltip");
+            taskDot.setAttribute("data-bs-placement", "top");
+            taskDot.setAttribute("title", task.title);
+
+            // Position the dot relative to the minutes (e.g., 30 minutes is halfway between the hour blocks)
+            // +50 here is to shift the postion to start from the center of hour
+            pos =50+ (parseInt(minutes, 10) / 60 * 100)
+            taskDot.style.left = `${pos}%`;
+
+            hourBlock.appendChild(taskDot);
+        });
+    }
+
+    plotTasks();
+
+</script>
 
   <script>
     $("#displayNotif").on("click", function () {
