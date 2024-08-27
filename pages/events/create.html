@@ -1419,7 +1419,7 @@
       row.remove()
       calculateTotalCost();
       updateTableVisibilitycost()
-      
+
     }
   </script>
 
@@ -1444,16 +1444,16 @@
 
   <script>
     function calculateTotalCost() {
-  let totalCost = 0;
-  const rows = document.getElementById("costsTableBody").getElementsByTagName("tr");
+      let totalCost = 0;
+      const rows = document.getElementById("costsTableBody").getElementsByTagName("tr");
 
-  for (let i = 0; i < rows.length; i++) {
-    const costCell = rows[i].getElementsByTagName("td")[1]; // العمود الثاني يحتوي على تكلفة
-    totalCost += parseFloat(costCell.innerText);
-  }
+      for (let i = 0; i < rows.length; i++) {
+        const costCell = rows[i].getElementsByTagName("td")[1];
+        totalCost += parseFloat(costCell.innerText);
+      }
 
-  document.getElementById("totalCostValue").innerText = totalCost;
-}
+      document.getElementById("totalCostValue").innerText = totalCost;
+    }
   </script>
 
   <!-- end price -->
