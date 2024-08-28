@@ -1014,7 +1014,7 @@
                                 <div class="form-group">
                                   <label for="name_costs">name</label>
                                   <input type="text" class="form-control" id="name_costs" placeholder="Enter Name"
-                                    value="" oninput="hideError('error_name_cost')" />
+                                    value="" oninput="validateForm()"  />
                                   <small id="error_name_cost" class="form-text text-muted d-none">please enter
                                     name</small>
                                 </div>
@@ -1025,7 +1025,7 @@
                                 <div class="form-group">
                                   <label for="cost">cost</label>
                                   <input type="number" class="form-control" id="cost" placeholder="Enter cost"
-                                    oninput="hideError('error_name_cost')" />
+                                  oninput="validateForm()"  />
                                   <small id="error_cost" class="form-text text-muted d-none">please enter cost</small>
                                 </div>
                               </div>
@@ -1110,6 +1110,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       updateTableVisibilitycost();
       updateTableVisibility();
+      validateForm();
     });
   </script>
 
@@ -1297,13 +1298,15 @@
 
 
   <!-- for cost -->
-  <script>function hideError(errorId) {
+  <script>
+    function hideError(errorId) {
       const error_name_cost = document.getElementById('error_name_cost');
       const error_cost = document.getElementById('error_cost');
       error_name_cost.classList.add('d-none');
       error_cost.classList.add('d-none');
 
-    }</script>
+    }
+  </script>
 
 
   <script>
@@ -1316,21 +1319,8 @@
       const name_costs = document.getElementById('name_costs').value || 'Null';
       const cost = document.getElementById('cost').value || 'Null';
       const modal = new bootstrap.Modal(document.getElementById('staticBackdropcost'));
-      if (name_costs === 'Null') {
-        const error_name_cost = document.getElementById('error_name_cost');
-        error_name_cost.classList.remove('d-none');
-        modal.show()
-        return;
-      }
-
-      else if (cost === 'Null') {
-        const error_cost = document.getElementById('error_cost');
-        // editcostsButton.classList.add('d-none');
-        error_cost.classList.remove('d-none');
-        modal.show()
-        return;
-      }
-      else {
+      
+      
         const newRow = `
             <tr id="row_${rowCountercost}">
             <td>${name_costs}</td>
@@ -1357,11 +1347,30 @@
         document.getElementById('costsTableBody').insertAdjacentHTML('beforeend', newRow);
         calculateTotalCost();
         updateTableVisibilitycost();
+        
       }
-    }
+    
   </script>
 
+<script>
+  function validateForm() {
+      const name = document.getElementById('name_costs').value;
+      const cost = document.getElementById('cost').value;
 
+      const addCostsButton = document.getElementById('add_costs_button');
+      const editCostsButton = document.getElementById('edit_costs_button');
+
+      if (name.trim() !== '' && cost.trim() !== '') {
+          addCostsButton.removeAttribute('disabled');
+          editCostsButton.removeAttribute('disabled');
+      } else {
+          addCostsButton.setAttribute('disabled', 'disabled');
+          editCostsButton.setAttribute('disabled', 'disabled');
+      }
+  }
+
+</script>
+  
   <script>
     function edit_costs_form(rowId) {
       const row = document.getElementById(`row_${rowId}`);
@@ -1381,6 +1390,7 @@
 
 
       document.querySelector('#edit_costs_button').setAttribute('data-row-id', rowId);
+      validateForm();
     }
   </script>
 
@@ -1410,6 +1420,7 @@
 
       editcostsButton.classList.add('d-none');
       addcostsButton.classList.remove('d-none');
+      validateForm();
     }
   </script>
 
