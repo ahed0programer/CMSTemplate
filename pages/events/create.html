@@ -989,7 +989,7 @@
                                 <div class="form-group">
                                   <label for="name_costs">name</label>
                                   <input type="text" class="form-control" id="name_costs" placeholder="Enter Name"
-                                    value="" oninput="validateForm()"  />
+                                    value="" oninput="validateFormCost()"  />
                                   <small id="error_name_cost" class="form-text text-muted d-none">please enter
                                     name</small>
                                 </div>
@@ -1000,7 +1000,7 @@
                                 <div class="form-group">
                                   <label for="cost">cost</label>
                                   <input type="number" class="form-control" id="cost" placeholder="Enter cost"
-                                  oninput="validateForm()"  />
+                                  oninput="validateFormCost()"  />
                                   <small id="error_cost" class="form-text text-muted d-none">please enter cost</small>
                                 </div>
                               </div>
@@ -1084,7 +1084,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       updateTableVisibilitycost();
       updateTableVisibility();
-      validateForm();
+      validateFormCost();
     });
   </script>
 
@@ -1327,7 +1327,7 @@
   </script>
 
 <script>
-  function validateForm() {
+  function validateFormCost() {
       const name = document.getElementById('name_costs').value;
       const cost = document.getElementById('cost').value;
 
@@ -1364,7 +1364,7 @@
 
 
       document.querySelector('#edit_costs_button').setAttribute('data-row-id', rowId);
-      validateForm();
+      validateFormCost();
     }
   </script>
 
@@ -1394,7 +1394,7 @@
 
       editcostsButton.classList.add('d-none');
       addcostsButton.classList.remove('d-none');
-      validateForm();
+      validateFormCost();
     }
   </script>
 
