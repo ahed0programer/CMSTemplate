@@ -22,7 +22,7 @@
 
     <!-- FullCalendar -->
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
-
+    <link rel="stylesheet" href="../assets/css/plugins.min.css">
     <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script> -->
 </head>
 
@@ -461,10 +461,35 @@
 
             <div class="container">
                 <div class="page-inner">
-                    <div id="calendar">
+                    <div class="page-header">
+                        <h3 class="fw-bold mb-3">Clender</h3>
+                        <ul class="breadcrumbs mb-3">
+                            <li class="nav-home">
+                                <a href="#">
+                                    <i class="icon-home"></i>
+                                </a>
+                            </li>
+                            <li class="separator">
+                                <i class="icon-arrow-right"></i>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">Business</a>
+                            </li>
+                            <li class="separator">
+                                <i class="icon-arrow-right"></i>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">Clender</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div id="calendar">
 
-                        <div id='draggable-el' data-event='{ "title": "my event", "duration": "02:00" }'>drag me</div>
+                            <div id='draggable-el' data-event='{ "title": "my event", "duration": "02:00" }'>drag me
+                            </div>
 
+                        </div>
                     </div>
                 </div>
 
@@ -560,7 +585,8 @@
 
                         {
                             title: 'fadi',
-                            start: new Date(y, m, d + 4, 16, 0),
+                            start: new Date(y, m, d + 4, 4, 5),
+                            end: new Date(y, m, d + 5, 5, 0),
                             allDay: false,
                             className: 'info',
                             extendedProps: {
@@ -570,13 +596,13 @@
                         {
                             title: 'Meeting',
                             start: new Date(y, m, d, 10, 30),
-                            end: new Date(y, m, d+1, 10, 30),
+                            end: new Date(y, m, d + 1, 11, 30),
                             allDay: false,
                             className: 'important'
                         },
                         {
                             title: 'Repeating Event',
-                            start: new Date(y, m, d - 3, 16, 0),
+                            start: new Date(y, m - 1, d, 16, 0),
                             allDay: false,
                             className: 'info'
                         },
@@ -584,10 +610,18 @@
                     ],
                     eventDidMount: function (info) {
                         if (info.event.extendedProps.status === 'done') {
+                            info.el.style.backgroundColor = "rgba(45, 187, 47, 0.6)";
+                            // info.el.style.borderRadius = "7px";
 
                             // Change background color of row
-                            info.el.style.backgroundColor = 'green';
+                            info.el.addEventListener('mouseenter', function () {
+                                info.el.style.backgroundColor = "rgba(45, 187, 47, 0.9)";
+                            });
 
+                            info.el.addEventListener('mouseleave', function () {
+                                // Set the background color back to its original state on mouse leave
+                                info.el.style.backgroundColor = "rgba(45, 187, 47, 0.6)"; // or set it to any other color as needed
+                            });
                             // Change color of dot marker
                             var dotEl = info.el.getElementsByClassName('fc-event-dot')[0];
                             if (dotEl) {
@@ -595,21 +629,25 @@
                             }
                         }
                         else {
-                            info.el.style.backgroundColor = 'red';
+                            info.el.style.backgroundColor = "rgba(255, 0, 0, 0.6)";
+                            // info.el.style.borderRadius = "7px";
+                            // Change background color of row
+                            info.el.addEventListener('mouseenter', function () {
+                                info.el.style.backgroundColor = "rgba(255, 0, 0, 0.9)";
+                            });
+
+                            info.el.addEventListener('mouseleave', function () {
+                                // Set the background color back to its original state on mouse leave
+                                info.el.style.backgroundColor = "rgba(255, 0, 0, 0.6)"; // or set it to any other color as needed
+                            });
+
 
                         }
                     },
 
-
-
                     editable: true,
                     selectable: true,
                     defaultView: 'month',
-
-
-
-
-
 
                 });
 
