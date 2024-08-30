@@ -4782,9 +4782,10 @@
 * (c) 2018 Adam Shaw
 */
 
-#calendar{
+#calendar {
     padding: 20px;
 }
+
 .fc {
     direction: ltr;
     text-align: left
@@ -4996,10 +4997,10 @@ hr.fc-divider {
     background-color: #edecec;
 }
 
-.fc th a{
-	color: rgb(24, 23, 23);
-	padding: 10px !important;
-	font-size: large;
+.fc th a {
+    color: rgb(24, 23, 23);
+    padding: 10px !important;
+    font-size: large;
 }
 
 .fc td {
@@ -5727,13 +5728,13 @@ a.fc-more:hover {
     color: black;
 }
 
-.fc-today-button:hover{
+.fc-today-button:hover {
     /* background: #f1f0f0 !important; */
     border-radius: 9px !important;
     color: white !important;
 }
 
-.fc-today-button{
+.fc-today-button {
     background-color: rgb(124, 126, 128) !important;
     border-radius: 9px !important;
     color: white !important;
@@ -11342,13 +11343,17 @@ text {
     }
 }
 
-.fc .fc-button-primary:not(:disabled).fc-button-active{
+.fc .fc-button-primary:not(:disabled).fc-button-active {
     background-color: rgb(124, 126, 128);
     border-color: var(--fc-button-active-border-color);
     color: var(--fc-button-text-color);
 }
 
-.fc .fc-daygrid-day-number{
+.fc .fc-daygrid-day-number {
     color: black;
     font-weight: bold;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: rgba(0, 0, 0, 0.15);
 }
