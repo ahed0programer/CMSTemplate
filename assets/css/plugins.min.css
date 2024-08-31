@@ -5735,7 +5735,7 @@ a.fc-more:hover {
 }
 
 .fc-today-button {
-    background-color: rgb(124, 126, 128) !important;
+    background-color: rgba(0, 28, 255, 0.9) !important;
     border-radius: 9px !important;
     color: white !important;
 }
@@ -11344,9 +11344,10 @@ text {
 }
 
 .fc .fc-button-primary:not(:disabled).fc-button-active {
-    background-color: rgb(124, 126, 128);
-    border-color: var(--fc-button-active-border-color);
+    background-color: rgba(0, 28, 255, 0.9);
+    border-color: rgba(0, 28, 255, 0.9);
     color: var(--fc-button-text-color);
+    border-radius: 9px !important;
 }
 
 .fc .fc-daygrid-day-number {
